@@ -1,264 +1,107 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="judge logo: a hand holding a red gavel" width="160">
+<img src="assets/logo.png" alt="judge logo" width="140">
 
 # judge
 
-**Clear decisions. Less noise.**
+**Clear decisions. Less noise. · قرارات أوضح، وكلام أقل.**
 
-An Agent Skill that helps an AI assistant compare options, evaluate projects, surface risks and give an honest recommendation — in the user's own language and dialect.
+An AI skill that compares options, evaluates projects, finds the risks and gives an honest recommendation, in your language.
 
-`v1.0.0` · English & Arabic instructions · Full and light editions · MIT License
-
-**[🚀 ابدأ هنا بدون تثبيت](#ابدأ-هنا)** · **[🚀 Quick start, no install](#quick-start)**
-
-[English](#english) · [العربية](#العربية) · [Evaluation records](evals/)
+`v1.0.0` · MIT License · **[English](#english)** · **[العربية](#arabic)**
 
 </div>
 
 ---
 
-<a id="quick-start"></a>
+<a id="english"></a>
 
 ## 🚀 Quick start (any AI chat, no install)
 
-> Sending the GitHub link alone won't work: paste the instructions yourself.
+> Sending the GitHub link alone won't work. Paste the instructions yourself.
 
 1. Open [this file](https://github.com/babikerMakkawi/judge/blob/main/skills/en/judge-flash/SKILL.md) and click 📋 **Copy raw file**.
-2. In a new chat (ChatGPT, Gemini, Claude...), send: `Follow these instructions in every reply:` then paste, then your question.
-3. Keep talking in the same chat. In a new chat, paste again.
-
-For a permanent setup, see [below](#installation).
-
-<a id="english"></a>
+2. In a new chat (ChatGPT, Gemini, Claude...), type `Follow these instructions in every reply:`, paste the text, then add your question.
+3. Keep using the same chat. In a new chat, paste again.
 
 ## What it does
 
-`judge` turns a fuzzy question ("which is better?", "should I open this shop?", "is this plan sound?") into a practical, defensible decision — or an honest statement that the evidence does not support one yet.
-
-- **Picks the right depth automatically.** A quick question gets a short answer; a costly or hard-to-reverse decision (savings, lease, loan, partnership, starting a business) gets a full risk scan.
-- **Risk scan for real projects.** Ten categories: demand, cash runway, unit economics and break-even (with a low / expected / high table), contracts and tax, fraud signals, key people, competition, supply and regulation, currency and price shocks, and exit terms. Risks are ranked by severity, and each comes with a check or a mitigation.
-- **Honest about bad ideas.** If an idea cannot work as stated, it says so in the first lines and gives the decisive reason. Then it looks for the useful core: a real niche nearby, what would have to be true, and the cheapest test.
-- **Never invents.** No made-up prices, buyers, sources or statistics. Assumptions are labeled.
-- **Choosing is not authorizing.** "Sounds good, let's go with A" is a choice, not an order. The skill never buys, sends, publishes or deletes anything without an explicit instruction for that action.
-- **Disagreement is not evidence.** It holds its assessment unless you bring new facts, while making clear the decision is yours.
-- **Fair comparisons.** The same criteria apply to every option. Polish, order and authorship are not merits, and people are never judged on name, gender, age, nationality, religion or looks.
-- **Speaks your language.** It replies in the user's language, dialect and register, matching grammatical gender when that is evident.
-
-## Editions
-
-| Edition | Folder | Size | Best for |
-|---|---|---|---|
-| **judge** (full) | `skills/en/judge` · `skills/ar/judge` | ~18k chars (EN) · ~16k (AR) | Claude Code, Claude apps, Codex and other hosts with skill support |
-| **judge-flash** (light) | `skills/en/judge-flash` · `skills/ar/judge-flash` | ~7.8k chars (EN) · ~7.6k (AR), under 8,000 | Custom GPTs, Gemini Gems and hosts with tight instruction limits; works standalone |
-
-The English and Arabic instructions say the same thing. Every edition **replies in the user's language** whichever instruction language you install, so pick Arabic instructions only if you want to read or edit them in Arabic.
-
-> **Install only one edition per host.** Two similar skills compete for activation.
-
-## Repository layout
-
-```
-assets/logo.png             # repository logo
-evals/                      # scenarios, raw answers and blind grading behind the test claims
-scripts/validate.py         # structural checks, run by GitHub Actions on every push
-skills/
-├── en/
-│   ├── judge/                  # full edition, English instructions
-│   │   ├── SKILL.md
-│   │   ├── agents/openai.yaml  # Codex / ChatGPT metadata
-│   │   ├── assets/icon.svg
-│   │   └── references/
-│   │       ├── edge-cases.md        # ties, stakeholders, portfolios...
-│   │       ├── runtime-protocol.md  # tools, delegation, handoff
-│   │       └── usage.md
-│   └── judge-flash/            # light edition, same structure
-└── ar/
-    ├── judge/                  # full edition, Arabic instructions
-    └── judge-flash/            # light edition, Arabic instructions
-```
-
-<a id="installation"></a>
+- Gives a clear verdict first, then the reasons, the main risk and the next step.
+- For a business or other costly decision, it checks ten risk areas and ranks them by severity.
+- Says plainly when an idea can't work, then suggests a realistic alternative.
+- Never invents prices, numbers or sources.
+- Never buys, sends or deletes anything unless you explicitly tell it to.
 
 ## Permanent setup
 
 | Where | How |
 |---|---|
-| **ChatGPT** (Custom GPT or Project) | Paste `judge-flash/SKILL.md` into **Instructions** |
-| **Gemini** (Gem) | Paste `judge-flash/SKILL.md` into **Instructions** |
-| **Claude apps** | Download a zip from [Releases](https://github.com/babikerMakkawi/judge/releases), then **Settings → Capabilities → Skills → Upload** |
-| **Claude Code** | `cp -r skills/en/judge ~/.claude/skills/judge`, then use `/judge` |
-| **Codex** | Copy the folder into your Codex skills directory, then use `$judge` |
+| ChatGPT (Custom GPT or Project) · Gemini (Gem) | Paste `judge-flash/SKILL.md` into **Instructions** |
+| Claude apps | Download a zip from [Releases](https://github.com/babikerMakkawi/judge/releases), then **Settings → Capabilities → Skills → Upload** |
+| Claude Code · Codex | Copy `skills/en/judge` into your skills folder, then use `/judge` or `$judge` |
 
-Use **`judge-flash`** for pasting (under 8,000 characters, works alone), and the full **`judge`** where skills install as folders.
+`judge-flash` is the light edition (under 8,000 characters, works on its own). `judge` is the full edition.
 
-## How to use it
-
-Just ask naturally ("which is better", "should I", "is it worth it", "قارن", "هل يستحق"), or use a shortcut:
-
-| Shortcut | What it does |
-|---|---|
-| `judge: ...` | Run any request through the skill |
-| `compare 7` | Compare up to 7 options |
-| `ideas` | 10–20 varied ideas in groups instead of a single verdict |
-| `plan` | Ask only the next essential question |
-| `audit` | Separate confirmed defects from untested risks |
-| `debate only` | Arguments for and against, with no verdict |
-| `execute B` | Act on an approved option (requires a real tool and your authorization) |
-| `handoff` | Package the decision for another person or agent |
-
-### Recommended prompt for evaluating a project
+## Example request
 
 ```text
-judge: Evaluate my project honestly and list its weaknesses and risks ranked by severity.
-
-Idea: [e.g. a men's barbershop]
-Location: [city and neighborhood]
-Available budget: [amount, and how much is a loan or a partner's money]
-Known costs: [rent, equipment, salaries...]
-Expected income: [customers or sales per day, and price]
-My experience: [have you worked in this field?]
-My goal: [side income, full-time, experiment...]
-Non-negotiables: [e.g. no more than 50k, no loans]
-Maximum loss I can absorb: [amount]
-
-I want: go or no-go, the break-even point, a low / expected / high table,
-and the cheapest test before I pay anything.
+judge: Evaluate my project honestly and rank its risks.
+Idea: ...   Location: ...   Budget: ...   My goal: ...
 ```
 
-Real numbers matter more than descriptions. If you don't know something, write **"assume and proceed"** and the skill will label its assumptions and keep going.
+If you don't know a detail, write "assume and proceed".
 
-## Testing and limitations
+## Limits
 
-The skill was developed through blind A/B tests: the same model answered each scenario with and without the skill. Pass criteria were written before each run, and graders did not know which answer used the skill. Everything is published in [`evals/`](evals/): scenarios, raw answers, grading and the blinding key.
+Tested on Claude models only, one run per case ([test records](evals/)). It supports your decision; it is not professional legal, medical or financial advice.
 
-- **The original draft showed no net benefit**: 17 wins, 17 losses and 7 ties in 41 blind comparisons. Every later version was revised from those failures.
-- **Core behaviors** (resisting pushback without evidence, fair comparisons, flawed scoring formulas, warm personal answers, idea lists, purchase authorization with a simulated tool timeout): all 7 losing scenarios improved on retest.
-- **Business projects** (barbershop, supermarket, importing, restaurant partnership, gym franchise): v1.2 won 4 of 5 and caught 34 of 35 hidden risks, against 33.5 for the baseline. Risk coverage was about even; the gain was in answer quality (8.6 vs 8.0) and in ranking the most serious risks first.
-- **Unworkable and joke ideas**: all six were flagged as unworkable up front, each with a realistic nearby niche and a cheap test, and no invented numbers.
-
-**Limits:**
-
-- Tests ran on Claude models (Opus, Sonnet, Haiku) in simulated chats, with one run per case. Some later rounds were graded by the developer rather than blind graders.
-- The final pre-release edits were not re-tested.
-- GPT and Gemini are untested. Results from them are welcome.
-- None of this guarantees accuracy. The skill gives decision support, not professional legal, medical or financial advice.
-- Tools, accounts, external actions and background execution depend on the host and your authorization. The skill installs no connectors.
-
-## Version
-
-See [CHANGELOG.md](CHANGELOG.md). Current release: **1.0.0**.
-
-## License
-
-[MIT](LICENSE) © 2026 Babiker Makkawi. You may use, modify and share the skill, including commercially, as long as the copyright notice is kept.
+[MIT License](LICENSE) © 2026 Babiker Makkawi
 
 ---
 
-<a id="العربية"></a>
+<a id="arabic"></a>
 
-<div dir="rtl">
+<div dir="rtl" align="right">
 
-## العربية
+## 🚀 ابدأ هنا (أي محادثة، بدون تثبيت)
 
-<a id="ابدأ-هنا"></a>
-
-### 🚀 ابدأ هنا (أي محادثة، بدون تثبيت)
-
-> إرسال رابط GitHub وحده لا يكفي: الصق التعليمات بنفسك.
+> إرسال رابط GitHub وحده لا يكفي، الصق التعليمات بنفسك.
 
 1. افتح [هذا الملف](https://github.com/babikerMakkawi/judge/blob/main/skills/ar/judge-flash/SKILL.md) واضغط 📋 **Copy raw file**.
-2. في محادثة جديدة (ChatGPT أو Gemini أو Claude...)، اكتب: «اتبع هذه التعليمات في كل ردودك:» ثم الصق النص، ثم سؤالك.
-3. أكمل في المحادثة نفسها. وفي أي محادثة جديدة الصقه مرة أخرى.
+2. في محادثة جديدة (ChatGPT أو Gemini أو Claude...) اكتب: «اتبع هذه التعليمات في كل ردودك:»، ثم الصق النص، ثم اكتب سؤالك.
+3. أكمل في المحادثة نفسها. وفي أي محادثة جديدة، الصق النص مرة أخرى.
 
-وللإعداد الدائم، انظر [بالأسفل](#الإعداد-الدائم).
+## ماذا تفعل؟
 
-### ما هي judge؟
+- تعطيك الحكم أولًا، ثم الأسباب، وأهم خطر، والخطوة التالية.
+- في المشاريع والقرارات المكلفة، تفحص عشرة أنواع من المخاطر وترتبها حسب خطورتها.
+- تقول بصراحة إن كانت الفكرة غير قابلة للتطبيق، ثم تقترح بديلًا واقعيًا.
+- لا تختلق أسعارًا أو أرقامًا أو مصادر.
+- لا تشتري ولا ترسل ولا تحذف شيئًا إلا بأمر صريح منك.
 
-مهارة (Agent Skill) تساعد المساعد الذكي على مقارنة الخيارات وتقييم المشاريع وكشف مخاطرها، ثم إعطاء توصية صريحة بلغة المستخدم ولهجته.
+## الإعداد الدائم
 
-- **تختار العمق المناسب تلقائيًا:** السؤال البسيط يأخذ ردًا قصيرًا. أما القرار المكلف أو الصعب التراجع عنه، كالمدخرات أو الإيجار أو القرض أو الشراكة أو بدء مشروع، فيأخذ فحصًا كاملًا للمخاطر.
-- **فحص مخاطر للمشاريع الحقيقية:** عشر فئات، منها:
-  - الطلب، والسيولة، وتكلفة الوحدة.
-  - نقطة التعادل، مع جدول للحالات المتشائمة والمتوقعة والمتفائلة.
-  - العقود والضرائب، وإشارات الاحتيال، والأشخاص الأساسيون.
-  - المنافسة، والتوريد، والعملة، وشروط الخروج.
+| أين | كيف |
+|---|---|
+| ChatGPT (Custom GPT أو Project) · Gemini (Gem) | الصق محتوى `judge-flash/SKILL.md` في خانة **Instructions** |
+| تطبيقات Claude | نزّل ملف zip من [الإصدارات](https://github.com/babikerMakkawi/judge/releases)، ثم **Settings ← Capabilities ← Skills ← Upload** |
+| Claude Code · Codex | انسخ مجلد `skills/ar/judge` إلى مجلد المهارات، ثم اكتب الأمر `/judge` في Claude Code، والأمر `$judge` في Codex |
 
-  وترتّب المخاطر حسب خطورتها، مع فحص أو حل لكل خطر.
-- **صريحة مع الأفكار غير القابلة للتطبيق:** تقول ذلك في أول سطر مع السبب الحاسم. ثم تبحث عن الجانب المفيد: حاجة حقيقية قريبة من الفكرة، وما يجب أن يتحقق لتنجح، وأرخص اختبار.
-- **لا تختلق** أسعارًا أو مشترين أو مصادر أو أرقامًا، وتوضّح افتراضاتها.
-- **الاختيار ليس إذنًا بالتنفيذ:** لا تشتري ولا ترسل ولا تنشر ولا تحذف شيئًا إلا بأمر صريح.
-- **الاعتراض ليس دليلًا:** تحافظ على تقييمها ما لم تأتِ بمعلومة جديدة، والقرار في النهاية قرارك.
-- **عادلة:** معايير واحدة لكل الخيارات، ولا حكم على الأشخاص بالاسم أو الجنس أو العمر أو الجنسية أو الدين أو المظهر.
+النسخة الخفيفة هي `judge-flash`، وهي أقل من 8,000 حرف وتعمل وحدها. والنسخة الكاملة هي `judge`.
 
-### النسخ
-
-| النسخة | المجلد | الحجم | الأنسب لـ |
-|---|---|---|---|
-| **judge** (الكاملة) | `skills/ar/judge` · `skills/en/judge` | نحو 16 ألف حرف (عربي) و18 ألفًا (إنجليزي) | Claude Code وتطبيقات Claude وCodex |
-| **judge-flash** (الخفيفة) | `skills/ar/judge-flash` · `skills/en/judge-flash` | أقل من 8,000 حرف | Custom GPTs وGemini Gems والمنصات ذات الحدود الضيقة، وتعمل وحدها دون ملفات إضافية |
-
-التعليمات العربية والإنجليزية متطابقتان في المعنى. **كل النسخ تجيب بلغة المستخدم ولهجته** أيًا كانت لغة التعليمات. ثبّت **نسخة واحدة فقط** في كل منصة.
-
-<a id="الإعداد-الدائم"></a>
-
-### الإعداد الدائم
-
-- **ChatGPT** (Custom GPT أو Project) و**Gemini** (Gem): الصق محتوى `judge-flash/SKILL.md` في خانة **Instructions**.
-- **تطبيقات Claude:** نزّل ملف zip من [الإصدارات](https://github.com/babikerMakkawi/judge/releases)، ثم **Settings ← Capabilities ← Skills ← Upload**.
-- **Claude Code:** انسخ المجلد إلى `~/.claude/skills/judge`، ثم استخدم `/judge`.
-- **Codex:** انسخ المجلد إلى مجلد مهارات Codex، ثم استخدم `$judge`.
-
-استخدم **`judge-flash`** للّصق (أقل من 8,000 حرف وتعمل وحدها)، والكاملة **`judge`** حيث تُثبَّت المهارات كمجلدات.
-
-### الطلب المقترح لتقييم مشروع
-
-</div>
+## مثال على الطلب
 
 ```text
-judge: قيّم مشروعي بصراحة، واذكر العيوب والمخاطر مرتبة حسب خطورتها.
-
-الفكرة: [مثال: محل حلاقة رجالي]
-المكان: [المدينة والحي]
-الميزانية المتاحة: [المبلغ، وكم منه قرض أو مال شريك]
-التكاليف المعروفة: [إيجار، معدات، رواتب...]
-الدخل المتوقع: [عدد الزبائن أو المبيعات يوميًا، والسعر]
-خبرتي: [هل عملت في هذا المجال؟]
-هدفي: [دخل إضافي، تفرغ كامل، تجربة...]
-ما لا أقبل التنازل عنه: [مثال: لا أتجاوز 50 ألف، لا قروض]
-أقصى خسارة أتحملها: [المبلغ]
-
-أريد: هل أبدأ أم لا، ونقطة التعادل، وجدول للحالات المتشائمة والمتوقعة والمتفائلة، وأرخص اختبار قبل أن أدفع.
+judge: قيّم مشروعي بصراحة، ورتّب مخاطره حسب خطورتها.
+الفكرة: ...   المكان: ...   الميزانية: ...   هدفي: ...
 ```
 
-<div dir="rtl">
+وإن لم تعرف معلومة، فاكتب «افترض وأكمل».
 
-**صيغ أقصر:**
-- `judge: قارن بين هذه الخيارات ضمن ميزانيتي: ...`
-- `judge: راجع خطتي وافصل العيوب المؤكدة عن المخاطر غير المختبرة: ...`
-- `judge: أعطني أفكار مشاريع بميزانية ... في ...`
-- `judge: هل هذه الفكرة قابلة للتطبيق أصلًا؟ ...`
+## الحدود
 
-الأرقام الحقيقية أهم من الوصف. وإن لم تعرف معلومة، فاكتب **«افترض وأكمل»**.
+اختُبرت على نماذج Claude فقط، بتشغيل واحد لكل حالة ([سجلات الاختبار](evals/)). وهي مساعدة على اتخاذ القرار، لا استشارة قانونية أو طبية أو مالية متخصصة.
 
-### الاختبار والحدود
-
-طُوّرت المهارة باختبارات مقارنة عمياء ضد النموذج نفسه بدون المهارة. كل السيناريوهات والردود الخام والتقييمات منشورة في مجلد [`evals/`](evals/).
-
-- **المسودة الأصلية:** بلا فائدة صافية، 17 فوزًا و17 خسارة و7 تعادلات في 41 مقارنة. وعُدّلت المهارة بناءً على تلك الإخفاقات.
-- **السلوكيات الأساسية:** تحسنت السيناريوهات الخاسرة السبعة كلها عند إعادة الاختبار.
-- **المشاريع التجارية:** فاز الإصدار 1.2 في 4 من 5 مشاريع. التقط 34 من 35 خطرًا مخفيًا مقابل 33.5 بدون المهارة، أي تقارب في التغطية، والتفوق كان في جودة الرد (8.6 مقابل 8.0).
-- **الأفكار غير القابلة للتطبيق:** حكمت المهارة على الأفكار الست بذلك من البداية، مع حاجة قريبة واختبار رخيص، دون اختلاق أرقام.
-
-**الحدود:**
-- الاختبارات أُجريت على نماذج Claude فقط، بتشغيل واحد لكل حالة.
-- بعض الجولات قيّمها المطوّر لا محكّم أعمى.
-- آخر التعديلات قبل الإصدار لم يُعَد اختبارها.
-- لم تُختبر على GPT وGemini بعد.
-- المهارة دعم للقرار، لا استشارة قانونية أو طبية أو مالية متخصصة.
-
-### الترخيص
-
-مرخّصة بموجب [MIT](LICENSE). يمكنك استخدامها وتعديلها ومشاركتها، حتى تجاريًا، بشرط الإبقاء على إشعار حقوق المؤلف.
+[ترخيص MIT](LICENSE) © 2026 Babiker Makkawi
 
 </div>
