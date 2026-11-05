@@ -1,0 +1,211 @@
+{
+ "judge:S16:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give A 1214, B 955 and C 1112, and both name B the winner under the formula as written. Y also shows each sum."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both explain that adding a higher-is-better rating to a lower-wins total counts against high quality."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say that dollars swamp the 1-5 rating and the day counts, so price decides the result."
+   },
+   {
+    "id": 4,
+    "x": "fail",
+    "y": "partial",
+    "note": "X keeps its (5 - quality) variant separate and labeled, but its totals (A 1211, B 956, C 1107) still make B the winner, and X wrongly says C wins. Y suggests subtracting quality or scaling each factor to 0-1, but does not work either one out or say whether the winner would change."
+   }
+  ],
+  "x_failures": [
+   "Says the inverted-quality version makes C the winner, but B (956) is still lower than C (1107)",
+   "Its advice not to pick B leans on that wrong claim",
+   "The error contradicts its own point that price dominates"
+  ],
+  "y_failures": [
+   "Does not say whether a corrected formula would change the winner"
+  ],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Both get 1214, 955 and 1112 right and flag the mixed units and the backwards quality term. X's labeled (5 - quality) version gives A 1211, B 956 and C 1107, yet X says C wins. That is wrong, because B's 956 is still the lowest. This comparison error could steer the user's choice, and it contradicts X's own point that price dominates. Y has no errors. Its only gap is not saying whether a corrected formula would change the winner."
+ },
+ "judge:S16:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give A 1,214, B 955 and C 1,112, and both name B as the winner under the formula as written. X also shows each sum."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say that a higher quality rating raises a lower-wins score, so the formula penalizes quality. X: 'counts against a supplier'. Y: 'a 5/5 supplier is penalized'."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say that dollars swamp the 1-5 rating and the days, so price almost alone decides the result."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "fail",
+    "note": "X suggests subtracting quality or scaling each factor to 0-1, kept apart from the main result, but never says whether the winner would change. Subtracting quality still leaves B first. Y labels its (5 - quality) alternative and keeps it separate, but its claim about the winner is false. Its own totals (A 1,211, B 956, C 1,107) put B lowest, yet it says in bold that C wins."
+   }
+  ],
+  "x_failures": [
+   "Never says whether its suggested fixes would change the winner",
+   "Suggests alternatives without calculating them"
+  ],
+  "y_failures": [
+   "Says C wins under the corrected formula, but its own totals show B (956) is still lowest",
+   "Steers the user away from B on that false result",
+   "Contradicts its own point that price dominates the total"
+  ],
+  "winner": "X",
+  "margin": "clear",
+  "rationale": "Both get the as-written scores right (B wins with 955) and flag both the mixed units and the inverted quality. Y's corrected alternative is labeled, but its conclusion is wrong. Its own totals (A 1,211, B 956, C 1,107) leave B lowest, yet it says in bold that C wins and advises against B. That is an arithmetic-error failure, and it contradicts Y's own point that price dominates. X is correct throughout but never says whether its suggested fixes would change the winner."
+ },
+ "judge:S16:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give A=1214, B=955, C=1112 and name B as the winner under the formula as written. Neither has an arithmetic error."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say plainly that quality counts backwards: adding it to a lower-wins total punishes C's 5/5 and helps B's 2/5."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say price dominates. X's figures are right: quality plus delivery differ by 9 points at most, while prices differ by $100 to $250. Y's example also holds: B at 150 days scores 1102, still under C's 1112. Y's 'hundreds of dollars apart' is slightly loose, since A and C are only $100 apart."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X keeps its dollar-based formula separate and labeled. It says B still wins if quality is subtracted, and that C wins if the quality gap is worth more than $150 plus 4 days. That condition is correct: C wins when 3X > 150 + 4Y. X computes no concrete alternative result. Y's labeled normalized table is accurate (2.33 / 1.00 / 1.17). It says B still wins narrowly with equal weights and C wins once quality is weighted 1.2x or more; the true threshold is about 1.17."
+   }
+  ],
+  "x_failures": [
+   "minor: no concrete corrected result; it needs the user's X and Y values"
+  ],
+  "y_failures": [
+   "minor: calls equal-weight min-max scaling 'fairer', though those weights are arbitrary",
+   "minor: 'hundreds of dollars apart' overstates the $100 A-C gap"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both compute 1214/955/1112 correctly, name B, and flag both the backwards quality direction and price dominance. Both keep their alternatives separate. X adds that C beats A on every factor, that fixing the quality sign alone still leaves B winning, and an intuitive dollar-tradeoff rule: C wins if the quality gap is worth more than $150 plus 4 days. Y's normalized table is accurate and shows a near-flip, but its equal weights are arbitrary. Slight edge to X."
+ },
+ "judge:S16:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both compute A=1,214, B=955 and C=1,112 using the formula as written, and both name B the winner. Neither changes the formula silently."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say quality 'counts backwards': adding it to a lower-wins total penalizes C's 5/5 and helps B's 2/5. X also states its assumption that 5/5 is the best rating."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both show that price swamps the other factors. X's example holds: B would score 1,102 with a 150-day delivery and still beat C. Y's numbers hold: quality and delivery differ by 9 points at most, against price gaps of $100-250. Y's dollar-based fix also deals with the unit mismatch directly."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X's labeled normalized table is accurate (2.33 / 1.00 / 1.17). It says B narrowly wins with equal weights and C wins once quality is weighted 1.2x or more (the exact threshold is about 1.17). Y's labeled alternative is a formula that puts every factor in dollars. Y says that subtracting quality instead of adding it still leaves B ahead, and that C wins if the quality gap is worth more than $150 plus 4 days. Y never computes a result for its own formula."
+   }
+  ],
+  "x_failures": [
+   "Calls an equal-weight min-max normalization 'fairer'",
+   "Gives the weight threshold in abstract normalized units"
+  ],
+  "y_failures": [
+   "Computes no result for its corrected formula and leaves the weights to the user"
+  ],
+  "winner": "tie",
+  "margin": "slight",
+  "rationale": "Both compute correctly (B=955), flag the inverted quality term and price dominance, and keep alternatives labeled. X adds an accurate normalized table: B narrowly wins, and C wins at 1.2x or more quality weight. Y adds that A is dominated, that flipping quality's sign still leaves B winning, and frames B vs C as a dollar trade-off, but computes no alternative result. X is more concrete and Y gives more decision insight, so they come out even."
+ },
+ "gap:S16": {
+  "helped": [
+   "Opus gained some decision insight (small, within noise). The skill reply added three points the baseline lacked, and I re-checked all three as correct. (1) A is dominated: 'C is cheaper, higher quality and faster.' (2) Flipping quality's sign alone still leaves B winning: 'B would still win if you subtracted quality instead of adding it' (recomputed: 1206/951/1102). (3) B vs C becomes a threshold in the user's own units: 'C is the better pick if that quality gap is worth more to you than $150 and 4 extra days of waiting', which is the same as 3X > 150 + 4Y. This traces to §6.5 'Check whether plausible changes in uncertain inputs or priorities would reverse the winner. If so, identify that dependency' and the edge case 'Identify the switching assumption or threshold when supportable.' Judges gave a slight edge to the skill and a tie, so the gain is small and within one-sample noise.",
+   "Opus did not invent weights. The skill reply left the weights to the user ('Tell me your X and Y and I'll recalculate'), following §3.3 'Do not silently substitute your priorities' and §6.4 'Use explicit user weights if supplied.' That avoided the baseline flaw both judges flagged: it called an arbitrary equal-weight min-max table 'fairer'.",
+   "Both sizes put the formula's result first, but so did the baselines. Both skill replies led with the result as written and labeled the correction separately ('Under your formula, B wins with 955'; 'As written, B wins'). That fits 'Lead with the verdict' and the edge case 'calculate it faithfully ... keep any alternative weighting separate and labeled.' Both baselines did the same, and both also caught the backwards quality term and the dollar dominance. On rubric criteria 1-3 the skill made no measurable difference at either size.",
+   "Haiku attempted criterion 4. The skill pushed haiku to compute a labeled correction and say whether the winner changes, which baseline haiku left out (judges: 'Never says whether its suggested fixes would change the winner'; criterion 4 = 0.5). The direction was right but the execution failed (see the first hurt item), so here the net effect was negative."
+  ],
+  "hurt": [
+   {
+    "issue": "Haiku with the skill computed a labeled corrected formula, then named the wrong winner (C). This contradicts its own totals and its own point that price dominates.",
+    "evidence": "skill_en/haiku: 'use (5 − quality). That gives A 1,211, B 956, and C 1,107, so **C wins**.' Recomputed: B 956 < C 1,107 < A 1,211, so B still wins. Simply subtracting quality also leaves B ahead (951 vs 1,102). Both judges called it an arithmetic-error failure. Criterion 4 dropped to 0 (baseline 0.5), and baseline won the pair by a clear margin with both judges. Opus with the skill handled the same check correctly ('B would still win if you subtracted quality instead of adding it'). With one sample per cell the slip itself may be noise, but nothing in the skill tells the model to re-check a corrected ranking before stating it.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "SKILL.md final check: 'Before replying, check: actual goal addressed; constraints honored; evidence and actions described honestly; strongest material objection considered; uncertainty visible where it matters; useful result complete and concise.' It has no numeric or ranking check. edge-cases.md Scoring discipline: 'If the user requests a supplied formula, calculate it faithfully, identify consequential limitations, and keep any alternative weighting separate and labeled. Show relevant calculations' asks for labeled, shown alternatives, but does not ask to recompute the alternative's winner or to report that the winner is unchanged.",
+    "severity": "high",
+    "fix": "In the SKILL.md final check, insert after 'constraints honored;': 'every stated total, ranking, and winner recomputed and consistent with the stated direction (lower or higher wins) and with your other claims;'. In edge-cases.md Scoring discipline, change the supplied-formula sentence to: '...keep any alternative weighting separate and labeled; compute any alternative in full and state whether it changes the winner. An unchanged winner is a valid finding.'"
+   },
+   {
+    "issue": "The verdict-first template pushed haiku to recommend against the formula's winner before it had computed the correction, and it then reported the correction as matching that verdict.",
+    "evidence": "skill_en/haiku opens with '**Verdict:** As written, B wins ... I would not pick B on this formula alone.' Only after that does it compute the corrected totals, which it misreads as 'C wins'. Judges: 'Steers the user away from B on that false result' and 'Its advice not to pick B leans on that wrong claim.' Baseline haiku ('Winner: Supplier B') made no recommendation and no error. Opus with the skill led only with the computed result ('Under your formula, B wins with 955') and placed its conditional advice after the numbers, which judges rated well. The commit-first mechanism is plausible from the ordering, not proven from one sample.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "§7: 'Lead with the verdict, conditional recommendation, tie, or blocker.' Template: '**Verdict:** the decision or current status. **Why:** one or two decisive reasons. **Main risk / what would change it:** only material caveats.' Purpose: 'Turn uncertainty into a practical, defensible decision'. §6.5: 'Check whether plausible changes in uncertain inputs or priorities would reverse the winner. If so, identify that dependency rather than presenting a robust winner.' (It invites looking for a reversal but never says to report when there is none.)",
+    "severity": "medium",
+    "fix": "In §7, after 'Lead with the verdict, conditional recommendation, tie, or blocker.', add: 'When the user asks you to apply their method, the verdict is that method's result; place any recommendation of your own after the numbers that support it.' Optionally change §6.5 to: 'Check whether plausible changes in uncertain inputs or priorities would reverse the winner, and report the answer either way.'"
+   },
+   {
+    "issue": "The rule written for exactly this scenario lives only in edge-cases.md. The core's pointer does not send formula or scoring requests there, and core §6.4 covers only scores the assistant introduces, not a formula the user supplies.",
+    "evidence": "SKILL.md line 44 sends only 'infeasible, tied, conflicting, sensitive, or multi-party decisions' to Edge cases, and S16 is none of these. Core §6.4 says 'If numerical scoring helps, disclose...', which is about the model's own scoring. Neither skill reply uses wording specific to the supplied-formula rule, and we do not know whether the test harness exposed the reference files at all. No failure here can be pinned on this gap: both skill runs, and both baselines, flagged direction and units anyway. It is a reliability gap for smaller models that follow pointers literally, and it decides whether fixes like the first one ever load.",
+    "models": [
+     "haiku",
+     "opus"
+    ],
+    "skill_text": "'For infeasible, tied, conflicting, sensitive, or multi-party decisions, consult [Edge cases](references/edge-cases.md).' and §6.4 'If numerical scoring helps, disclose the scale, direction, weights, and origin of values; check comparability and overlapping criteria.'",
+    "severity": "low",
+    "fix": "Add one sentence to core §6.4: 'If the user supplies a formula or weights, apply them exactly as written and report that result first; then flag any input whose direction conflicts with the total (e.g., a higher-is-better rating added to a lower-wins score) and any unit that dominates it. Label any corrected version separately, compute it in full, and say whether its winner differs.' Change line 44 to: 'For infeasible, tied, conflicting, sensitive, multi-party, or formula- or score-based decisions, consult [Edge cases](references/edge-cases.md).'"
+   },
+   {
+    "issue": "Opus with the skill gave a corrected formula in terms of X and Y with no computed result. Both judges called this a minor gap. It is a deliberate trade-off by the skill, not a defect.",
+    "evidence": "skill_en/opus: 'score = price + X × (5 − quality) + Y × days ... Tell me your X and Y and I'll recalculate.' Judges: 'no concrete corrected result; it needs the user's X and Y values.' Criterion 4 still scored 1, because the reply did say whether fixes change the winner: flipping quality's sign leaves B ahead, and it gave the $150 + 4-day threshold. The baseline's concrete equal-weight table drew the opposite criticism ('calls equal-weight min-max scaling \"fairer\"'). Net effect is neutral.",
+    "models": [
+     "opus"
+    ],
+    "skill_text": "§6.4 'Use explicit user weights if supplied. Otherwise make qualitative priorities visible.'; §3.3 'Do not silently substitute your priorities.'; edge-cases 'With uncertain weights or inputs, expose the switching dependency instead of excessive decimal places.'",
+    "severity": "low",
+    "fix": "No change needed. If more concreteness is wanted, add to the edge-case Scoring discipline: 'You may show one worked example whose weights are labeled illustrative (not fair or correct), alongside the switching threshold.' Ship this only together with the recompute check from the first item, since the haiku result shows each extra calculation is another chance for error at small sizes."
+   }
+  ],
+  "model_size_notes": "Opus: the skill made no real difference. Criterion scores were identical ([1,1,1,1] for both); one judge gave the skill a slight edge, the other a tie. The skill reply's extra value was framing: A is dominated, flipping quality's sign doesn't change the winner, and the dollar threshold for B vs C. I re-checked all of it as correct. The difference is within one-sample noise. At 235 words it ran past the Standard target of 180 or fewer, but judges did not penalize that.\n\nSonnet: S16 has no sonnet data, so no conclusion is possible.\n\nHaiku: the skill was clearly worse in this sample (both judges, clear margins). The cause was one comparison slip ('C wins' when B scored 956 and C 1,107) in an extra calculation the skill encouraged, plus a recommendation against B ('I would not pick B on this formula alone') written before the supporting numbers. Baseline haiku (84 words) did less and made no errors. Skill haiku (127 words) tried more and got the one part beyond the baseline wrong.\n\nThe pattern: at small sizes, the skill's push toward verdicts, labeled alternatives and reversal checks gives more chances for error unless it is paired with an explicit recompute and consistency check. A verdict-first layout also lets a model without hidden reasoning commit to a conclusion before computing it. The fixes proposed above target exactly this and do not remove the behavior that worked on opus. With one sample per cell, the haiku slip itself may be noise, but the missing check is a real gap and cheap to close.",
+  "arabic_core_notes": "S16 tested only the English core. SKILL.ar.md is not in this runtime folder (usage.md refers to it), so nothing here measures the Arabic core.\n\nThe Arabic edge-case section 'انضباط الدرجات' mirrors the English supplied-formula rule ('إذا طلب المستخدم معادلة محددة، فاحسبها بأمانة وبيّن القيود المؤثرة، وافصل أي وزن بديل وسمِّه'). It has the same gaps: no instruction to recompute the alternative's winner or to report that the winner is unchanged, and the same routing gap if the Arabic core's pointer copies the English list. Mirror any accepted changes. Suggested wording:\n\n(1) Core §6.4: 'إذا قدّم المستخدم معادلة أو أوزانًا، فطبّقها كما كُتبت تمامًا واذكر نتيجتها أولًا، ثم نبّه إلى أي مدخل يعاكس اتجاه المجموع (مثل تقييم «الأعلى أفضل» يُضاف إلى مجموع «الأقل يفوز») وإلى أي وحدة تطغى عليه. افصل أي صيغة مصححة وسمّها، واحسبها كاملة، وبيّن هل يتغير الفائز بها؛ بقاء الفائز نفسه نتيجة تستحق الذكر.'\n\n(2) Final check: 'كل مجموع وترتيب وفائز مذكور أُعيد حسابه، ويتسق مع الاتجاه المعلن ومع بقية استنتاجاتك؛'\n\n(3) §7: 'إذا طلب المستخدم تطبيق طريقته، فالحكم هو نتيجة تلك الطريقة؛ ضع أي توصية خاصة بك بعد الأرقام التي تدعمها.'\n\n(4) Edge-case scoring sentence: append 'واحسب أي بديل كاملًا وبيّن هل يغيّر الفائز.'\n\n(5) Pointer: add 'أو القائمة على معادلة أو درجات' to the list that routes to the edge cases.",
+  "verdict": "The net effect was neutral on opus (a slight, correct analytical gain within noise) and negative on haiku, where one wrong 'C wins' claim under a labeled correction decided the pair. There is no sonnet data.\n\nOn rubric criteria 1-3 (faithful arithmetic, the backwards quality term, dollar dominance) the skill added nothing measurable, because both baselines already got them at both sizes. The skill's real contribution is pushing toward criterion 4 (a labeled alternative plus whether the winner changes) and threshold framing. Opus did this well; haiku did it wrong, and the skill has no step that would catch the error.\n\nMinimal edits, in priority order:\n1. Add 'every stated total, ranking, and winner recomputed and consistent with the stated direction and with your other claims' to the core's final check.\n2. Put a one-sentence supplied-formula rule in core §6.4: apply as written and report first; flag direction and unit problems; compute any labeled correction in full and say whether its winner differs, where an unchanged winner is a valid finding. Also add formula- or score-based decisions to the edge-case pointer.\n3. In §7, when the user asks to apply their method, the verdict is that method's result, and any recommendation of the model's own goes after the numbers that support it.\n\nThese edits keep the behavior that worked on opus and target the haiku failure directly. Caveat: one sample per cell, so the haiku slip may partly be noise, but the missing verification step is a real, checkable gap in the text."
+ }
+}

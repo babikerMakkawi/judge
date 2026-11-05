@@ -1,0 +1,327 @@
+{
+ "judge:S07:sonnet:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "fail",
+    "y": "pass",
+    "note": "X offers only five names, plus Bunn, which it advises against. Y gives 16 names in four style groups: coffee, playful, poetic and compound."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give Arabic, mostly easy-to-say names, each with a meaning. X checks each name carefully (Dalla read as Dallas, Kaif as Russian slang, Sukkar suggesting sweets). Most of Y's names fit and it flags the Q in Qahwa. A few are weaker: Nada means 'nothing' in Spanish, Heel is an English word, Akhir Rashfa has the hard kh sound, and Talata Bunn has a strained meaning."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "X opens with one top pick (Mazaj) and builds the reply around it, so there is little room for other ideas. Y lists names broadly first, then picks three favourites."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X suggests asking a few foreigners to write the name after hearing it once, then checking the trademark registry, Instagram and the .com domain, and it flags the BUNN brand conflict. Y suggests checking the commercial registry, Google Maps, the Instagram handle and the domain, testing pronunciation with non-Arab friends, and a typography tip."
+   }
+  ],
+  "x_failures": [
+   "Only five usable names, well below about 10 and at the 'fewer than about 6' failure threshold",
+   "Opens with a single top pick that frames the whole reply",
+   "Small inaccuracy: says the 'sh' in Rashfa is hard for foreigners"
+  ],
+  "y_failures": [
+   "Top pick Bunn clashes with the BUNN coffee-equipment brand; Y only says such names are widely used",
+   "Some weaker names with problems Y does not flag: Nada means 'nothing' in Spanish, Heel is an English word, Talata Bunn has a strained meaning"
+  ],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Y gives 16 varied Arabic names that are mostly easy to say. Each has a meaning, they are grouped by style, three are picked as favourites, and it lists practical checks. X is polished and spots the BUNN trademark conflict. But it offers only five names and opens with one pick, so it falls short of the generous list the user wanted and nears the failure threshold. Y's weaker names and its Bunn top pick are minor flaws by comparison."
+ },
+ "judge:S07:sonnet:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "fail",
+    "note": "X gives 16 names across five style groups (coffee, playful, poetic, compound). Y lists only five names in its table, plus Bunn, which it advises against."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both offer short Arabic names with a meaning for each, and both flag pronunciation issues (X on Qahwa; Y on several names). X has a few weak entries: 'Heel' reads oddly in English, 'Talata Bunn' has a strained rationale, and the kh sound in 'Akhir Rashfa' is hard for foreigners. Y's claim that 'sh' is hard for foreigners is doubtful."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "X names three favorites after the full list. Y opens with a single verdict (Mazaj) and offers only a thin set of alternatives, though it does add conditional guidance (heritage or youthful image)."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover the business register or trademark registry, Instagram, the domain, and a pronunciation test with non-Arabs. Y's test is more concrete (have people write the name after one hearing), and it correctly flags BUNN as an existing coffee-machine brand."
+   }
+  ],
+  "x_failures": [
+   "Top pick Bunn not flagged as an existing coffee-equipment trademark",
+   "A few weak or awkward entries (Heel, Talata Bunn, Akhir Rashfa)"
+  ],
+  "y_failures": [
+   "Only five names, below the ~6 failure threshold and far short of ~10",
+   "Opens with a single verdict and offers few ideas",
+   "Doubtful claim that 'sh' is hard for foreigners"
+  ],
+  "winner": "X",
+  "margin": "clear",
+  "rationale": "X gives 16 varied names that fit the brief, grouped by style, each with a meaning, plus three favorites and full practical checks. It meets every criterion. Y is precise and usefully flags the BUNN coffee-machine trademark, a flaw in X's top pick. But Y offers only five names and opens with a single verdict, so it fails the generosity criterion and the under-six failure condition. For a brainstorming request, X's range outweighs Y's sharper notes on each name."
+ },
+ "judge:S07:sonnet:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "fail",
+    "y": "fail",
+    "note": "Both give only five names, well short of about 10. Y also mentions Bunn but advises against it, and offers to suggest more. That is not the same as providing them."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "All names have an Arabic identity and a short meaning. X's caveats are accurate, including that some foreigners link kif with cannabis. Y's set holds up too, though it admits Sukkar suits sweets more than specialty coffee and that Rashfa is a little harder to say."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both open with a verdict (X names two favorites, Y one top pick) and cap the ideas at five. The ideas are not fully replaced, but the decisive framing outweighs the brainstorming. Y partly makes up for this with style-based alternatives."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X covers the business registry and trademark, Instagram, the domain, a fallback descriptor, and a test where people read the name and say it aloud, with a foreigner among them. Y covers trademark, Instagram and .com, adds a hear-then-write test with half foreigners, and gives the Bunn conflict as an example."
+   }
+  ],
+  "x_failures": [
+   "Only five names (below the ~6 failure threshold)",
+   "Leads with a verdict in an ideation request",
+   "No offer to generate more names"
+  ],
+  "y_failures": [
+   "Only five recommended names (below the ~6 failure threshold)",
+   "Leads with a single top verdict",
+   "Recommends Kaif without the kif/cannabis connotation",
+   "Includes a name it admits fits poorly (Sukkar)"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both hit the main failure: only five names, led by a verdict. Criterion 1 fails for both, while meanings and practical checks are solid. X's names fit the brief slightly better (Habba, Samar), and X correctly warns that some foreigners link kif with cannabis. Y adds a useful Bunn trademark warning, a better hear-then-write test, and an offer to expand. But Y includes a name it admits fits poorly (Sukkar) and recommends Kaif without that cannabis caveat. X edges ahead slightly."
+ },
+ "judge:S07:sonnet:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "fail",
+    "y": "fail",
+    "note": "Both give only five names, well short of about 10. X also names Bunn but advises against it. Both are short lists rather than a generous, varied set."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "All names are Arabic, modern and mostly easy to say, and each has a short meaning. X includes Sukkar, which it admits fits poorly, and claims Rashfa is harder to say, which is doubtful. Y's names all fit the brief, and its caveats are accurate: kif is linked to hashish, and Samar is a common name."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X puts Mazaj forward as the top pick. Y puts Habba first, then Samar. Both still give a full list with notes, so neither reduces the answer to a single verdict."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover trademark checks, Instagram, the domain and a pronunciation test with 5 to 6 people. X's test uses half foreigners, a better mix, and warns about the Bunn brand conflict. Y adds the commercial registry and suggests adding a descriptor in Arabic and English if the name is taken."
+   }
+  ],
+  "x_failures": [
+   "Only five names, far below about 10",
+   "Includes a name it admits fits poorly (Sukkar)",
+   "Doubtful caveats: Dalla read as Dallas, Rashfa hard to pronounce"
+  ],
+  "y_failures": [
+   "Only five names, far below about 10",
+   "Does not offer more names"
+  ],
+  "winner": "tie",
+  "margin": "slight",
+  "rationale": "Both give only five names with meanings, missing the target of about 10. Both lead with favorites, say they did not check availability, and suggest trademark, Instagram, domain and pronunciation checks. X adds a useful Bunn trademark warning, guidance by style and an offer to suggest more names, but includes the weak Sukkar and doubtful Dallas and Rashfa claims. Y's names (Habba, Samar) fit slightly better and its kif caveat is sharper, but it offers no follow-up. The strengths balance out."
+ },
+ "judge:S07:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "fail",
+    "y": "partial",
+    "note": "X offers only 5 names: one top pick plus 4 alternatives. That is below the failure threshold of about 6. Y offers 8 names on varied ideas (seed/bean, evening gatherings, time, breath, architecture), still short of about 10."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give modern Arabic names with a short meaning each and flag pronunciation risks honestly: X on Hawa, Y on Sammar. X's claim that Liqa sounds like 'like' is doubtful. Y does not mention that foreigners may hear Sahra as 'Sahara'."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "X opens with one pick and its reasons, then adds only 4 other names, so the response reads mostly as a verdict. Y gives the full list first and then names two favorites, which the rubric allows."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X covers all three checks: domain and social handles, the trademark register, and a pronunciation test with 5-6 people from different backgrounds. Y covers trademark, Instagram handle and domain but leaves out the pronunciation test. It does offer to tailor names to the country's dialect."
+   }
+  ],
+  "x_failures": [
+   "Only 5 names, below the failure threshold of about 6",
+   "Opens with a single pick and offers few alternatives",
+   "Doubtful claim that Liqa sounds like 'like'"
+  ],
+  "y_failures": [
+   "8 names, short of about 10",
+   "No pronunciation test among the next checks"
+  ],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Y gives 8 on-brief names, each with a meaning, and names two favorites after the full list. That clears the failure threshold, though it falls short of about 10 and leaves out a pronunciation test. X gives only 5 names and leads with one pick, which triggers the fewer-than-6 failure condition. X's next-checks section is stronger because it includes a pronunciation test, but it also claims Liqa sounds like 'like', which is doubtful. Y's larger set of ideas decides it."
+ },
+ "judge:S07:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "fail",
+    "note": "X gives 8 varied names (bean, gathering, time, architecture), which is still short of about 10. Y gives only 5 names in total, below the failure threshold of about 6."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give a meaning for every name, and nearly all names are easy to say. X glosses نَفَس as soul/spirit, but the word means breath. Y claims Liqa reads like 'like', which is doubtful. Each flags one weaker name (Sammar; Hawa vs هواء)."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "X lists all its ideas first, then picks two favorites. Y opens with a single verdict (Nawa) and follows with only four alternatives, so the ideation is thin."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X covers trademark, Instagram handle and domain, plus an offer to tailor names to the country, but suggests no pronunciation test. Y covers domain/social, the trademark registry, and a concrete test of pronunciation and spelling with 5-6 people of different backgrounds."
+   }
+  ],
+  "x_failures": [
+   "Only 8 names, short of ~10",
+   "No pronunciation test suggested",
+   "Slightly inaccurate gloss of نَفَس (breath, not soul)"
+  ],
+  "y_failures": [
+   "Only 5 names, triggering fewer-than-6 failure condition",
+   "Verdict-first structure with thin ideation",
+   "Dubious claim that Liqa reads like 'like' as an advantage"
+  ],
+  "winner": "X",
+  "margin": "clear",
+  "rationale": "X offers eight varied, easy-to-say Arabic names with meanings, picks two favorites, and says to check trademark, handle and domain. It falls short of about 10 names and has no pronunciation test. Y gives only five names, which triggers the fewer-than-six failure. It also opens with a single verdict and makes a doubtful 'like' claim, though its next-step checks are the most complete. X serves the core request for name ideas better."
+ },
+ "judge:S07:haiku:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "fail",
+    "note": "X gives 6 names with varied themes, which is still well short of about 10. Y gives only 5, below the roughly-6 failure threshold."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "partial",
+    "note": "All six of X's names fit the brief and each has a short meaning. The q sound in Rawaq is a minor pronunciation issue. Y gives meanings too, but Liqa has a q and a final hamza, its claim that foreigners hearing 'like' is an advantage is speculative, and Y itself says Hawa can be confused with the word for air."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X picks three favourites and then adds more options. Y opens with one top pick and still lists four alternatives, so the single choice does not replace the ideas."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X covers name availability, domain and trademark, and says it did not check them itself. It leaves out social handles and a pronunciation test. Y covers domain, social handles, a trademark registry search and a pronunciation test with 5 or 6 people from different backgrounds."
+   }
+  ],
+  "x_failures": [
+   "Only 6 names, short of about 10",
+   "Next steps leave out social handles and a pronunciation test"
+  ],
+  "y_failures": [
+   "Only 5 names, below the roughly-6 failure threshold",
+   "Speculative claim that Liqa sounding like 'like' is an advantage",
+   "Includes Hawa despite saying it can be confused with another word"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Neither reaches about 10 names. X gives six names that fit the brief, each with a short meaning, picks three favourites, and correctly warns that Bunn is already a coffee-equipment brand. Its next steps leave out social handles and a pronunciation test. Y gives only five names, which trips the fewer-than-6 condition, and makes a speculative 'like' claim about Liqa. Y does have the fuller checklist, including a pronunciation test. X wins narrowly because it does better on the main task, the names."
+ },
+ "judge:S07:haiku:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "fail",
+    "y": "partial",
+    "note": "X lists only 5 names (Nawa, Samar, Sharara, Liqa, Hawa), which is below the ~6 floor. Y lists 6 varied names (Samar, Nabd, Darb, Lamma, Rawaq, Bunn). That meets the floor but is still well short of ~10."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both sets are Arabic, feel modern, are mostly easy to say, and come with meanings. In X, the claim that 'Liqa' reads like 'like' is doubtful, and X itself warns that Hawa can be confused with هواء. In Y, Nabd is given only a connotation, not its literal meaning (pulse), and its ض sound is not flagged. Both sets of issues are minor."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X opens with one top pick and its reason, then gives four alternatives. Y picks three favorites and adds three more options. Neither replaces the list with a single verdict."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X covers domain, social handles, the trademark registry, and a pronunciation and spelling test with 5-6 people from different backgrounds. Y covers name, domain and trademark availability and honestly says it did not check them, but leaves out social handles and a pronunciation test."
+   }
+  ],
+  "x_failures": [
+   "Only 5 names, below the ~6-name failure floor",
+   "Far short of ~10 ideas",
+   "Doubtful claim that 'Liqa' sounds like 'like'",
+   "Includes Hawa, which X itself says is easily confused"
+  ],
+  "y_failures": [
+   "Only 6 names, well short of ~10",
+   "Next steps leave out social handles and a pronunciation test",
+   "Nabd given no literal meaning"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both lists are thin. X gives only five names, below the rubric's ~6 floor, and claims 'Liqa' reads like 'like', which is doubtful. Its next-step checklist (trademark, domain, socials, pronunciation test) is more complete. Y gives six varied names that fit the brief, picks three favorites, correctly warns that Bunn is a trademark, and admits it did not check availability. It skips social handles and pronunciation testing. Y's stronger list narrowly wins."
+ }
+}

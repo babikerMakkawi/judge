@@ -11,3 +11,7 @@
 - Fairness guard for comparing options and people; the skill's own drafts are treated as proposals.
 - Final self-check: recompute numbers, make "only"/"best" claims match the table, and make no execution remarks when no tool or request exists.
 - References: `edge-cases.md`, `runtime-protocol.md`, `usage.md`; Codex metadata in `agents/openai.yaml`.
+- The light edition is self-contained: essential rules for tools, delegation, handoff, ties and stakeholders are inline, so it works when pasted without its reference files. Both light editions stay under 8,000 characters, with a safety margin.
+- The personal-decision example is conditioned on what the user shared, instead of an unqualified verdict.
+- `agents/openai.yaml`: removed the unverified `policy.products` list; light editions now invoke `$judge-flash`.
+- Repository: MIT license, logo, published evaluation records in `evals/`, and a GitHub Actions check (`scripts/validate.py`) for frontmatter, size limits, links and EN/AR file parity.

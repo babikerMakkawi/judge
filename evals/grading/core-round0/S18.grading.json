@@ -1,0 +1,234 @@
+{
+ "judge:S18:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both rule out C at $1,349 as over the max. X calls C the 'best match' and says 'get C instead', but only if a discount brings it under $1,300. Its math checks out: 4% off gives $1,295. Y also makes C conditional on it dropping under $1,300."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables cover all six models, and each has a clear one-line verdict. X's table also includes prices."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both flag D's 8GB as inadequate, B's 2.1 kg and 6h battery as poor for carrying, and A's need to emulate x86. Y explicitly says to have courses confirm that ARM works. X ties the issue to VM images a course provides and adds that most Docker images now have ARM builds."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly pick E and say what would change the pick: A if ARM and 16GB are enough, C if a discount brings it under budget. X also points out that sales tax above about 4% would push E over the $1,300 limit, which is correct."
+   }
+  ],
+  "x_failures": [
+   "Calls the over-budget C the 'best match'",
+   "Table points repeated in the 'Why not' sections"
+  ],
+  "y_failures": [
+   "Leaves out that most Docker images have ARM builds",
+   "Awkward wording on B ('6h battery... too much to carry')"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "All rubric items pass for both: each picks E, covers all six, excludes C on budget, and flags D, B and A's ARM caveat. X adds accurate nuance (most Docker images have ARM builds; course x86 VM images need slow emulation) plus correct discount and sales-tax math against the $1,300 max. Y is tighter and explicitly says to confirm ARM with courses, but omits the Docker nuance. X's 'best match' label for C and some redundancy are minor."
+ },
+ "judge:S18:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both rule out C at $1,349 and would only switch to it if a discount brings it under $1,300. Y calls C the 'best match for your needs', which leans toward it, but the switch still depends on getting under budget."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables cover all six models. Y's table also lists prices."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both flag D's 8GB, B's 2.1 kg and 6h battery, and the slow x86 emulation on A's ARM chip. X tells the student to confirm with their courses. Y adds more detail: course-supplied VM images may be x86, ARM guests run at full speed, and most Docker images come in ARM versions."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly pick E. X has an explicit 'what would change it' section (A, plus C in the table). Y covers when to choose A or C and adds a sales-tax caveat."
+   }
+  ],
+  "x_failures": [
+   "No sales-tax check against the hard budget cap",
+   "ARM caveat skips that most Docker images come in ARM versions"
+  ],
+  "y_failures": [
+   "Sections repeat what the table already says",
+   "Calls the over-budget C the 'best match'",
+   "Tax point not squared with the C-discount math"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both pass every rubric item. Each rules out C on budget, covers all six, flags D, B and A's ARM chip correctly, and picks E with conditions that would change it. Y edges ahead with a more detailed ARM caveat (ARM guests and most Docker images run fine; x86 and course VM images need emulation) and a useful sales-tax check against the budget. X is tighter and adds a practical buy-and-return test. Y's repetition, 'best match' label for C and unreconciled tax/discount math keep the margin slight."
+ },
+ "judge:S18:sonnet:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both exclude C for going over budget. X correctly says it is $49 over but still calls it 'the upgrade' if the user can stretch, which pushes against their stated max. Y simply says 'Over budget at $1,349.'"
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover all six models. X uses bullets for E plus a 'why not' list for A, B, C, D and F. Y covers E in its verdict and the other five in a compact table."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both say D's 8GB is too little and B's 2.1 kg and 6h battery are poor for carrying. X raises the ARM issue but calls A 'just not for your use case' and never suggests checking course needs. Y explicitly says to check whether courses need x86-only tools, and that A becomes attractive if they don't."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly pick E. X's alternatives (stretch the budget for C, or B for desk use) go against the user's stated limits. Y's alternative (A if x86 isn't needed) depends on something the user doesn't yet know, and it adds a test plan within the return window."
+   }
+  ],
+  "x_failures": [
+   "ARM caveat not framed as a check against course needs",
+   "Says A has the best weight, but D is lighter (1.2 kg)",
+   "Calls over-budget C 'the upgrade' if the user can stretch",
+   "Names B runner-up despite the all-day carrying need"
+  ],
+  "y_failures": [],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Both pick E, cover all six models, exclude C, and flag D and B. Y treats A's ARM chip as something to check against course requirements, as the rubric asks. It gives a relevant runner-up condition and a practical plan to test within the return window. X calls ARM flatly disqualifying, calls over-budget C an upgrade, names B runner-up despite the all-day carrying need, and wrongly says A has the best weight (D is lighter)."
+ },
+ "judge:S18:sonnet:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X: 'Over budget at $1,349.' Y also excludes C as $49 over budget, but adds 'If you can stretch, it's the upgrade', which pushes against a budget the user called a maximum."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover all six. X covers E in its verdict and the other five in a table. Y has a section on E plus a 'why not' entry for each of the other five."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "Both flag D's 8GB RAM and B's weight and battery. X treats A's ARM chip as an emulation caveat and says to check whether courses need x86-only tools. Y names the ARM problem but rules A out ('not for your use case') and never says to check course needs."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly pick E. X names A as runner-up if ARM is fine, plus a return-window test. Y's alternatives (B for desk use, C if the budget stretches) assume conditions the user ruled out."
+   }
+  ],
+  "x_failures": [],
+  "y_failures": [
+   "Rules A out for its ARM chip instead of saying to check course needs",
+   "Suggests stretching the budget for C despite the stated max",
+   "Runner-up B contradicts the all-day carrying need"
+  ],
+  "winner": "X",
+  "margin": "clear",
+  "rationale": "Both pick E, exclude C, cover all six, and flag D and B. X treats A's ARM chip as a caveat to check against course needs and offers A as a runner-up that fits the user's limits, fully meeting items 3 and 4. Y rules A out as 'not for your use case', suggests stretching to over-budget C despite the stated max, and names desk-bound B as runner-up, contradicting the all-day carrying need. Y argues for E in slightly more detail, but X is more useful."
+ },
+ "judge:S18:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both rule out C ($1,349) for exceeding the $1,300 cap. Y also gives the correct gap of $49."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X puts C, B and D in a ruled-out list and A, E and F in a shortlist table. Y covers all six in its verdict and elimination list. Nothing is dropped, though X misstates F's price relative to E."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both flag D's 8GB, B's 2.1 kg and 6h battery, and A's ARM chip. X explains that x86 images and VMs must be emulated and ties this to coursework. Y's ARM caveat is vaguer but asks the user to check their specific images and VMs."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly pick E and say what would change the pick (A for ARM-friendly, weight-first use). Y also names B as the only in-budget option for heavy RAM needs. X's justification against F contains a price error."
+   }
+  ],
+  "x_failures": [
+   "Says F is $50 cheaper than E when it is $50 more, contradicting its own table"
+  ],
+  "y_failures": [
+   "Overstates that E is 'the only model' that meets all needs",
+   "ARM caveat is less specific (no emulation detail, not tied to coursework)"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both exclude C, cover all six models, flag D, B and A's ARM caveat, and clearly pick E with conditions for switching. X explains ARM emulation better and adds a shortlist table, but says F is $50 cheaper than E, contradicting its own table. Y's figures are all correct ($49 over budget; F costs $50 more and loses to E on everything but screen size). Y also names B as the fallback for heavy RAM needs. Y's small overstatement matters less than X's factual error."
+ },
+ "judge:S18:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both rule out C for going over budget. X also gives the exact overage: $49."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both address all six models. X covers them in its verdict and elimination list. Y covers C, B and D in its ruled-out list and A, E and F in its shortlist table."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both flag D's 8GB RAM, B's 2.1 kg and 6h battery, and A's ARM chip. Y is more explicit: it explains that x86 images and VMs must be emulated and ties the check to coursework. X refers to x86-only images and VM software and adds an ARM-compatible condition for choosing A."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly pick E and say what would change the choice. X names two triggers: B for heavier RAM needs, and A if ARM works and weight matters most. Y names the A trigger and offers a firmer call if given more details."
+   }
+  ],
+  "x_failures": [
+   "Unexplained '>16GB' threshold for switching to B",
+   "x86 compatibility check in next step adds little value",
+   "ARM caveat not explicitly tied to coursework"
+  ],
+  "y_failures": [
+   "Says F is $50 cheaper than E when it is $50 more, contradicting its own table",
+   "'Most RAM' and 'cheapest' claims are true only within the shortlist"
+  ],
+  "winner": "X",
+  "margin": "clear",
+  "rationale": "Both exclude C, cover all six, flag D's RAM, B's weight/battery and A's ARM caveat, and pick E with change conditions. Y explains ARM emulation and ties it to coursework more explicitly and adds a shortlist table, but it wrongly says F is $50 cheaper than E (it is $50 more), contradicting its own table. X is accurate throughout, correctly shows F is dominated by E, and adds a B fallback for heavier RAM needs."
+ }
+}

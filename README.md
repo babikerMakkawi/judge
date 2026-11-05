@@ -1,14 +1,16 @@
 <div align="center">
 
-# ⚖️ judge
+<img src="assets/logo.png" alt="judge logo: a hand holding a red gavel" width="160">
+
+# judge
 
 **Clear decisions. Less noise.**
 
 An Agent Skill that helps an AI assistant compare options, evaluate projects, surface risks and give an honest recommendation — in the user's own language and dialect.
 
-`v1.0.0` · English & Arabic instructions · Full and light editions
+`v1.0.0` · English & Arabic instructions · Full and light editions · MIT License
 
-[English](#english) · [العربية](#العربية)
+[English](#english) · [العربية](#العربية) · [Evaluation records](evals/)
 
 </div>
 
@@ -34,7 +36,7 @@ An Agent Skill that helps an AI assistant compare options, evaluate projects, su
 | Edition | Folder | Size | Best for |
 |---|---|---|---|
 | **judge** (full) | `skills/en/judge` · `skills/ar/judge` | ~18k chars (EN) · ~16k (AR) | Claude Code, Claude apps, Codex and other hosts with skill support |
-| **judge-flash** (light) | `skills/en/judge-flash` · `skills/ar/judge-flash` | < 8,000 chars | Custom GPTs, Gemini Gems and hosts with tight instruction limits |
+| **judge-flash** (light) | `skills/en/judge-flash` · `skills/ar/judge-flash` | ~7.8k chars (EN) · ~7.6k (AR), under 8,000 | Custom GPTs, Gemini Gems and hosts with tight instruction limits; works standalone |
 
 The English and Arabic instructions say the same thing. Every edition **replies in the user's language** whichever instruction language you install, so pick Arabic instructions only if you want to read or edit them in Arabic.
 
@@ -43,6 +45,9 @@ The English and Arabic instructions say the same thing. Every edition **replies 
 ## Repository layout
 
 ```
+assets/logo.png             # repository logo
+evals/                      # scenarios, raw answers and blind grading behind the test claims
+scripts/validate.py         # structural checks, run by GitHub Actions on every push
 skills/
 ├── en/
 │   ├── judge/                  # full edition, English instructions
@@ -71,13 +76,13 @@ Use `.claude/skills/judge` inside a project instead to scope it to that project.
 
 **Claude apps (claude.ai, desktop, mobile)**: zip one skill folder (for example `judge/`) and upload it under Settings → Capabilities → Skills. Menu names may change over time.
 
-**Codex**: copy the folder into your Codex skills directory and invoke it with `$judge`. The `agents/openai.yaml` file provides the display name, icon and default prompt.
+**Codex**: copy the folder into your Codex skills directory and invoke it with `$judge` (or `$judge-flash`). The `agents/openai.yaml` file provides the display name, icon and default prompt. Check the current Codex documentation for the skills path on your setup.
 
 ```bash
 cp -r skills/en/judge ~/.codex/skills/judge
 ```
 
-**Custom GPTs, Gemini Gems or any plain chat**: paste the contents of `judge-flash/SKILL.md` into the instructions field. If the host accepts knowledge files, also upload the files in `references/`. Otherwise the skill works from its main instructions alone.
+**Custom GPTs, Gemini Gems or any plain chat**: paste the contents of `judge-flash/SKILL.md` into the instructions field. The light edition is self-contained; if the host accepts knowledge files, uploading `references/` adds detail for edge cases and tool use.
 
 ## How to use it
 
@@ -117,16 +122,18 @@ Real numbers matter more than descriptions. If you don't know something, write *
 
 ## Testing and limitations
 
-The skill was developed through blind A/B tests against the same models without the skill. Rubrics were written before each run, judges did not know which answer came from the skill, and the answer order was swapped between judges. The tests covered:
+The skill was developed through blind A/B tests: the same model answered each scenario with and without the skill. Pass criteria were written before each run, and graders did not know which answer used the skill. Everything is published in [`evals/`](evals/): scenarios, raw answers, grading and the blinding key.
 
-- core and regression scenarios: options, scoring formulas, multi-turn decisions, pushback, purchase authorization with a simulated tool timeout;
-- real-world business cases: barbershop, supermarket, importing goods and more complex ventures. In the final round the skill won 4 of the 5 business cases and caught 34 of 35 hidden risks;
-- unworkable and joke ideas: the skill flagged all six as unworkable up front, offered a realistic niche and a cheap test each time, and invented no numbers.
+- **The original draft showed no net benefit**: 17 wins, 17 losses and 7 ties in 41 blind comparisons. Every later version was revised from those failures.
+- **Core behaviors** (resisting pushback without evidence, fair comparisons, flawed scoring formulas, warm personal answers, idea lists, purchase authorization with a simulated tool timeout): all 7 losing scenarios improved on retest.
+- **Business projects** (barbershop, supermarket, importing, restaurant partnership, gym franchise): v1.2 won 4 of 5 and caught 34 of 35 hidden risks, against 33.5 for the baseline. Risk coverage was about even; the gain was in answer quality (8.6 vs 8.0) and in ranking the most serious risks first.
+- **Unworkable and joke ideas**: all six were flagged as unworkable up front, each with a realistic nearby niche and a cheap test, and no invented numbers.
 
 **Limits:**
 
-- Tests ran on Claude models (Opus, Sonnet, Haiku) in simulated chats, with one run per case.
-- GPT and Gemini are untested.
+- Tests ran on Claude models (Opus, Sonnet, Haiku) in simulated chats, with one run per case. Some later rounds were graded by the developer rather than blind graders.
+- The final pre-release edits were not re-tested.
+- GPT and Gemini are untested. Results from them are welcome.
 - None of this guarantees accuracy. The skill gives decision support, not professional legal, medical or financial advice.
 - Tools, accounts, external actions and background execution depend on the host and your authorization. The skill installs no connectors.
 
@@ -136,7 +143,7 @@ See [CHANGELOG.md](CHANGELOG.md). Current release: **1.0.0**.
 
 ## License
 
-No license has been chosen yet. Until one is added, all rights are reserved by the author.
+[MIT](LICENSE) © 2026 Babiker Makkawi. You may use, modify and share the skill, including commercially, as long as the copyright notice is kept.
 
 ---
 
@@ -169,7 +176,7 @@ No license has been chosen yet. Until one is added, all rights are reserved by t
 | النسخة | المجلد | الحجم | الأنسب لـ |
 |---|---|---|---|
 | **judge** (الكاملة) | `skills/ar/judge` · `skills/en/judge` | نحو 16 ألف حرف (عربي) و18 ألفًا (إنجليزي) | Claude Code وتطبيقات Claude وCodex |
-| **judge-flash** (الخفيفة) | `skills/ar/judge-flash` · `skills/en/judge-flash` | أقل من 8,000 حرف | Custom GPTs وGemini Gems والمنصات ذات الحدود الضيقة |
+| **judge-flash** (الخفيفة) | `skills/ar/judge-flash` · `skills/en/judge-flash` | أقل من 8,000 حرف | Custom GPTs وGemini Gems والمنصات ذات الحدود الضيقة، وتعمل وحدها دون ملفات إضافية |
 
 التعليمات العربية والإنجليزية متطابقتان في المعنى. **كل النسخ تجيب بلغة المستخدم ولهجته** أيًا كانت لغة التعليمات. ثبّت **نسخة واحدة فقط** في كل منصة.
 
@@ -177,8 +184,8 @@ No license has been chosen yet. Until one is added, all rights are reserved by t
 
 - **Claude Code:** انسخ مجلد المهارة إلى `~/.claude/skills/judge`، ثم استدعها بـ `/judge`.
 - **تطبيقات Claude:** اضغط مجلد المهارة في ملف zip، ثم ارفعه من الإعدادات ← Capabilities ← Skills.
-- **Codex:** انسخ المجلد إلى `~/.codex/skills/judge`، ثم استدعها بـ `$judge`.
-- **Custom GPTs وGems وأي محادثة عادية:** الصق محتوى `judge-flash/SKILL.md` في خانة التعليمات، وارفع ملفات `references/` إن أمكن.
+- **Codex:** انسخ المجلد إلى مجلد مهارات Codex، ثم استدعها بـ `$judge` أو `$judge-flash`.
+- **Custom GPTs وGems وأي محادثة عادية:** الصق محتوى `judge-flash/SKILL.md` في خانة التعليمات. النسخة الخفيفة تعمل وحدها، ورفع ملفات `references/` يضيف تفاصيل للحالات الخاصة.
 
 ### الطلب المقترح لتقييم مشروع
 
@@ -212,19 +219,22 @@ judge: قيّم مشروعي بصراحة، واذكر العيوب والمخا
 
 ### الاختبار والحدود
 
-طُوّرت المهارة باختبارات مقارنة عمياء ضد النموذج نفسه بدون المهارة. شملت الاختبارات:
+طُوّرت المهارة باختبارات مقارنة عمياء ضد النموذج نفسه بدون المهارة. كل السيناريوهات والردود الخام والتقييمات منشورة في مجلد [`evals/`](evals/).
 
-- **المقارنات والقرارات متعددة الرسائل وتفويض الشراء.**
-- **مشاريع حقيقية:** محل حلاقة، وسوبرماركت، واستيراد بضائع. فازت المهارة في 4 من 5 مشاريع في الجولة الأخيرة، والتقطت 34 من 35 خطرًا مخفيًا.
-- **أفكار غير قابلة للتطبيق أو مزاح:** حكمت المهارة على الأفكار الست بأنها غير قابلة للتطبيق من البداية، دون اختلاق أرقام.
+- **المسودة الأصلية:** بلا فائدة صافية، 17 فوزًا و17 خسارة و7 تعادلات في 41 مقارنة. وعُدّلت المهارة بناءً على تلك الإخفاقات.
+- **السلوكيات الأساسية:** تحسنت السيناريوهات الخاسرة السبعة كلها عند إعادة الاختبار.
+- **المشاريع التجارية:** فاز الإصدار 1.2 في 4 من 5 مشاريع. التقط 34 من 35 خطرًا مخفيًا مقابل 33.5 بدون المهارة، أي تقارب في التغطية، والتفوق كان في جودة الرد (8.6 مقابل 8.0).
+- **الأفكار غير القابلة للتطبيق:** حكمت المهارة على الأفكار الست بذلك من البداية، مع حاجة قريبة واختبار رخيص، دون اختلاق أرقام.
 
 **الحدود:**
 - الاختبارات أُجريت على نماذج Claude فقط، بتشغيل واحد لكل حالة.
+- بعض الجولات قيّمها المطوّر لا محكّم أعمى.
+- آخر التعديلات قبل الإصدار لم يُعَد اختبارها.
 - لم تُختبر على GPT وGemini بعد.
 - المهارة دعم للقرار، لا استشارة قانونية أو طبية أو مالية متخصصة.
 
 ### الترخيص
 
-لم يُحدد الترخيص بعد، وجميع الحقوق محفوظة للمؤلف إلى أن يُضاف ترخيص.
+مرخّصة بموجب [MIT](LICENSE). يمكنك استخدامها وتعديلها ومشاركتها، حتى تجاريًا، بشرط الإبقاء على إشعار حقوق المؤلف.
 
 </div>
