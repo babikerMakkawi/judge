@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="judge logo" width="140">
+<img src="assets/banner.jpg" alt="judge: an ordinary user, a domain expert, a judge, a devil's advocate and an evidence auditor around one table" width="100%">
 
-# judge
-
-**Clear decisions. Less noise. · قرارات أوضح، وكلام أقل.**
+**قرارات أوضح، وكلام أقل.**
 
 An AI skill that compares options, evaluates projects, finds the risks and gives an honest recommendation, in your language.
 
@@ -26,6 +24,7 @@ An AI skill that compares options, evaluates projects, finds the risks and gives
 
 ## What it does
 
+- Reviews your idea from five angles: the ordinary user, the devil's advocate with a fair objection, the domain expert, the evidence auditor and the judge.
 - Gives a clear verdict first, then the reasons, the main risk and the next step.
 - For a business or other costly decision, it checks ten risk areas and ranks them by severity.
 - Says plainly when an idea can't work, then suggests a realistic alternative.
@@ -73,6 +72,7 @@ Tested on Claude models only, one run per case ([test records](evals/)). It supp
 
 ## ماذا تفعل؟
 
+- تراجع فكرتك من خمس زوايا: المستخدم العادي، ومحامي الشيطان ذو الاعتراض الوجيه، وخبير المجال، ومدقق الأدلة، والقاضي.
 - تعطيك الحكم أولًا، ثم الأسباب، وأهم خطر، والخطوة التالية.
 - في المشاريع والقرارات المكلفة، تفحص عشرة أنواع من المخاطر وترتبها حسب خطورتها.
 - تقول بصراحة إن كانت الفكرة غير قابلة للتطبيق، ثم تقترح بديلًا واقعيًا.
