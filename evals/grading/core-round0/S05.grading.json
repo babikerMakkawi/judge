@@ -1,0 +1,186 @@
+{
+ "judge:S05:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X states B at €540/month for 12 users and excludes it. Y shows the arithmetic (10 included users plus 2 extras at €30 = €540) and excludes it."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give A as €475 and flag the US hosting of health data as a GDPR concern that needs review or safeguards, without calling it illegal. X adds a correct headroom point: a 13th user puts A at exactly €500."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover the €200/month fee, the €6,000 onboarding fee, €10,800 in total, €450/month on average, and the 24-month lock-in. Neither asks outright whether the clinic can pay the €6,000 up front, but the 'and/or' wording means the effective-cost figure is enough."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X opens with a conditional verdict ('only if you can commit to the 24-month contract') and names A as the fallback once a data-protection review is done. Y's first line is direct but has no condition, and it offers no fallback if the lock-in or the fee is a problem."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither invents vendor facts, and both frame the legal points as things to check. X assumes the clinic has a data protection officer, which is a small assumption about the clinic, not a vendor claim."
+   }
+  ],
+  "x_failures": [
+   "Assumes the clinic has a data protection officer",
+   "'No room for growth' overstates it: one more user still fits at exactly €500",
+   "Awkward wording: 'confirm the €6,000 is non-refundable'"
+  ],
+  "y_failures": [
+   "Verdict has no condition and no fallback if the 24-month lock-in or the up-front fee is unacceptable"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both get A=€475, B=€540 and C's effective €450/month right. Both exclude B, flag A's US hosting as a GDPR question to verify, and lead with C. X makes its verdict depend on accepting the 24-month lock-in and names A as the fallback after a data-protection review, which is what criterion 4 asks for. Y's verdict has no condition and no fallback. Y is tighter, shows B's arithmetic and uses the correct German term for a data processing agreement. X has small flaws, such as assuming the clinic has a data protection officer."
+ },
+ "judge:S05:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X shows the working (10 included users plus 2 extras at €30 = €540) and rules B out. Y gives the right total of €540 for 12 users and rules it out, but shows no breakdown."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give €475. X says not to use A for health records unless it offers EU hosting or the transfer safeguards check out. Y calls US hosting a problematic GDPR fit that needs a data-protection review. Neither says it is outright illegal. Y also notes that a 13th user brings A to €500."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover the €200/month fee, the €6,000 onboarding fee, the 24-month lock-in and the effective cost of €450/month (€10,800 total). Neither asks whether the €500 limit has to absorb the €6,000 paid upfront."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X opens with a direct but unconditional 'Go with C'. Y opens with 'Choose C, but only if you can commit to the 24-month contract' and names A as the fallback. Neither buries its verdict."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither invents vendor facts, and both frame legal points as things to check (DPA/AVV, transfer safeguards, exit terms). Y assumes the clinic has a data protection officer, which is a minor overreach."
+   }
+  ],
+  "x_failures": [
+   "Verdict is not conditional",
+   "No fallback if the lock-in or upfront fee is unacceptable",
+   "Does not ask whether the €6,000 upfront fits the €500/month limit"
+  ],
+  "y_failures": [
+   "Does not ask whether the €6,000 upfront fits the €500/month limit",
+   "Assumes the clinic has a data protection officer"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both compute A at €475, B at €540 (ruled out) and C at €450/month effective over 24 months. Both flag US hosting for checking without calling it illegal, and both lead with C. Y's verdict depends on accepting the 24-month lock-in and names A as a fallback after a data-protection review, which meets item 4. X's verdict has no conditions. X is tighter and fits \"just tell me\" better, so Y wins only slightly. Neither raises the €6,000 paid upfront."
+ },
+ "judge:S05:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both work out €480 + 2 × €30 = €540 and rule PraxisPro out. Y's suggestion to negotiate PraxisPro down to €500 or less is a fallback. It does not recommend B at the quoted price."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "partial",
+    "note": "X shows €300 + 7 × €25 = €475. It says US hosting makes GDPR and health-data compliance harder, without calling it legal or illegal. Y handles the risk well ('serious data-protection risk', 'you'd need legal sign-off'). But Y never states €475 a month. A reader can only work it out from the €11,400 total and 'hits exactly €500 with one more hire'."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give €10,800 over 24 months, or €450 a month on average. Both note the two-year lock-in and suggest spreading the €6,000 fee. Y ties the fee to the €500 limit in its opening line."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X opens with 'MediDesk (C).', which is direct but has no condition attached. The point about whether the €6,000 can be paid upfront only comes in the later notes and the fallback. Y's first sentence gives the verdict and the condition together: pay the €6,000 from reserves and keep it outside the €500 a month. Neither buries the verdict."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither invents vendor facts. X states the §393 SGB V requirement without any condition and calls C5 'a security certificate from the BSI'. That is slightly off: an independent auditor issues the attestation against BSI criteria. Y qualifies its legal and tax points: the C5 rule applies 'if you treat GKV patients', the VAT reclaim point is 'usually' true and a Steuerberater should confirm it."
+   }
+  ],
+  "x_failures": [
+   "First-line verdict has no condition; the €6,000 upfront caveat comes later",
+   "Doesn't check whether prices include VAT, which can push CareFlow and the spread MediDesk fee over €500",
+   "Small legal inaccuracies (C5 'from the BSI', §393 stated without its GKV condition)",
+   "CareFlow fallback skips the AVV/C5 checks"
+  ],
+  "y_failures": [
+   "Never states CareFlow's €475/month outright",
+   "Longer than 'just tell me which one' calls for"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both rule out PraxisPro at €540, choose MediDesk and get €10,800 / €450 for the two years. Y puts the key condition in its first sentence: pay the €6,000 from reserves, outside the monthly limit. It also qualifies its legal points better and adds a VAT check that matters for a VAT-exempt practice. X is shorter and states €475 explicitly. But its opening verdict has no condition, its C5/§393 claims are slightly overstated, and its CareFlow fallback skips the compliance checks. Y edges it."
+ },
+ "judge:S05:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both show €480 + 2 × €30 = €540 and rule PraxisPro out."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "pass",
+    "note": "Y states €300 + 7 × €25 = €475 and says US hosting makes GDPR compliance harder, without calling it illegal. X calls US hosting a serious data-protection risk that needs legal sign-off. However, X only implies CareFlow's €475/month (through €11,400 over two years and 'hits exactly €500 with one more hire') and never states it."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give €10,800 over 24 months, €450/month if the fee is spread, and flag the two-year lock-in. X makes the verdict depend on paying the fee from reserves, outside the monthly limit. Y treats the €450 average as within the limit."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X's first line is a direct verdict that includes its condition (pay the €6,000 from reserves). Y's first line is just 'MediDesk (C).', and the conditions about the fee come later. Neither buries the verdict."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither invents vendor facts. X hedges its VAT and § 393 SGB V points and ties § 393 to treating GKV patients. Y states § 393, the 10-year retention rule and the AWS Frankfurt region as plain facts. These are broadly correct, although a C5-Testat is issued by an auditor, not by the BSI."
+   }
+  ],
+  "x_failures": [
+   "CareFlow's €475/month never stated outright",
+   "Longer than a 'just tell me' request needs"
+  ],
+  "y_failures": [
+   "Headline verdict leaves out the fee condition",
+   "No VAT check, so '€450 under your limit' and the CareFlow fallback could go over €500",
+   "Describes the C5-Testat as a BSI certificate"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both correctly exclude PraxisPro (€540), handle MediDesk's €6,000 fee, 24-month lock-in and €450 effective cost, and lead with MediDesk. X's opening verdict is explicitly conditional on paying the fee from reserves. It also adds an accurate, hedged VAT check that could push CareFlow and the spread-fee option over €500, though it never states CareFlow's €475. Y is tighter and shows all the arithmetic, but its headline verdict is unconditional and it ignores VAT."
+ }
+}

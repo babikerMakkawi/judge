@@ -1,0 +1,122 @@
+{
+ "judge:S09:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are accurate and short. They cover connection setup, reliable ordered delivery, retransmission, flow and congestion control, overhead and typical uses. Y is tighter at about 68 words to X's 91. X adds a few useful details: the handshake, the term best-effort, and TCP's overhead and latency cost stated outright. Both use the common textbook example of streaming over UDP."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither has a verdict template, option list or clarifying question. Y's repeated 'Use it for...' sounds slightly prescriptive next to X's descriptive 'It's used for...', but it does not turn the question into a decision."
+   }
+  ],
+  "x_failures": [],
+  "y_failures": [],
+  "winner": "tie",
+  "margin": "slight",
+  "rationale": "Both are correct two-paragraph comparisons covering connections, reliability and ordering, retransmission, flow and congestion control, overhead and typical uses. Neither has a verdict template, option list or question. Y is tighter (about 68 vs 91 words), which fits 'keep it short' better. X adds useful detail (handshake, best-effort, TCP's cost stated outright) and says 'It's used for' where Y says the slightly prescriptive 'Use it for'. Their strengths cancel out, so this is effectively a tie."
+ },
+ "judge:S09:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are short and correct. X is 68 words and covers connection-oriented vs connectionless, reliable ordered delivery, retransmission, flow and congestion control, overhead, and good example uses. Y is 91 words: it covers the same points and also states TCP's overhead and latency cost and the lack of a handshake, so it is still short. Both simplify slightly by listing 'streaming' as a typical UDP use."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither uses a verdict template, an option list or clarifying questions. X says 'Use it for...', which sounds a little like advice but only lists typical uses. Y's 'It's used for...' simply describes them."
+   }
+  ],
+  "x_failures": [],
+  "y_failures": [],
+  "winner": "tie",
+  "margin": "slight",
+  "rationale": "Both answers are short, accurate and free of verdict templates, option lists or questions. X is shorter (68 vs 91 words), so it follows 'keep it short' slightly more closely. Y states TCP's overhead and latency cost outright, and its 'It's used for' describes uses where X's 'Use it for' sounds slightly like advice. Both simplify 'streaming' as a UDP use. These small differences cancel out, so neither is meaningfully better for this user."
+ },
+ "judge:S09:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are short (about 105-115 words) and correct on the handshake, reliable in-order delivery, retransmission, congestion slowdown, overhead and typical uses. X's 'slows down... which adds overhead' gets the cause slightly wrong, and Y's 'the cost is extra overhead and delay' is a little more precise. Neither point changes the grade."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "partial",
+    "note": "X ends with an 'In short' line that only describes the tradeoff. It has no verdict, no menu of options and no questions. Y ends with 'Rule of thumb: if you need every byte in order, use TCP... use UDP'. That tells the user which to pick, which is decision framing they did not ask for. It is only one sentence, so this is partial, not a fail."
+   }
+  ],
+  "x_failures": [],
+  "y_failures": [
+   "Unrequested 'Rule of thumb' telling the user when to use TCP or UDP (decision framing)"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both give short, accurate explanations with nearly the same content and length: the handshake, reliable ordered delivery, retransmission, congestion control, overhead and typical uses. X ends by describing the tradeoff. Y ends with a 'Rule of thumb' telling the user when to use TCP or UDP. That is the decision framing the rubric flags, though it is one sentence and does little harm. Neither asks questions or offers a menu of options. X wins narrowly."
+ },
+ "judge:S09:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are about 110 words and accurate. Each covers the handshake vs. no connection, ordering, retransmission, congestion control, overhead/latency and typical uses. Y also spells out both acronyms. Y's line linking slowing down to 'overhead' is a little loose but not wrong enough to matter."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "pass",
+    "note": "X ends with a bolded 'Rule of thumb' that tells the user to 'use TCP' or 'use UDP' depending on their needs. That is decision framing the user never asked for. Y's 'In short' line states the tradeoff neutrally and prescribes nothing. Neither reply asks clarifying questions or presents options to choose from."
+   }
+  ],
+  "x_failures": [
+   "Unrequested 'Rule of thumb' decision framing (use TCP if..., use UDP if...)"
+  ],
+  "y_failures": [],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Both replies are short, accurate and nearly identical in content: handshake, ordering, retransmission, congestion control, overhead and typical uses. The difference is the closing line. X adds a bolded 'Rule of thumb' telling the user which protocol to use. The user didn't ask for that, and the rubric explicitly flags this kind of decision framing as a failure. Y closes with a neutral tradeoff summary, so it fully meets both criteria. Y's wording on overhead is slightly loose, which doesn't change the result."
+ },
+ "gap:S09": {
+  "helped": [
+   "Contained, not improved. On both tested models the skill kept its decision machinery out of a plain factual answer. Neither skill_en reply used the Verdict / Why / Main risk / Next step template, a route label, an option list, evidence-strength labels, limitation boilerplate, or a clarifying question about the user's use case. This is the main thing S09 tests, and given how template-heavy §2 and §7 are, it largely held. Likely protective text: the frontmatter 'Do not activate for simple facts, translation, routine rewriting…'; §6.1 'Do not pad, and do not turn a factual question into alternatives.'; §7 'Avoid generic introductions, repeated disclaimers, unnecessary follow-up questions, and mechanically forcing labels.'; §1 'The user's explicit scope and preferences override this skill's defaults'. The baselines had none of these failures either, so this counts as no harm, not a gain over baseline.",
+   "Correctness and length were unaffected. All four replies are accurate and criterion 1 scored 1 in every cell. skill_en/opus and baseline/opus are the same length (110 vs 106 words by my count). One judge called the baseline/opus overhead wording slightly loose ('Slows down when the network is busy, which adds overhead and latency'), while skill_en/opus kept congestion control and cost apart ('slows down when the network is congested. The cost is extra overhead and delay.'). That is likely noise, not a skill effect.",
+   "Haiku tied, with small offsetting strengths for skill_en. It described uses as facts ('It's used for…') where baseline/haiku was mildly prescriptive ('Use it for…' twice), and it stated TCP's cost outright ('The cost is more overhead and latency.'). A near-identical sentence appears in skill_en/opus ('The cost is extra overhead and delay.') and in neither baseline. That may be a weak, harmless trace of the skill's emphasis on cost and trade-offs (§3.3 'full cost', §6.6 'material downside'). With one sample per cell it is noise-level evidence."
+  ],
+  "hurt": [
+   {
+    "issue": "Opus appended an unrequested which-to-use recommendation ('Rule of thumb: if you need every byte in order, use TCP. If speed matters more and losing a packet now and then is fine, use UDP.'). The underlying gap: the body of SKILL.md has no route for requests that ask for no judgment. The 'do not activate for simple facts' rule appears only in the frontmatter, and the lightest route in the body still prescribes a verdict and a next action.",
+    "evidence": "Both judges chose baseline for opus (margins clear, slight). Criterion 2 was 0.5 for skill_en vs 1 for baseline, and both failure notes name the 'Rule of thumb' as decision framing. Lengths match (110 vs 106 words) and both replies end with a bolded closer, so the closer's content is the whole difference. baseline/opus ended neutrally ('In short: TCP gives up some speed to be reliable. UDP gives up reliability to be fast.'). skill_en/opus ended with a conditional verdict plus its deciding reason, which is the shape the Quick route asks for. Caveats: one sample per cell; 'use TCP when…' closers are common in ordinary answers to this question; haiku did not leak; Sonnet was not reported.",
+    "models": [
+     "opus"
+    ],
+    "skill_text": "Text that pushes toward the recommendation, all in the body: §2 'Choose the lightest sufficient route', whose lightest row is '| Quick | Clear, narrow, low-impact choice | Verdict + decisive reason + useful next action; aim for ≤80 words. |', so no route produces a plain answer. §7 'Lead with the verdict, conditional recommendation, tie, or blocker.' §3.1 'Extract the outcome, actual choice, decision owner, and relevant time horizon.', the pre-reply check 'actual goal addressed', and the last line 'Make the smallest complete, defensible response that helps the user move forward.' Together these invite inferring an unstated decision behind the question. Text that should have prevented it but did not: the frontmatter-only 'Do not activate for simple facts, translation, routine rewriting, or an unrelated task merely because tools or subagents are available.' It is routing metadata and may not be shown to the model at all when the skill is force-loaded; its 'merely because' clause can also be read as qualifying the whole list. And §6.1 'Do not pad, and do not turn a factual question into alternatives.', which is too narrow (it bans alternatives, not a recommendation) and sits inside the option-generation step, which a factual answer never reaches.",
+    "severity": "medium",
+    "fix": "(1) Core change: insert a first row in the §2 route table so a non-decision route exists: '| Direct | No judgment requested: a fact, explanation, “difference between X and Y”, translation, or routine rewrite | Plain answer at the requested length. State typical uses as facts if relevant; no verdict, “use X if” advice, options, or questions. Don't infer an unstated decision. |'. The trigger stays 'no judgment requested', so an explicit 'which should I use?' still routes to Quick, and the host safety rules in §1 still apply. (2) Optional, for real routing (not exercised here because the skill was force-loaded): split the frontmatter sentence so the exclusion is unconditional and names factual comparisons: 'Do not activate for simple facts or explanations (including “what's the difference between X and Y”), translation, or routine rewriting. Do not activate for an unrelated task merely because tools or subagents are available.' This also offsets 'resolving trade-offs' earlier in the same description, which a router could match to a TCP-vs-UDP question."
+   },
+   {
+    "issue": "§7's comparison rule and the compare command are not limited to decisions. Read literally, a factual 'difference between X and Y' question is a comparison request that should open with a verdict. This is a latent trigger: the sample is consistent with it but does not prove it.",
+    "evidence": "The S09 prompt is shaped like a comparison ('What's the difference between TCP and UDP?'), and the opus leak gives a verdict for each condition ('use TCP' / 'use UDP'), which is what this rule produces. But opus put the recommendation last, not first, and haiku did not leak, so this text is at most a contributing cause here.",
+    "models": [
+     "opus"
+    ],
+    "skill_text": "§7 'When a comparison is requested, put the verdict first unless the user requests another order, then the table or alternatives in the requested count.'; Commands section 'Recognize natural-language equivalents and the user's language.' together with '`compare [count]` / `audit` / `verify` — compare / challenge / check evidence within scope.'",
+    "severity": "low",
+    "fix": "§7: 'When a comparison for a decision is requested, put the verdict first…' (adds 'for a decision'). Commands: '`compare [count]` / `audit` / `verify` — compare options for a decision / challenge / check evidence within scope; a factual “difference between X and Y” question is not compare.' usage.md's 'natural-language equivalents work too' has the same reach, but it is loaded only for invocation questions, so it needs no change for this case."
+   }
+  ],
+  "model_size_notes": "Opus (largest) is the only cell with a failure attributable to the skill, and the leak was subtle. It was not the §7 template but one bolded, softened conditional recommendation ('Rule of thumb: … use TCP. … use UDP.'). That looks like a capable model applying the skill's goal ('helps the user move forward', 'conditional recommendation') to a request outside the skill's scope. Both judges preferred baseline (clear, slight). Haiku (smallest) tied. skill_en showed no decision framing; it ran 91 words vs 68 for baseline but was still short, and the baseline was the mildly prescriptive one ('Use it for' twice). So nothing here suggests the skill pushes the small model toward decision framing, and the direction is inconsistent across sizes (opus: skill reply more prescriptive; haiku: baseline more prescriptive). Sonnet (mid) has no S09 result in this evidence, so mid-size behavior is unknown and should be run. With one sample per cell, the opus loss rests on one sentence and is plausibly within sampling variance, since 'use TCP when…' closers are common in ordinary answers to this question. To confirm it, run at least 5 samples per cell and count replies that contain 'use X if/when' advice or verdict-like closers.",
+  "arabic_core_notes": "S09 exercised only the English core, so there is no Arabic-core result to assess. SKILL.ar.md is not in the runtime directory I was given, so I could not check its wording. usage.md says it replaces SKILL.md as the entry file, and the reference files mirror English and Arabic one-to-one, so the same gap very likely exists there: the exclusion lives only in metadata, and the lightest route still requires a حكم. Mirror the fixes. Direct row: '| مباشر | لا يُطلب حكم: معلومة أو شرح أو «ما الفرق بين X وY» أو ترجمة أو إعادة صياغة روتينية | إجابة مباشرة بالطول المطلوب. اذكر الاستخدامات الشائعة كحقائق عند الحاجة؛ بلا حكم ولا نصيحة «استخدم X إذا» ولا بدائل ولا أسئلة. لا تفترض قرارًا لم يذكره المستخدم. |'. Align the route name with whatever the Arabic table already uses for Quick/Standard/Deep/Plan. §7: 'عند طلب مقارنة لاتخاذ قرار، ابدأ بالحكم…'. Gloss for «قارن [عدد]»: 'مقارنة بدائل لاتخاذ قرار؛ وسؤال «ما الفرق بين» المعلوماتي ليس هذا الأمر'. The Arabic mapping risk matches the English one: usage.md lists «قارن 7» and says «وتعمل مكافئاتها الطبيعية أيضًا», so «ما الفرق بين TCP وUDP؟» can be read as a natural equivalent of «قارن». Add an Arabic S09 variant ('ما الفرق بين TCP وUDP؟ باختصار.') to the test set.",
+  "verdict": "On S09 the skill made little real difference. On both tested models it kept its templates, option lists and questions out of a plain factual answer, and it preserved correctness and brevity. Its one observed failure is a single unrequested 'Rule of thumb: use TCP if…, use UDP if…' closer on opus. That sentence cost the opus comparison: both judges chose baseline (margins clear and slight), and criterion 2 scored 0.5 vs 1. Haiku tied, and Sonnet was not reported. With one sample per cell the opus loss may be partly noise, but the mechanism is plausible and visible in the text. The 'do not activate for simple facts' rule lives only in the frontmatter. The body's lightest route still prescribes 'Verdict + decisive reason + useful next action'. §3.1 and the closing line invite inferring an unstated decision. §7 ties any 'comparison' to a verdict. Minimal fix: add a 'Direct' route row for requests that ask for no judgment; limit §7's comparison sentence and the compare command to decisions; optionally split the frontmatter exclusion so it is unconditional; mirror all of it in the Arabic core. To validate, re-run S09 with at least 5 samples per cell on all three model sizes. Add a multi-turn variant (a factual side question inside a decision conversation, the realistic case where the skill stays loaded), and re-run one Quick-route decision case to confirm the new row does not suppress verdicts the user asked for."
+ }
+}

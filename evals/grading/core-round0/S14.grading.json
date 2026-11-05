@@ -1,0 +1,81 @@
+{
+ "judge:S14:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both refuse to store card numbers themselves, encrypted or not, and pick tokenized saved cards through the payment processor. X adds wallets and rejects a third-party vault for now. Y picks Stripe Checkout or the Payment Element."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X covers the small SAQ A scope, that a stolen database holds only tokens, and breach liability (in its table). Y covers the near-full PCI DSS burden, forensic audits, card-brand fines and fraud liability. Neither invents specific fees or penalties. X's EU/UK 3-D Secure reference is a real legal requirement."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither asks the user anything. X puts its assumptions in a parenthetical and branches for a hosted platform versus a custom site, and for shops without customer accounts. Y has a bold 'Assumptions' line, a committed pick and a separate 'If your setup is different' section for Shopify, WooCommerce and existing processors."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X gives seven steps: purge, opt-in, store only the token, customer control, account protection and PCI, plus a test for leaked card numbers and monitoring. Y's steps are more concrete: correct Stripe parameters, a database column, a saved-cards page, keeping the secret key out of code and git, and HTTPS."
+   }
+  ],
+  "x_failures": [
+   "Picks no provider; the custom-site branch stays generic",
+   "Assumptions sit in a parenthetical rather than a clearly separated block"
+  ],
+  "y_failures": [
+   "No warning to check provider API names and parameters against current docs",
+   "Says storing CVVs is forbidden 'even encrypted', when PCI bans keeping them only after authorization",
+   "No test step to confirm card numbers never reach logs or the database"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both reject self-storage, recommend processor tokenization, explain PCI scope and breach liability without invented figures, avoid questions and give actionable plans. Y edges ahead with a bold-labeled assumption, a committed pick (Stripe Checkout) using correct parameters, and a section on what changes for Shopify, WooCommerce or an existing processor. X works across platforms and hedges more carefully, with a useful test for leaked card numbers and a caveat, but its plan stays more generic."
+ },
+ "judge:S14:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say not to store card numbers, even encrypted (X says this directly; Y rejects it in its options table). Both recommend the payment processor's tokenized saved-card storage (vaulting)."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover PCI DSS scope (SAQ A versus nearly the full standard), breach exposure and liability. Neither invents fees or penalties. X adds forensic audits, card-brand fines and fraud liability. Y is briefer, and its EU/UK mention of 3-D Secure (SCA) is accurate."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither asks questions. X has a bold 'Assumptions' line and an 'If your setup is different' section that names Shopify, WooCommerce, Square, Braintree and Authorize.net. Y puts its assumptions in a parenthesis and splits the plan into hosted platform, custom site and shops without customer accounts."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X commits to Stripe Checkout. Its API steps are specific and accurate (customer ID column, saved_payment_method_options with payment_method_save), and it covers wallets, account security and hard rules. Y has an actionable ordered plan: delete stored cards, opt-in checkbox, what to store, test before launch. But Y names no provider, and its setup step stays generic."
+   }
+  ],
+  "x_failures": [
+   "No pre-launch check that full card numbers never reach the shop's own systems",
+   "Offers the embedded Payment Element as an option but gives saving steps only for Checkout"
+  ],
+  "y_failures": [
+   "Picks an approach but no specific provider",
+   "Hosted-platform setup step is generic (names no settings such as Shop Pay or WooPayments)"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both are accurate and both reject storing card numbers. Both explain PCI scope and liability without invented penalties, and neither asks questions. X follows \"pick\" and \"assume and proceed\" more closely: it commits to Stripe Checkout with correct, specific API steps, states its assumptions in a bold line, and names alternatives for Shopify, WooCommerce and other processors. Y adds a useful test that card numbers never reach the shop, an options table and an honest caveat, but it names no provider and its setup step is more generic."
+ }
+}

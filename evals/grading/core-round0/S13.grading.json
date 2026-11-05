@@ -1,0 +1,540 @@
+{
+ "judge:S13:sonnet:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B is 100 SAR over budget and point out its 84% battery health. Y also works out the effective capacity (under 2,800 mAh), which is correct."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both treat C's one-year update cutoff as a real risk for WhatsApp use. X names scam links; Y names years of personal data."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both recommend A and say to ask about its update period (3+ years). Only Y considers the mother's own platform, an iPhone preference, and offers a concrete alternative: a larger used iPhone with 90%+ battery health. X never asks whether she is used to iPhone or Android."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables are clean and readable. Y adds a row on screen clarity for weak eyesight."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use warm, simple Arabic with a Gulf flavor and some formal Arabic mixed in."
+   }
+  ],
+  "x_failures": [
+   "Does not ask whether the mother is used to iPhone or Android"
+  ],
+  "y_failures": [],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both note B's 100 SAR overrun and 84% battery, flag C's one-year updates as a WhatsApp risk, and recommend A with a check on its update period. Both give clean tables in warm, Gulf-flavored Arabic. Y also covers the mother's possible iPhone preference with a realistic alternative, and its setup tips fit her better: WhatsApp on the home screen, favorites, and a case bought with the leftover 200 SAR. X skips platform familiarity, though its main-risk note is sharp."
+ },
+ "judge:S13:sonnet:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B is 100 SAR over budget and point out its 84% battery health. X also works out the usable capacity (under 2,800 mAh) and warns the battery may soon need replacing. Y says the real capacity is lower and that she will likely charge more than once a day."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X calls the one-year update cutoff a big flaw, since the phone will hold WhatsApp and personal data for years. Y is more concrete: it is a risk for a heavy WhatsApp user who may receive scam links."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "Both recommend A and say to ask how many years of security updates it gets (3 or more). X also covers the iPhone-preference case and suggests a used iPhone with a bigger screen and 90%+ battery instead. Y never asks whether the mother is used to iPhone or Android, though it does honestly flag that A's brand and update period are unknown."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables are clean and readable. X adds rows for eyesight-friendliness and condition. Y's 'warranty' row lists new/used rather than actual warranty terms, which is a small mismatch."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "X is warm, simple Arabic with some Gulf phrases, mixed with formal MSA in places. Y is more consistently Gulf (ليش، ما يستاهل، كمان)."
+   }
+  ],
+  "x_failures": [
+   "Raises OS familiarity only as an iPhone preference; never asks it directly",
+   "Some formal MSA sentences mixed into the dialect"
+  ],
+  "y_failures": [
+   "Never asks whether the mother is used to iPhone or Android",
+   "Vague 'مساعد الصوت' setup tip",
+   "Warranty row shows new/used instead of warranty details"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both recommend A, flag B's 2,100 SAR price and 84% battery, flag C's one-year update cutoff, and give clean tables. Y ties the update risk to WhatsApp scam links more concretely and uses stronger Gulf dialect, but never addresses whether the mother is used to iPhone or Android. X covers that with an iPhone-preference alternative, works out the effective battery (about 2,770 mAh), and adds practical setup tips, which gives it a slight edge."
+ },
+ "judge:S13:sonnet:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables say B costs 100 SAR over the budget and give its 84% battery health. X adds that the battery barely lasts a day. Y bolds the budget overrun and says the phone may need charging more than once a day."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X says the one-year cutoff puts WhatsApp and the mother's data at risk, and the lower price doesn't make up for it. Y ties the risk to heavy WhatsApp use and scam links, which is more concrete."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both recommend A and tell the user to confirm its update period (at least 3 years). Both also say what would change the advice. Neither asks whether the mother is used to iPhone or Android. Y only mentions that the iPhone is simple to use."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables are clean, with six rows each. X's labels are all correct. Y's 'warranty' row (الضمان) holds new/used values. It is still readable."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "X is simple, clear and considerate, but it is formal Modern Standard Arabic and fairly impersonal. Y uses natural Gulf dialect and a warm tone, which matches the user better."
+   }
+  ],
+  "x_failures": [
+   "Does not ask whether the mother is used to iPhone or Android",
+   "Formal Modern Standard Arabic rather than the user's Gulf register"
+  ],
+  "y_failures": [
+   "Does not ask whether the mother is used to iPhone or Android",
+   "Warranty row shows new/used values instead",
+   "Vague 'voice assistant' tip and some repetition"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both note B is over budget with 84% battery health and flag C's one-year update risk. Both recommend A if its update period checks out, and both give clean tables. Neither asks if the mother uses iPhone or Android. X is tighter and slightly more accurate: it says iPhones usually get long support and its labels are correct. Y's warm Gulf dialect fits the user. It also makes the risk concrete (scam links) and adds warranty and service checks, which gives it a slight edge despite small slips."
+ },
+ "judge:S13:sonnet:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B's 2,100 SAR is 100 over the budget and point to its 84% battery health."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both treat C's one-year update cutoff as a real risk for WhatsApp. X adds a concrete example: a scam link reaching the mother."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both recommend A and say to confirm A's update period, at least 3 years. Neither asks whether the mother is used to iPhone or Android."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables are clean and readable. X's 'warranty' row lists new/used rather than warranty terms. Y labels the same row 'condition', which is correct."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "partial",
+    "note": "X uses warm Gulf dialect (ليش، ما يستاهل، يستاهل تعيد الحساب). Y's Arabic is correct and simple, but it is formal MSA with little warmth."
+   }
+  ],
+  "x_failures": [
+   "Never asks if mother is used to iPhone or Android",
+   "Warranty row shows new/used, not warranty terms",
+   "Vague 'voice assistant' setting tip"
+  ],
+  "y_failures": [
+   "Never asks if mother is used to iPhone or Android",
+   "Formal MSA with little Gulf dialect or warmth"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both recommend A, flag B's over-budget price and 84% battery, warn about C's one-year updates for WhatsApp, and urge verifying A's update period. Neither raises whether the mother knows iPhone or Android. Y is slightly more accurate on iPhone update support and adds practical tips, like a case bought with the leftover 200 SAR. X better matches the user's Gulf dialect and caring tone, and gives a concrete scam-link example. The substance is nearly equal; X wins slightly on register."
+ },
+ "judge:S13:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X's table says B is 2100, 100 over budget, with 84% battery health that will keep dropping, and its 'why not B' section repeats this. Y has its own budget row ('لا، أعلى بـ100 ريال'), lists the 84% health, and repeats both points when it discusses B."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X says C becomes unsafe for daily WhatsApp use and links this to scam links, then says it does not recommend C. Y calls the one-year end of updates a 'خطر حقيقي' for an older woman using WhatsApp, and allows C only if the 600 SAR saving is essential."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both recommend A and tell the user to confirm at least 3 years of security updates. X never asks whether the mother is used to iPhone or Android. Y says B suits only if the family already uses iPhone, because that makes things easier for her. This is framed around the family rather than the mother herself, but it covers the familiarity point."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give clean three-column markdown tables that are easy to read. Y's table has two extra rows, one for budget fit and one for suitability for the mother."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "partial",
+    "note": "The user wrote 'محتار', the masculine form, yet both replies address him with feminine forms throughout (تأكدي، اسألي). Y also slips once into a masculine imperative, 'أعطِ'. X is simple but formal Standard Arabic. Y is mostly Standard Arabic too, but it is warmer and uses some Gulf words such as 'عيالها' and 'أهلك'."
+   }
+  ],
+  "x_failures": [
+   "Never raises whether the mother is used to iPhone or Android",
+   "Addresses the male user ('محتار') with feminine forms throughout",
+   "Formal Standard Arabic, not Gulf dialect, and not especially warm"
+  ],
+  "y_failures": [
+   "Addresses the male user ('محتار') with feminine forms, and once switches to a masculine form",
+   "Frames platform familiarity around the family, not the mother herself",
+   "Assumes A and C come with a warranty ('جديد بضمان') without support"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both recommend A, note B's budget overrun and 84% battery health, treat C's one-year updates as a real WhatsApp risk, and give readable tables. Y also makes B depend on whether the family already uses iPhone, which covers the platform-familiarity point X leaves out, and adds tips for older users such as spotting scams. Both address the male user ('محتار') as female and lean on Standard Arabic, though Y is warmer. X's tip to check the iCloud lock on the used iPhone is useful but does not close the gap."
+ },
+ "judge:S13:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B costs 100 SAR more than the 2,000 budget and both mention its 84% battery health. Y adds that the battery will weaken further and need replacing soon."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both call C's one-year update cutoff a real risk for WhatsApp use. Y also points out that C will likely need replacing within 1-2 years, which cancels much of the 600 SAR saving."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "Both recommend A for its screen, battery and price, and both say to confirm at least 3 years of security updates. X raises platform familiarity: B makes sense if the family already uses iPhone. Y never mentions whether the mother is used to iPhone or Android."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables are well-formed and easy to read. X adds explicit rows for budget fit and condition. Y puts budget status in the price row."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both use simple, clear Arabic close to standard Arabic, which suits the user. But the user wrote the masculine 'محتار', and both address him with feminine forms (اسألي، تأكدي). X also switches to the masculine 'أعطِ' once."
+   }
+  ],
+  "x_failures": [
+   "Addresses the user, who wrote masculine 'محتار', with feminine imperatives, and switches gender once",
+   "States that A and C come with a warranty without any basis"
+  ],
+  "y_failures": [
+   "Leaves out whether the mother is used to iPhone or Android",
+   "Addresses the user, who wrote masculine 'محتار', with feminine imperatives throughout"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both flag B being over budget and its 84% battery, and C's one-year update risk for WhatsApp. Both give readable tables and recommend A with a 3-year update check. X also raises platform familiarity (whether the family already uses iPhone), the used iPhone's iOS support, and useful tips for an older user. Y leaves out familiarity, though its iCloud-lock and warranty checks are practical. Both address the user, who wrote masculine 'محتار', in feminine forms."
+ },
+ "judge:S13:haiku:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B's 2,100 SAR is 100 over the budget, and both mention its 84% battery health. X adds that the battery will keep getting weaker."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X links the one-year update end to daily WhatsApp use and scam links. Y links it to WhatsApp and security holes that stay open."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both recommend A for its bigger screen and battery within budget, on condition that it gets 3+ years of updates. Y adds a fallback that respects the budget (B, only if the extra 100 SAR is acceptable). Neither asks whether the mother is used to iPhone or Android."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give clear six-row tables. Y puts the screen sizes in the row label instead of the cells, but the table is still readable."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "pass",
+    "note": "The user wrote 'محتار', which marks him as male, but X uses feminine verbs throughout (تتأكدي, اسألي, ستحتاجين). Y addresses him correctly in simple Arabic, with one pronoun slip ('أمها' instead of 'أمك')."
+   }
+  ],
+  "x_failures": [
+   "Addresses the male user ('محتار') with feminine verb forms throughout",
+   "Does not ask whether the mother is used to iPhone or Android"
+  ],
+  "y_failures": [
+   "Does not ask whether the mother is used to iPhone or Android",
+   "Pronoun slip 'أمها' and an invented claim that she uses financial apps",
+   "Rates B's camera weaker from megapixel count alone"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both cover the budget, battery and C update risk, give a readable table, and recommend A on condition of verified updates. Neither asks whether the mother is used to iPhone or Android. X has slightly richer setup tips but addresses the male user ('محتار') in feminine forms throughout. Y addresses him correctly, says plainly what it cannot verify, and gives a sensible fallback. It does slip ('أمها'), invents financial-app use and judges the camera by megapixels. Y edges ahead."
+ },
+ "judge:S13:haiku:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B is 100 SAR over budget and mention its 84% battery health. Y goes further and says the battery will keep weakening and will need replacing soon."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both treat one year of updates as a real security risk. Y links it directly to daily WhatsApp use and scam links. X links it to WhatsApp plus 'financial apps', which the user never mentioned."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both recommend A on condition that it gets at least 3 years of updates. X adds a fallback to B if that check fails. Neither asks whether the mother is used to iPhone or Android."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables are clean and easy to read. Y puts the actual values in every cell and adds a verdict row. X puts the screen sizes in the row header, which still reads fine."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "partial",
+    "note": "X addresses the user correctly in the masculine but reads like a dry report, and once writes 'أمها' (her mother) instead of 'your mother'. Y is warmer and simple, but addresses the male user (محتار) with feminine verb forms throughout."
+   }
+  ],
+  "x_failures": [
+   "Writes 'أمها' (her mother) instead of 'your mother'",
+   "Invents financial-app use the user never mentioned",
+   "Equates lower megapixels with a weaker camera",
+   "Never asks about the mother's iOS/Android familiarity",
+   "Dry, report-like tone"
+  ],
+  "y_failures": [
+   "Addresses the male user with feminine verb forms throughout",
+   "Never asks about the mother's iOS/Android familiarity",
+   "No fallback if A's update period falls short"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both recommend A if it gets 3+ years of updates. Both flag B's budget overrun and 84% battery, warn about C's updates and give readable tables. Neither asks about the mother's iOS/Android familiarity. Y adds setup tips for weak eyesight and links C's risk to WhatsApp scams, but addresses the male user (محتار) in the feminine throughout and gives no fallback. X is concise, honest and has a fallback, but writes 'أمها' and invents financial apps. Slight edge to Y."
+ },
+ "judge:S13:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B costs 2,100, which is 100 over budget, and both give its 84% battery health as roughly 2,800 mAh in practice. X says the battery will need replacing soon. Y also explains the 80% replacement threshold."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both connect C's one-year update cutoff to years of daily use with her WhatsApp, photos and contacts on it. X also points out that the savings disappear if the phone has to be replaced early."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both recommend A, say to check how long its updates last (3+ years), and raise whether the mother is used to iPhone. X adds that update years count from the model's launch, not the purchase date, and an iCloud-lock check. Y notes that phones in this price range can get 4+ years of updates."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tables are clean and readable. Y adds a warranty row and a summary row."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use natural Gulf dialect. Y is warmer ('الله يخليها لك') and speaks to the user in the singular. X is more direct and uses plural address."
+   }
+  ],
+  "x_failures": [
+   "Ambiguous claim that A is 'the only one within budget' (C at 1,200 also fits)"
+  ],
+  "y_failures": [
+   "Does not say that update support counts from the model's launch date, not the purchase date"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both pass every rubric item. Both note B's budget overrun and 84% battery, flag C's one-year updates for WhatsApp use, recommend A with update and iPhone-familiarity caveats, give clean tables and use natural Gulf dialect. Y edges ahead with a warmer tone, the table first as asked, the 80% battery threshold, and setup tips suited to her needs (bigger font, easy mode, WhatsApp two-step verification and a warning about scam codes, photo backup). X is tighter and adds the launch-date and iCloud-lock points, but has ambiguous phrasing."
+ },
+ "judge:S13:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B costs 2,100, which is 100 SAR over the budget, and that 84% battery health leaves about 2,800 mAh. X adds that 84% is close to the 80% point where replacing the battery is advised. Y says the battery is nearly due for replacement."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both treat C's updates ending after one year as a real risk, since the phone will hold her WhatsApp and photos for years. Y argues it more sharply: either she runs it without patches or it gets replaced early and the savings are lost."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both recommend A, say to check how many years of updates A gets, and make B reasonable only if the mother is used to iPhone. X points out that other phones in this price range get 4+ years of updates. Y adds that the update period counts from the model's launch, and that it matters whether the children who help her use iPhones."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give clean tables that are easy to read. X adds warranty and summary rows; Y adds a phone-type and warranty row."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both write in natural Gulf dialect. X is warmer and more colloquial, opening with 'الله يخليها لك'. Y is a little more neutral and uses some formal Arabic in the table."
+   }
+  ],
+  "x_failures": [
+   "Does not say the update period counts from the model's launch date",
+   "No used-iPhone checks such as iCloud lock if they choose B",
+   "Its fallback to B does not say plainly that it means going over budget"
+  ],
+  "y_failures": [
+   "Calling A 'the only one within budget' is ambiguous, since C is cheaper",
+   "Less warm than X and has no friendly opening"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both pass every rubric item. They recommend A, flag B's 2,100 price and 84% battery, treat C's one-year updates as a real WhatsApp risk, give clean tables and write in Gulf dialect. Y is tighter and makes two sharp points: the update period counts from the model's launch, and a used iPhone should be checked for an iCloud lock. X is warmer and adds accurate setup help: bigger text, WhatsApp shortcuts, two-step verification against code scams and photo backup. X edges ahead on practical value."
+ },
+ "judge:S13:opus:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B is 100 SAR over budget and that its 84% battery health is close to needing a replacement. Y also works out the effective capacity (about 2,800 mAh), which makes the gap with A's 5,000 easy to see."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X calls C's one-year update window a real risk for a phone that gets messages and links every day. Y ties it to her WhatsApp and photos, and adds the choice it leaves: use the phone unpatched for years, or replace it early and lose the 600 SAR saved."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both recommend A because of its bigger screen and battery and its price under budget. Both make the advice depend on checking A's update period and ask whether the mother is used to an iPhone. Y adds that update support is usually counted from the model's launch, not the purchase date, and suggests looking for a similar phone within budget if A's support turns out short."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give a clean six-row table with short notes in each cell. Y's row labels link each spec to her needs (her eyesight, video calls, the grandchildren)."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use warm, natural Gulf dialect. X addresses the user in the singular throughout. Y switches between singular and plural, which is natural when speaking to a family."
+   }
+  ],
+  "x_failures": [],
+  "y_failures": [
+   "The phrase \"the only one within budget\" could be misread, since C is also within budget",
+   "Switches between singular and plural address (minor)"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both meet every rubric item: they recommend A within budget, flag B's +100 SAR and 84% battery, treat C's one-year updates as a real WhatsApp risk, give clean tables, and use natural Gulf dialect. Y edges ahead with more buying detail that matters for the decision: update windows count from model launch, B's effective capacity is about 2,800 mAh, and there is an in-budget fallback if A's support is short. X is tighter and its in-store tests fit her needs well."
+ },
+ "judge:S13:opus:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say B is 2,100, which is 100 over budget, and both note its 84% battery health and that the battery is close to replacement. X adds a useful figure: about 2,800 mAh of real capacity."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Y calls C's one-year update window a real risk for a phone that gets messages and links every day. X ties it to her WhatsApp and photos and shows the 600 SAR saving is lost if the phone is replaced early."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both recommend A, tell the user to check A's update period (aim for 3+ years) and raise whether the mother is used to an iPhone. X adds that the update period counts from the model's release date and gives a better fallback. X's line 'the only one within budget' is loose, because C is within budget too."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give a clean six-row table, with labels tied to her needs (eyesight, video calls, warranty or condition)."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use natural, warm Gulf dialect. Y keeps the singular 'you' to match the user. X switches to plural to include the family, which still reads naturally."
+   }
+  ],
+  "x_failures": [
+   "Loose claim that A is 'the only one within budget' when C is also within budget"
+  ],
+  "y_failures": [],
+  "winner": "tie",
+  "margin": "slight",
+  "rationale": "Both pass every rubric item. Both recommend A with clear tables, flag B's 2,100 price and 84% battery, treat C's one-year updates as a real risk, raise the update check and iPhone familiarity, and write in natural Gulf dialect. X adds sharper points (update period counts from model release, about 2,800 mAh real capacity, a better fallback) but has the loose 'only one within budget' claim. Y is cleaner, states the security risk more directly and adds a tip to buy where returns are accepted. Overall they are about even."
+ }
+}

@@ -1,0 +1,209 @@
+{
+ "judge:S10:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "partial",
+    "note": "X gives a structured split with its assumptions labeled: an example of $2,500 a month and an instruction to adjust once costs are known. It then asks three targeted follow-up questions. Y uses conditionals and closes with questions, but the reply is long and inefficient, and one question asks whether the user is leaving or starting a job, which the user already said."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "fail",
+    "note": "X invents no facts about the user, but it frames everything around careers and saving money, discourages travel and asks nothing about the user's goals. Y invents a job search and a layoff ('if the search runs long', 'tell your network you're looking', 'after a layoff'). That contradicts the user's statement that the next job is already set."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X offers a simple framework (reserve, insurance, discretionary money, time), example math and the risk of an unsigned offer. Y gives useful points on the health-insurance enrollment window, employer waiting periods and debt, plus a rough split, though some of it is aimed at the wrong situation."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "fail",
+    "note": "X is short, with a four-part split. Y sprawls into a generic checklist covering a safety net, insurance, unemployment benefits, taxes, debt, job search, skills, routine, rest and investing."
+   }
+  ],
+  "x_failures": [
+   "Does not ask what the user wants from the time",
+   "Frames everything around career and saving; discourages travel without knowing the user's other finances"
+  ],
+  "y_failures": [
+   "Treats the user as job-searching even though a job is lined up",
+   "Long generic checklist",
+   "Garbled tax point and questionable unemployment-benefits advice",
+   "Suggests a 3-month cushion and investing part of the savings despite six months with no income",
+   "Asks whether the user is starting a job, which the user already said"
+  ],
+  "winner": "X",
+  "margin": "large",
+  "rationale": "X reads the situation correctly (job lined up) and gives a focused runway framework with labeled example numbers. It flags the risk of an unsigned offer and asks targeted follow-ups. Its gap is that it assumes career-focused, frugal priorities without asking the user's goals. Y treats the user as job-searching after a layoff and sprawls into a generic checklist (unemployment, a garbled tax point, investing). It also suggests investing part of a cushion the user needs for six months with no income."
+ },
+ "judge:S10:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "X gives a structure and asks about costs and debt, but builds on a misreading of the user's situation and asks again whether the user is leaving or starting a job, which the user already said. Y gives a compact split with clearly labeled example numbers ('$2,500 a month', 'adjust once you know your monthly costs') and three targeted follow-up questions."
+   },
+   {
+    "id": 2,
+    "x": "fail",
+    "y": "pass",
+    "note": "X invents a job search and a layoff ('if the search runs long', 'apply to a short list of roles', 'after a layoff') even though the user said the next job is already set. Y reads the situation correctly (offer, first paycheck, next role) and labels its assumptions, though its suggestions lean toward career goals."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give immediate value. X covers health insurance, a cushion and paying down debt. Y gives the runway arithmetic, a split, a health insurance reminder and the risk that the offer is not signed."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X runs to roughly 550 words across about a dozen items, several of them marginal or vague (unemployment, taxes, job search). Y stays concise, with one verdict, a four-part split, one risk and one next step."
+   }
+  ],
+  "x_failures": [
+   "Misreads the premise: advises a job search and assumes a layoff even though the next job is lined up",
+   "Long checklist with marginal or vague items (unemployment, taxes)",
+   "A 3-month cushion and a $10k-12k liquid split may not cover six months without income",
+   "Asks whether the user is leaving or starting a job, which the user already stated"
+  ],
+  "y_failures": [
+   "Time suggestions are all career-focused, and it never asks what the user wants from the time",
+   "Suggesting only 2-3 hours a week on a goal is oddly little for six free months"
+  ],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Y correctly reads that a job is lined up, shows that six income-free months consume most of the $20k, offers a compact labeled split, flags the unsigned-offer risk, and asks targeted questions. X misreads the premise, advising a job search and assuming a layoff, and gives a long checklist with marginal items plus a split that may not cover six months. Y's time advice is narrow and career-only, but it is far more relevant and focused."
+ },
+ "judge:S10:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X says up front that the answer depends on the user's goals, gives one budget step, then asks one key question with six easy answer choices, including 'Not sure' and 'Something else'. Y gives a structured plan with conditional money assumptions and ends with three well-chosen questions, but they come late."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "partial",
+    "note": "X keeps every circumstance conditional (living costs, insurance). Y hedges most points ('If the $20k...', 'In the US', 'If you have credit card debt') but also assumes things: 'You'll earn the money back', a set month of decompressing, and a 'best test' that steers the user's goals."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X gives a real budget-first framework (living costs, a 1-2 month buffer, insurance) plus genuinely different paths. Y gives rich, accurate specifics: the US 60-day marketplace window vs COBRA, a high-yield savings account rather than stocks, paying off debt, travel cost ranges, and a loose monthly shape."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X is short and focused. Y is organized and has a guiding test, but it is long: five money bullets, six option categories holding about 15 fairly standard sabbatical ideas, a monthly plan and three questions. That leans toward a laundry list."
+   }
+  ],
+  "x_failures": [],
+  "y_failures": [
+   "Long, list-heavy reply",
+   "Assumes spending is fine ('you'll earn the money back')",
+   "Prescriptive goal framing ('best test', decompress month)",
+   "Key clarifying questions buried at end"
+  ],
+  "winner": "X",
+  "margin": "clear",
+  "rationale": "X fully meets the rubric: it flags that the answer depends on goals, gives a concrete budget-first framework, and asks one key question with six easy answer choices, all briefly and without assumptions. Y is accurate and genuinely useful (US 60-day enrollment window, HYSA, debt payoff), but it is long and list-heavy, buries its questions at the end, and slips in assumptions ('you'll earn the money back', a prescribed decompress month, a 'best test' that steers goals)."
+ },
+ "judge:S10:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "Y says outright that the plan depends on the user's goals. It asks one key question with six easy answer choices, including 'Not sure' and 'Something else'. X gives a useful structure and hedges with 'if' clauses, but it never frames its experience-first approach as an assumption. Its question about goals only comes at the end of a long answer."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "pass",
+    "note": "X steers toward spending on experiences ('That's the best test', 'You'll earn the money back'), which takes a view of the user's risk tolerance. It also assumes a need to decompress and a lightly hedged US/employer-insurance situation. Y keeps everything conditional ('whatever living costs', 'If your health insurance came through your last job')."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X has a lot of accurate, concrete value: budget math, a savings account rather than stocks, the 60-day insurance window, the credit-card-debt point and a month-by-month shape. Y has a concrete budget step that applies whatever the user wants, plus four genuinely different paths. It is lighter but enough."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X runs about 500 words with three sections and six activity categories covering more than a dozen ideas (marathon, Camino, instrument, app, decluttering, cooking). That is close to a generic laundry list. Y is short, focused and proportionate."
+   }
+  ],
+  "x_failures": [
+   "Long reply that edges into a laundry list of activities",
+   "Steers toward spending on experiences without knowing the user's goals",
+   "Question about goals left until the end",
+   "Lightly hedged US/employer-coverage assumption"
+  ],
+  "y_failures": [
+   "Minor: no advice on where to keep unspent cash"
+  ],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Y fits the rubric best: it notes the plan depends on the user's goals, gives a budget step that applies either way, and asks one key question with easy answer choices that double as distinct paths. It's concise and assumes nothing. X has accurate, useful specifics (60-day insurance window, savings account over stocks), but it runs long, nears a laundry list of activities, steers toward spending on experiences, and saves its questions for the end."
+ },
+ "gap:S10": {
+  "helped": [
+   "Opus followed the Plan route closely. It asked one goal question with exactly 4 concrete choices (Recharge / A big experience / A career boost / Build something) plus 'Not sure: I'll help you figure it out' and 'Something else: tell me what you have in mind'. That structure matches SKILL.md section 3.4 ('include 2–4 concrete understandable choices plus an unsure/help-me-choose path and an other/free-text path') and the Plan row ('One high-impact question at a time, with helpful choices for goals/preferences; no unsupported final verdict'). Both judges preferred skill_en (clear, clear). Criteria: skill_en 1/1/1/1 vs baseline 0.75/0.5/1/0.5. The baseline put its three questions at the end of a 474-word reply.",
+   "Opus gave immediate value without guessing the user's goals. It opened with the dependency ('The best plan depends mostly on what you want from these six months, but one step comes first either way') and then gave a budget step that applies whatever the goal is. This fits section 3.5 ('Continue useful independent work when a necessary answer blocks only part of the task'). The four answer choices also work as four genuinely different paths, which met rubric item 3 without becoming a list of ideas.",
+   "Opus avoided the baseline's assumptions about goals and spending: 'You'll earn the money back', 'That's the best test', and a prescribed 'Month 1: Decompress'. It also skipped the generic opening ('Six months of free time is rare once you're working...'). This is consistent with section 3.3 ('Do not silently substitute your priorities') and section 7 ('Avoid generic introductions'). Judges listed all three baseline assumptions as failures.",
+   "The skill kept both replies proportionate. Word counts: skill_en 217 vs baseline 474 (opus), 304 vs 536 (haiku). Rubric item 4 scored 1 vs 0.5 (opus) and 1 vs 0.25 (haiku). This traces to the section 2 word targets and the closing line 'Make the smallest complete, defensible response that helps the user move forward.' The baseline haiku reply was judged a 'Long generic checklist' (unemployment benefits, a garbled tax point, investing).",
+   "On haiku, the template's 'Main risk / what would change it' slot produced the point both judges praised: 'If the job offer is not signed or the start date is not in writing, the start could slip or fall through... keep more in reserve', followed by 'Next step: Confirm the offer is signed'. This maps to the section 7 template and to section 6.6 ('what must be true, what can fail').",
+   "Haiku with the skill read the premise correctly (the next job is already lined up). Baseline haiku treated it as a post-layoff job search ('so you're not forced into a rushed job offer if the search runs long', 'Unemployment benefits') and asked 'whether you're leaving a job or starting one', which the user had already said. Section 3.1 ('Extract the outcome, actual choice, decision owner, and relevant time horizon') and section 3.2 ('do not repeat answered questions') plausibly helped. Still, one baseline sample misreading the premise could be noise.",
+   "Haiku with the skill labeled its example numbers as examples rather than facts ('For example, at $2,500 a month in essentials...', 'adjust once you know your monthly costs'), consistent with section 3.5's 'minimal, labeled, reversible assumptions'. It also kept the reserve in a high-yield savings account and suggested no investing. Baseline haiku proposed index-fund investing and a split that judges said 'may not cover six months without income', close to the rubric's 'pushes risky investments' failure."
+  ],
+  "hurt": [
+   {
+    "issue": "Haiku picked the default Verdict template for a question whose answer depends on the user's goals, instead of the Plan route. It committed to a direction the user never stated and never asked what they want from the time.",
+    "evidence": "skill_en/haiku reproduced all four section 7 labels verbatim: '**Verdict:** Treat the $20k as your runway, not as a budget for projects. Use the time for rest and one focused goal, and leave most of the money untouched.', then Why / Main risk / Next step. Its follow-up questions covered costs, debt and the new role, but not goals. Judges: 'Does not ask what the user wants from the time'; rubric item 2 = 0.75. With the same skill, opus chose Plan and scored 1. Haiku still won by a large margin only because baseline haiku misread the premise.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "Section 7: 'Lead with the verdict, conditional recommendation, tie, or blocker.' plus the bold Verdict/Why/Main risk/Next step block, which is the only concrete output template in the core. The Plan row's trigger is abstract: 'A missing answer would change feasibility or materially change the recommendation | One high-impact question at a time, with helpful choices for goals/preferences; no unsupported final verdict.' The section 7 escape clause 'For planning or debate-only requests, use their appropriate format' reads as being about what the user asked for, not the Plan route, and it names no format. A contributing loophole is in section 2: 'offer a conditional recommendation when the uncertainty can be carried safely', which lets a cautious default count as 'safe'.",
+    "severity": "medium",
+    "fix": "In SKILL.md section 2, replace the Plan row with: '| Plan | The user's goal or preference is unstated and different goals would lead to different advice (e.g., an open-ended \"What should I do with X?\"), or a missing answer would change feasibility or materially change the recommendation | No verdict. Give any goal-independent first step, then one high-impact question with helpful choices for goals/preferences; the choices can double as the main paths. |'. In section 7, change the first sentence to: 'Lead with the verdict, conditional recommendation, tie, or blocker; on the Plan route, lead instead with what the answer depends on and the one question, with no Verdict label.' Optionally, extend the section 2 'carried safely' sentence with: '; a cautious default does not settle an unknown goal.' Mirror the same three places in SKILL.ar.md. Regression check: re-run scenarios with clear goals (Quick/Standard) to confirm the broader trigger does not cause over-asking. The existing rules 'Ask only until the information is sufficient' and 'Stop interviewing when remaining unknowns would not change the action' should guard against that. Re-run S10 on haiku with at least 3 samples."
+   },
+   {
+    "issue": "The word 'silently' in section 3.3 bars only hidden substitution of priorities. Haiku substituted openly, imposing a frugal, career-only priority and a low risk tolerance as its headline advice.",
+    "evidence": "skill_en/haiku: 'capped at a set amount (for example, 10–15% of savings). Spend it on a skill or certification tied to your next role'; 'spend two or three hours a week on one concrete goal, such as a skill for the target role'; 'Spending that on expensive courses, travel, or a business idea... shrinks the buffer'. Judges: 'Frames everything around career and saving; discourages travel without knowing the user's other finances', 'Time suggestions are all career-focused', and '2-3 hours a week... oddly little for six free months'. Rubric item 2 forbids inventing goals or risk tolerance. Baseline haiku also led with a cushion frame ('the main decision is how much of that $20k to keep as a cushion'), so the frugal lean looks like a haiku tendency. The skill failed to prevent it rather than caused it. Any link to section 6.6's 'Prefer a reversible pilot' is speculative.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "Section 3.3: 'Do not silently substitute your priorities.' Section 3.5's 'Do not invent a budget' applies only in the 'assume and proceed' context, so the invented 10–15% discretionary cap fell outside it.",
+    "severity": "low",
+    "fix": "Replace the section 3.3 sentence with: 'Do not substitute your own goals, priorities, or risk tolerance for the user's, openly or silently; when they are unknown and would change the result, ask or show how the answer differs by goal.' Arabic mirror, replacing 'لا تستبدل أولويات المستخدم بأولوياتك سرًا.': 'لا تستبدل أهداف المستخدم أو أولوياته أو تحمّله للمخاطر بأولوياتك، سرًا أو علنًا؛ وإذا كانت مجهولة وتغيّر النتيجة فاسأل أو بيّن كيف يختلف الجواب باختلاف الهدف.'"
+   },
+   {
+    "issue": "Opus with the skill left out a small piece of advice that holds whatever the goal: where to keep unspent cash while the user decides. The baseline included it. This is a minor cost of the Plan route's brevity.",
+    "evidence": "One judge noted: 'Minor: no advice on where to keep unspent cash'. Baseline opus had 'Keep unspent money in a high-yield savings account, not stocks.' The skill reply still scored 1/1/1/1, and judges counted the baseline's US-specific insurance detail as a slight assumption, not a strength. With one sample, this is most likely noise or an acceptable trade-off.",
+    "models": [
+     "opus"
+    ],
+    "skill_text": "The Plan row's 'One high-impact question at a time...' does not prompt for goal-independent safe defaults. Section 3.5's 'Continue useful independent work when a necessary answer blocks only part of the task' permits such advice but does not prompt for it.",
+    "severity": "low",
+    "fix": "No separate change recommended. The Plan-row wording proposed in the first fix ('Give any goal-independent first step') already covers this. Do not add money-specific advice to a general decision skill."
+   }
+  ],
+  "model_size_notes": "Opus: the skill's intended Plan behavior came through intact. Section 3.4's question format was reproduced exactly (4 concrete choices + unsure + other), with a goal-independent budget step first, at 217 words vs the baseline's 474. Because the structure matches the skill text so closely, attribution to the skill is strong despite one sample per cell. Haiku: the skill still helped on focus (304 vs 536 words), the unsigned-offer risk check, labeled example numbers and no investing push. But haiku copied all four section 7 template labels verbatim and never chose the Plan route. The smallest model seems to anchor on the core's only concrete output template. The Plan route's output exists only as an abstract table cell, so it needs a concrete trigger and an explicit exemption from the Verdict template; haiku is the model those two text changes target. Haiku's better premise reading (job lined up) may be sampling noise, since only one baseline sample misread it. Sonnet: the evidence for S10 has no sonnet transcripts or judgments, so no conclusion is possible. Section 6.1's default ('aim for five meaningfully different viable options') did not produce a laundry list in either sample, and opus correctly let section 3.4's 2–4 choices govern. Not observed as a problem; no change proposed.",
+  "arabic_core_notes": "No skill_ar transcripts were provided for S10, so there is no behavioral evidence on the Arabic core here. The runtime folder (<workdir>/judge_runtime/judge/) contains only SKILL.md. The Arabic core is at <workdir>/judge_src/judge/SKILL.ar.md, and the source English SKILL.md is byte-identical to the runtime copy. The Arabic core has the same wording at all three implicated places. (1) The Plan row: 'إجابة ناقصة ستغيّر صلاحية الخيارات أو التوصية بصورة مؤثرة | سؤال مؤثر واحد مع خيارات مفيدة للأهداف والتفضيلات؛ دون حكم نهائي غير مدعوم.' It also drops the English 'at a time'; this is minor and unrelated to S10. (2) Section 3.3 has the same loophole: 'لا تستبدل أولويات المستخدم بأولوياتك سرًا.' (3) Section 7 has the same default: 'ابدأ بالحكم أو الترشيح المشروط أو التعادل أو العائق' with the الخلاصة/السبب/أهم خطر/الخطوة التالية template, and an equally vague 'استخدم الشكل المناسب للتخطيط أو المداولة دون حسم.' Suggested mirrors. Plan row: '| تخطيط | هدف المستخدم أو تفضيله غير مذكور وتختلف النصيحة باختلافه (مثل سؤال مفتوح: «ماذا أفعل بـ...؟»)، أو إجابة ناقصة ستغيّر صلاحية الخيارات أو التوصية بصورة مؤثرة | دون خلاصة حاسمة: قدّم أي خطوة أولى لا تعتمد على الهدف، ثم سؤالًا مؤثرًا واحدًا مع خيارات مفيدة للأهداف والتفضيلات يمكن أن تكون هي المسارات الرئيسية. |'. Section 7: 'ابدأ بالحكم أو الترشيح المشروط أو التعادل أو العائق؛ وفي مسار التخطيط ابدأ بما يتوقف عليه الجواب وبالسؤال الواحد، دون عنوان «الخلاصة».' Section 3.3: see the second fix.",
+  "verdict": "In S10 the skill clearly helped on both model sizes tested: both blind judges preferred skill_en for opus (clear, clear) and for haiku (large, clear). Opus produced close to the ideal reply: a goal-independent budget step, then one goal question in the exact section 3.4 format, with no assumed goals, at under half the baseline's length. Haiku with the skill was more focused, read the premise correctly, flagged the unsigned-offer risk and avoided investing. However, it bypassed the Plan route and copied the section 7 Verdict template, issuing 'Treat the $20k as your runway... rest and one focused goal'. That imposed a frugal, career-focused priority the user never stated. It won only because the haiku baseline was weak. The weakness: the Plan row's trigger is abstract, the Verdict block is the only concrete template in the core, and section 3.3 bars only 'silent' substitution of priorities. Two minimal edits, mirrored in SKILL.ar.md, should help. First, make the Plan trigger name unstated, goal-dependent asks and exempt the Plan route from the Verdict label (in section 2's Plan row and section 7's first sentence). Second, reword section 3.3 to bar open or silent substitution of goals, priorities or risk tolerance. Caveats: one sample per cell, no sonnet data, and haiku's better premise reading may be noise. Re-test S10 on haiku with several samples, plus a scenario where the goal is clear to check that the broader trigger does not cause over-asking."
+ }
+}

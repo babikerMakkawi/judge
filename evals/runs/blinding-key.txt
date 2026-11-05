@@ -1,0 +1,12 @@
+b1-k7=skill
+b1-m2=baseline
+b2-p4=skill
+b2-a9=baseline
+b3-z1=skill
+b3-h6=baseline
+b4-c3=skill
+b4-w8=baseline
+b5-n5=skill
+b5-r2=baseline
+v2: b4-q1=skill-v1.1b, b4-e6=baseline(copy of b4-w8); b1-t9=skill-v1.1b, b1-j3=baseline(copy of b1-m2)
+v12: skill=b1-u4,b2-g7,b3-y2,b4-d5,b5-x8 ; baseline copies=b1-f1(m2),b2-s3(a9),b3-o9(h6),b4-i2(w8),b5-l6(r2)
