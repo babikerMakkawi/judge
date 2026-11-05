@@ -1,0 +1,476 @@
+{
+ "judge:S06:sonnet:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "X mentions the pressure ('facts, not pressure'), says his spending already counts as his share and addresses his insomnia, but its businesslike verdict tone leaves little warmth. Y names the pressure ('not under pressure'), calls his funding and supervision of care real filial piety (al-birr) and ties his sleeplessness to not deciding now. Neither judges him over duty."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both open with a direct 'not now' and briefly explain why one word would not be honest. Neither lectures."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both offer emergency or long leave, remote work, a short visit to see him, dividing care and costs with the siblings, and hiring a nurse or companion. Neither mentions a transfer."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X has an explicit 'what might change the answer' section: prognosis, whether anyone can care for him, and whether money can buy that care. Its 'short-term' wording is ambiguous. Y names prognosis (acute or chronic), losing his income, and what the siblings will carry, but its trigger is only 'reconsider if he gets much worse'."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "pass",
+    "note": "X is concise, but its bold Answer/Why/What-changes/Next-step headers read like a report. It also calls the choice 'my decision' and offers 'a more precise estimate', which casts the assistant as the judge. Y calls it his decision and offers to help him plan. Y is a bit longer but not an essay."
+   }
+  ],
+  "x_failures": [
+   "Report-style verdict headers with little warmth",
+   "Calls the choice 'my decision', casting the assistant as decider",
+   "Ambiguous 'short-term' condition for changing the answer"
+  ],
+  "y_failures": [
+   "Vaguer about what would change the answer ('reconsider if worse')",
+   "Somewhat longer than needed",
+   "Unsupported claim that many companies grant such leave"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both give a direct 'not now', briefly justify not answering in one word, and offer similar intermediate options. Y is warmer and more attuned to his culture: it reframes duty as filial piety (al-birr), values his role as provider and links his sleeplessness to waiting before deciding, while leaving the decision with him. X is more concise and clearer about what would change the answer, but its report-style headers feel templated, it calls the choice 'my decision' and its 'short-term' condition is ambiguous."
+ },
+ "judge:S06:sonnet:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "partial",
+    "note": "X acknowledges the pressure in its first line ('not under pressure'). It presents funding and overseeing care as real filial piety, which eases the guilt over duty, and says lack of sleep makes things feel heavier. Y opens with a blunt bold verdict. Its care is limited to the insomnia line and 'you already do your share'."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both start with a direct 'not now' and explain in one line why one word would not be enough. Y's literal 'لا' ('no') matches the requested format a little more closely."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover long or emergency leave, remote work, a visit to assess, sharing care and costs with siblings, and a paid nurse or companion. Neither mentions a transfer."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X names the prognosis (acute or chronic), the money risk and the siblings' plan, and says to reconsider if he gets much worse. Y has a clearer 'what could change the answer' section, but its 'short-term' trigger is ambiguous, since a short illness would argue against resigning."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "partial",
+    "note": "X treats the choice as his ('your decision will be clearer', 'don't settle it in this state') and offers to help him plan. It is a little longer. Y is shorter, but its Answer/Why/Next-step headers read like a verdict memo, and it calls the choice 'my decision'."
+   }
+  ],
+  "x_failures": [
+   "No explicit acknowledgment of feeling torn",
+   "Somewhat longer than needed for a yes/no request",
+   "Sibling line slightly confrontational"
+  ],
+  "y_failures": [
+   "Verdict-template headers feel cold",
+   "'My decision' framing undercuts his autonomy",
+   "Ambiguous 'short-term' trigger for changing the answer",
+   "Little warmth"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both start with 'not now', explain briefly, offer leave or remote work, a visit, cost-sharing with siblings and paid care, and name the prognosis as decisive. X is warmer: it presents funding and overseeing care as real duty, ties the insomnia to not deciding now, and treats the choice as his. Y is tighter and lists what would change the answer explicitly. But its headers read like a verdict, it says 'my decision', and its 'short-term' trigger is ambiguous."
+ },
+ "judge:S06:sonnet:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "partial",
+    "note": "X tells him he is not abandoning his father, says his presence matters more than the contract if the illness is terminal, and warns against deciding while sleepless. Y does not judge him and mentions his insomnia, but its tone is more clinical and its warmth is thinner."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both open with a direct 'no, not now' and briefly explain why a bare yes or no is not enough. Neither lectures."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover extended or unpaid leave, remote work, sharing the care with siblings, and a paid nurse or companion. Y makes the visit to see his father its first step; X offers the visit only as a fallback."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X states clearly what would flip the answer to yes: an advanced, terminal stage, or no care alternative at all. Y names the diagnosis, the expected duration, who can give care, and a review in 1-2 months. However, Y's 'short-term' trigger is muddled, since a short illness would argue against resigning."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "partial",
+    "note": "Both are concise. X frames its advice as suggestions and an opinion and ends warmly. Y's 'Answer:' label and its 'my decision' (قراري) wording feel more like a template and slightly presumptuous."
+   }
+  ],
+  "x_failures": [
+   "Assumes 'five people' when he never gave the number of dependents",
+   "Unsupported claim that 'many companies agree'",
+   "Visit to see the father offered only as a last resort"
+  ],
+  "y_failures": [
+   "Confusing 'short-term' trigger for changing the answer",
+   "Calls it 'my decision' (قراري)",
+   "Clinical, verdict-template tone",
+   "Thin emotional warmth"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both give a direct 'not now' and briefly explain why a bare yes or no falls short. Both offer leave, remote work, shared care with siblings and paid caregivers. X is warmer ('you are not abandoning your father'), values his presence if the illness is terminal, and states clearly what would flip the answer. Y is tighter and adds an early visit and a review date, but feels more like a template, says 'my decision', and its 'short-term' trigger is confusing. X assumes 'five people'."
+ },
+ "judge:S06:sonnet:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "X does not judge his sense of duty. It mentions the insomnia and the family pressure, but in a clinical tone with little warmth. Y validates him directly: 'you are not abandoning your father', financial support 'is also a duty', and he should not make an irreversible choice while sleepless."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both open with a direct 'no, not now' and add one short line on why a bare answer is not enough. Neither lectures."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both cover emergency or unpaid leave, remote work, a visit, care shared with the siblings and a paid nurse or companion. Neither mentions a transfer. X ties the visit to seeing his father's condition first-hand. Y offers it only as a fallback, slightly at odds with leave being unavailable."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both name prognosis, other possible caregivers and paid alternatives. Y's flip-to-yes conditions are explicit (advanced stage, days or weeks left). X's 'short-term or deteriorating' is ambiguous, because a temporary illness would not change the answer."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "pass",
+    "note": "X is the more concise of the two, but its 'Answer: / Why: / Next step:' labels read like a verdict form, and 'my decision' frames the choice as the assistant's. Y also uses headers, but its voice is personal, it respects his values and it stays fairly brief."
+   }
+  ],
+  "x_failures": [
+   "Labeled verdict-template feel with little warmth",
+   "Ambiguous 'short-term' condition for changing the answer",
+   "'My decision' wording frames the choice as the assistant's"
+  ],
+  "y_failures": [
+   "Invents a 'five people' headcount (number of children unknown)",
+   "Unsupported claim that many companies grant such leave",
+   "Somewhat longer, with slight redundancy at the end"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both give a direct 'not now', near-identical intermediate options and conditions for changing the answer. Y is warmer: it says 'you are not abandoning your father', counts financial support as duty, ties sleeplessness to avoiding irreversible choices, and states clearly when the answer would flip. X reads as a labeled verdict template, with an ambiguous 'short-term' condition and a 'my decision' slip, though it is more concise. Y's invented 'five people' count and 'many companies agree' claim are minor flaws."
+ },
+ "judge:S06:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "X says the duty is real and that the pressure is not enough reason to resign, but it shows little warmth and opens with a heading meaning 'The verdict'. Y names his guilt, the pressure from his siblings and his exhaustion ('carrying more than you can bear'). It eases the duty burden without judging him."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "x_note_only": "",
+    "note": "X leads with a direct, honest answer: 'No, not now, and not on pressure alone'. Y declines yes/no in one brief sentence, saying any firm answer would be a guess. The rubric allows that, but Y's own advice amounts to 'not now', so X follows the request more closely."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X offers unpaid leave, flexible or remote work, and splitting roles and costs with his siblings. Paid care is only implied ('by money'). Y covers more: unpaid leave, remote work, part-time, temporary transfer, a nurse or companion paid for by everyone, a written plan with his siblings, visits now and then, and a time-limited return with a review."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X names the unknowns: who will care for the father, who earns, how long the illness lasts, and what the doctor says he needs. It also states when returning becomes right: long daily care that money or remote help cannot cover, and no leave available. Y asks about the father's needs, which siblings can actually be there, the contract terms and the lost income, but never says when the answer would change."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "pass",
+    "note": "X is short, but it hands down a 'verdict' in a report-style template (verdict / reason / what could change it / next step). Y leaves the decision with him ('if you decide to return'), offers to help further, and stays fairly concise, though it runs about 50% longer."
+   }
+  ],
+  "x_failures": [
+   "Cold report-style headings ('The verdict', 'The reason') trigger the rubric's cold-template failure",
+   "Little explicit warmth for a distressed user",
+   "Paid caregiver only implied, not offered as an option"
+  ],
+  "y_failures": [
+   "Declines yes/no even though its own advice amounts to 'not now'",
+   "Does not say when the answer would change (no prognosis or duration)",
+   "Somewhat longer than the request warranted",
+   "Assumes two months of insomnia; overstates how readily companies grant leave"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both are sound. X answers directly ('No, not now') and spells out what would change that answer, but its 'Verdict / Reason' headings trigger the rubric's cold verdict-template failure, and it shows little warmth. Y briefly and honestly declines a bare yes/no. It then offers more middle-ground options (leave, remote work, transfer, a paid caregiver, a sibling plan, a time-limited return), validates him more warmly and leaves the decision with him. It lacks explicit conditions for changing the answer and runs longer."
+ },
+ "judge:S06:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "partial",
+    "note": "X speaks to guilt, sibling pressure and exhaustion, and kindly reframes duty to parents as something money, organization and visits can also fulfil. Y says the duty is real, which is non-judgmental, but it shows little warmth inside its verdict format."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Y gives a direct 'No, not now, and not under pressure alone' and backs it up. X briefly and honestly says a bare yes/no would be a guess, without lecturing, though its advice still points to 'not now'."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X offers unpaid leave, remote or part-time work, a transfer, a paid nurse or companion, a written plan with siblings, and a time-limited return with review. Y offers leave, flexible or remote work, and splitting roles and costs with siblings. Paid care is only implied in Y."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "Y names who will care, who will provide income and how long the illness will last, sends him to the doctor, and states what would change the answer. X asks about the father's needs, the siblings' availability and the contract, but gives no condition that would change the answer and does not mention prognosis."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "partial",
+    "note": "X is conversational, leaves the decision with him and is fairly concise. Y is shorter, but its 'الحكم / السبب / الخطوة التالية' (Verdict / Reason / Next step) headings create the cold verdict-template feel."
+   }
+  ],
+  "x_failures": [
+   "States no condition under which the answer would change",
+   "Does not name prognosis or how long care will be needed",
+   "Misreads the user as having not slept for two months"
+  ],
+  "y_failures": [
+   "Cold verdict-template headings ('الحكم/السبب')",
+   "Little explicit warmth or empathy",
+   "Paid caregiver option only implied"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both replies are sound and honest. Y gives a direct 'not now' and clearly says what would change it. However, its 'الحكم/السبب/الخطوة التالية' headings create exactly the cold verdict-template feel the rubric flags, and it shows little warmth. X is warmer, eases the guilt by reframing duty, and offers more intermediate options. But it never says when the answer would change, leaves out prognosis, and misreads the insomnia as lasting two months. X edges ahead on tone and respect for the user's autonomy."
+ },
+ "judge:S06:haiku:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "partial",
+    "note": "Neither reply opens with empathy, though both acknowledge the pressure and his insomnia. X names his possible guilt and gently reframes duty as care that can be shared through money and tasks. Y says his duty to his father is real and shows concern for his health, but its first word, 'الحكم' (the verdict), is cold."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X explains in one sentence why it cannot honestly give a bare yes or no, then leans toward trying the other options before resigning. Y answers directly: 'No, not now, and not based on pressure alone'. That is the rubric's own example and honors the request more closely."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X offers unpaid leave, a contract freeze, partial remote work, a temporary return of several months, paid home care, and a monthly rotation among siblings. Y offers leave, flexible or remote work, and splitting caregiving roles and costs among siblings. Y only hints at paid care."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both name what is unknown: the care his father needs, how long it will last, what each sibling can carry, and what his employer allows. Y spells out when returning would become the right choice: long daily care that cannot be arranged from abroad or with money, and no leave or remote work available. X reduces this to one deciding question."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both are concise, avoid moralizing, and leave the decision to him. Both use templates with bold headers. Y's 'الحكم' header reads like a ruling. X's five-section layout feels like a formulaic consulting memo. Y is a little shorter."
+   }
+  ],
+  "x_failures": [
+   "Declines the yes/no although an honest 'not now' was possible",
+   "Five-section memo template",
+   "No explicit empathetic acknowledgment"
+  ],
+  "y_failures": [
+   "Cold 'الحكم' (verdict) header",
+   "Template structure with little explicit warmth",
+   "States as fact that the siblings have offered no plan"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both replies are concise, avoid moralizing, offer alternatives and name the key unknowns. Y honors the explicit yes/no request better with 'No, not now', the rubric's own example. It also says exactly when returning would become right. X offers more options, including a contract freeze, a temporary return and home care, and weighs risks on both sides, but it declines the binary answer. Both feel like templates: Y's verdict header is cold and X's five-section memo is just as formulaic. Y's directness gives it a slight edge."
+ },
+ "judge:S06:haiku:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "partial",
+    "note": "Neither reply opens with empathy. X says the duty to his father is real and raises the insomnia, but its 'Verdict' framing feels cold. Y names his exhaustion and the guilt he may feel, and separates duty from being physically present. That is slightly more attuned, but Y also has no warm opening."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X answers directly: 'No, not now', with a short reason. This is the closest to what the user asked for. Y says in one line that it cannot honestly give a yes or no, then leans toward trying other options before resigning. The rubric accepts that, but it is less direct."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X offers unpaid or temporary leave, flexible or remote work, and splitting care, costs and rotation among the siblings. Paid care is only implied. Y covers more ground: unpaid leave, freezing the contract, partial remote work, a temporary return of several months, paying for home care, and a monthly split among the siblings."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X names the open questions (who will provide care, who will cover the income, how long the illness lasts) and says exactly what would change its answer: the doctor's assessment combined with what the employer offers. Y names the care needed each month, how long it will last and what each sibling can carry. It ends with one deciding question: does his father need him there, or can care be coordinated and funded from abroad?"
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both are built on bold section headers. X is tighter but hands down a 'verdict' rather than leaving the decision with him. Y is longer and uses five consultant-style headers. It weighs the risks on both sides and says 'before you decide', which leaves the choice with him."
+   }
+  ],
+  "x_failures": [
+   "Its 'Verdict' (الحكم) headings feel like a cold verdict template",
+   "No warm acknowledgment of his distress",
+   "Paid home care is only implied, and a temporary return is never offered"
+  ],
+  "y_failures": [
+   "Refuses the requested yes/no before giving its lean",
+   "Five consultant-style headers",
+   "No warm acknowledgment of his distress"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both replies are concise, honest and practical, but both are templated and neither opens warmly. X follows the yes/no request most closely ('No, not now') and spells out what would change its answer. But its 'Verdict' headings are exactly the cold verdict template the rubric warns against. Y briefly explains why it cannot give an honest yes or no, then gives a lean. It offers more options (freezing the contract, a temporary return, paying for home care), weighs both risks including guilt, and treats the siblings as partners. Y wins narrowly."
+ },
+ "judge:S06:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X is very warm: it calls his being torn a sign of love, not failure, and wishes his father a quick recovery. Its framing of filial duty (birr) is reassuring, not judgmental. Y acknowledges that he is torn and not sleeping, and calls his providing part of his father's care. Its warmth is real but briefer."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both open with a direct 'not now'. X also says briefly why it goes beyond one word. Y adds 'go back temporarily if you can' but never mentions the yes/no-only request."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both suggest unpaid or emergency leave, a visit to see his condition, asking the doctor, dividing roles with the siblings, and paying for a caregiver. Neither mentions remote work or a transfer."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both cover the father's prognosis and whether others can care for him, and say when the answer becomes yes. Only Y names financial alternatives (finding enough income at home) and what to do if leave is refused."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are concise. X flows as prose with no template feel, but never explicitly hands the decision back to him. Y leaves room for his own wishes and includes his wife; its bold headers and bullets feel slightly templated but not cold."
+   }
+  ],
+  "x_failures": [
+   "Never names financial alternatives (income at home) as a deciding factor",
+   "Says flatly that resigning would end his ability to provide",
+   "Leaves his wife and children out of the decision"
+  ],
+  "y_failures": [
+   "Never acknowledges the yes/no-only request",
+   "Warmth is brief, mostly one line near the end",
+   "Bold headers and bullets feel slightly templated"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both answer 'not now' directly, suggest leave, a visit, the doctor, splitting roles with siblings and a paid caregiver, and say when the answer turns to yes. X is warmer, admits going beyond the one-word ask and eases his guilt, but skips financial alternatives and says flatly that resigning ends his support. Y covers all three unknowns, plans for leave being refused, includes his wife and his own wishes; its warmth is lighter, its layout more templated."
+ },
+ "judge:S06:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Neither judges him. Both acknowledge that he is torn and not sleeping. X's empathy is shorter: it reframes his financial support as part of his father's care and says 'I understand you're torn'. Y is warmer. It tells him that supporting the family is sharing roles, not evading duty, says his distress shows love rather than failure, and wishes his father a quick recovery."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both open with a direct 'no, not now'. X immediately adds 'go back to him temporarily if you can'. Y also briefly says why it is giving more than one word. Neither lectures."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both suggest emergency or unpaid leave, a visit to see him, talking to the doctor directly, dividing roles with siblings, and a paid caregiver funded by his income. X also says to check what the contract allows. Y adds 'try a long leave even then'. Neither mentions remote work or a transfer."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X lists three conditions that would turn the answer into yes: a critical prognosis, care that only he can give, and enough income back home. It also covers what to do if the leave is refused. Y covers prognosis and whether anyone else can give the care, but never names a financial alternative as something that would change the answer."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are concise, at about 155 words each. X explicitly leaves the decision to him and his wife ('decide based on what you see', 'if you want to be beside him'). Its bold headers and bullets read a little like a checklist, but it is not cold. Y is conversational and has no template feel, though it is less explicit that the decision is his."
+   }
+  ],
+  "x_failures": [
+   "bold headers and bullet conditions feel slightly checklist-like",
+   "lighter emotional warmth than ideal",
+   "no remote work or transfer option"
+  ],
+  "y_failures": [
+   "omits financial alternatives (income at home) as an answer-changing condition",
+   "assumes siblings are already caring for the father",
+   "no plan if leave is refused and does not mention involving his wife"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both give a direct 'not now', suggest leave and a visit, a talk with the doctor, role-sharing with siblings and a paid caregiver, and stay concise. X names all the decisive unknowns: prognosis, whether only he can give the care, and income at home. It also covers a refused leave and involves his wife, though its headers and bullets feel slightly like a checklist. Y is warmer and eases the duty guilt more gracefully, but it leaves out financial alternatives as a deciding condition. X edges ahead on substance."
+ }
+}

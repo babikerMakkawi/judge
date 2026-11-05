@@ -1,0 +1,158 @@
+{
+ "judge:S12:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly recommend Next.js 16 and tie the choice to team size, SEO needs and the 2-month deadline."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X says outright that it cannot check Remix 3's current status. Y dates its knowledge ('mid-2026') and tells the user to check. Y's Next 16 specifics (proxy.ts, awaited params, Turbopack default, use cache/cacheTag) are accurate pre-cutoff release facts, not uncertain claims."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "X covers ecosystem maturity, that both render HTML on the server, and deadline risk, but leaves out hosting and team familiarity. Y covers all five factors: familiarity as the condition for choosing React Router, Vercel cost and self-hosted cache, ecosystem, ISR/prerendering, and the deadline."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X gives a concrete week-one test build with view-source, mobile-speed and content-refresh checks, plus a point to rethink the choice. Y only says in passing to check Remix 3's status and to test caching on real hosting. It has no time-boxed test build to validate the chosen stack."
+   }
+  ],
+  "x_failures": [
+   "Omits hosting considerations",
+   "Does not weigh team familiarity"
+  ],
+  "y_failures": [
+   "No time-boxed test build; verification is only a passing 'check where it stands now'"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both clearly recommend Next.js 16, say they are unsure of Remix 3's release status and invent nothing; Y's Next 16 specifics are accurate. X offers an excellent week-one test build but leaves out hosting and team familiarity. Y covers all the durable factors and adds high-value marketplace SEO advice and React Router trade-offs. Its only verification step is a passing 'check where it stands now.' Y's extra content is substantive, not padding, which gives it a slight edge."
+ },
+ "judge:S12:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say clearly to use Next.js 16 and tie that choice to the 3-dev team, the 2-month deadline and the SEO needs. Both name React Router v7 as the realistic Remix-style alternative, and X says when to pick it (if the team already knows Remix v2 or React Router)."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Y says plainly 'I can't check its current status from here.' X dates its knowledge ('mid-2026') and tells the user to check Remix 3's status. Both make the recommendation hold even if Remix 3 is now stable. X's unhedged Next 16 details (awaited params, proxy.ts, Turbopack as default, use cache/cacheTag) are accurate, so they are not fabrications."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "X covers team familiarity, ecosystem maturity, SSR and incremental caching, hosting (Vercel costs, shared cache when self-hosting) and deadline risk. Y relies on ecosystem maturity, SSR parity, deadline risk and the learning curve, but never discusses hosting and only touches team familiarity through 'what you like'."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "Y proposes a few-day test build with real data, specific checks (view source, mobile speed, how quickly edits appear) and a go/no-go point at the end of week one. X only says 'check where it stands now' and 'test it on your real hosting', with no time-boxed spike."
+   }
+  ],
+  "x_failures": [
+   "Verification is only a passing mention; no time-boxed spike"
+  ],
+  "y_failures": [
+   "Omits hosting considerations",
+   "Team familiarity not explicitly weighed"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both recommend Next.js 16 with the deadline in mind, hedge Remix 3's status and offer React Router v7 as the alternative. Neither fabricates: X's Next 16 details are accurate. Y says more plainly that it cannot check and gives a better spike plan. X covers more durable factors (hosting, team familiarity, caching) and adds useful marketplace SEO advice (filter URLs, JSON-LD, sold listings), but its verification is only a passing mention. Net: X wins slightly on practical value."
+ },
+ "judge:S12:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both recommend Next.js clearly. Both tie the choice to the 3-person team, SEO needs and the two-month deadline."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X says it can't confirm Remix 3's state and that its advice rests on its own knowledge, not a check of current releases. Y says it can't confirm stability and explicitly flags its knowledge cutoff. Y's claims about Remix's history (ground-up rewrite, v2 continuing as React Router framework mode) are accurate, not fabricated."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "X covers SSR/SSG/ISR, ecosystem maturity, deadline risk and team familiarity (as a condition on React Router). It touches hosting only through 'deployment docs'. Y covers maturity, SSR/SSG, deadline risk and hiring, but never weighs what this team already knows, and it barely mentions hosting."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X gives a concrete 1-2 day spike: one real content template, then view-source, Lighthouse, sitemap and metadata checks. Y only says to check Remix's release status and verify both frameworks. That fits the 'check current releases' example but is generic."
+   }
+  ],
+  "x_failures": [
+   "Assumes React Router skills carry over to Remix 3, which was announced as a non-React rewrite",
+   "Hosting and deployment platform not discussed"
+  ],
+  "y_failures": [
+   "Never considers the team's existing skills",
+   "Verification advice is vague, with no concrete spike",
+   "Hosting not discussed"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both recommend Next.js clearly, respect the deadline, and admit they can't verify the current state. X weighs team familiarity and gives a concrete 1-2 day spike with specific SEO checks, plus a useful warning about Next.js caching changes. Y adds accurate context on Remix's history and a strong SEO checklist for a marketplace, but its verification advice is generic and it ignores the team's skills. X's assumption that React Router skills carry over to Remix 3 is a minor flaw. X edges ahead."
+ },
+ "judge:S12:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly recommend Next.js 16 and tie the choice to the 3-dev team, SEO needs and the 2-month deadline."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "X says it can't confirm Remix 3 stability, says to check release status, and names its knowledge cutoff. Its Remix-rewrite and React Router facts are accurate. Y says it can't confirm Remix 3's stability today and that the call rests on its knowledge, not on current releases or docs."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X covers maturity, ecosystem, SSR/SSG/ISR, deadline risk, and the point that rendering decisions matter more than the framework, but it skips the team's own skills. Y covers maturity, SSR/SSG, deadline risk, team familiarity, and Next.js caching churn. Neither says much about hosting."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X suggests checking Remix's current release status and verifying both frameworks, which is a generic check of releases. Y gives a concrete 1-2 day spike (view-source, Lighthouse, sitemap and metadata checks) and also says to pin the version and check the caching docs."
+   }
+  ],
+  "x_failures": [
+   "Verification advice is generic, not a concrete spike",
+   "Doesn't consider the team's existing skills",
+   "No mention of Next.js caching/version-churn risk"
+  ],
+  "y_failures": [
+   "Treats React Router familiarity as relevant to the Remix 3 rewrite",
+   "Little context on what Remix 3 actually is"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both recommend Next.js 16, tie it to the team and the deadline, invent nothing, and admit they can't verify current status. Y edges ahead. It proposes a concrete 1-2 day spike with testable checks, flags Next.js's own caching churn (pin the version) and says what would change the call. X adds accurate context on the Remix rewrite and a useful SEO checklist, but its verification advice is generic and it ignores team familiarity. Y's React Router condition doesn't quite fit Remix 3."
+ }
+}

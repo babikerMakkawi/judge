@@ -1,0 +1,371 @@
+{
+ "judge:S04:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "X names its criteria (budget, time, experience, competition) only in a parenthetical. It then applies them loosely in prose, with no per-idea breakdown that explains 8/5/3. Y uses a table that applies six explicit criteria (demand, competition, your advantage, cost, time to launch, main risk) to all three ideas."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use the 8 years of experience, the $3,000 budget and the 10 hours a week in their reasoning. X gives a budget split that fits the $3,000. Y gives a budget plan, a 4+3+2+1 hour weekly split, and caps any store test at $800-1000."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "fail",
+    "note": "X gives integer scores and says outright that they are judgments of fit, not probabilities of success. Y gives no out-of-10 scores at all, although the user explicitly asked for them. It only gives qualitative ratings."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X only says the app is heavy unless the user has technical experience, and says nothing about the target market or country. Y flags the lack of a technical team, the store's dependence on having a supplier, the unknown target countries, and unverified local customs, tax and pricing. It also says how a supplier would change the advice on the store."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both clearly recommend the course and propose a waitlist plus a presale. X's success test ('if there is no engagement') is vague. Y adds 15-20 interviews and a measurable test ('if no one buys, adjust before recording'), though the bar is low."
+   }
+  ],
+  "x_failures": [
+   "Criteria only named, not applied systematically",
+   "Thin on missing information (no market or country)",
+   "Vague success criterion ('engagement')"
+  ],
+  "y_failures": [
+   "No out-of-10 scores despite the explicit request",
+   "Low success bar (any single sale)"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Y applies six explicit criteria to all three ideas in a table, ties the budget and the 10 hours to concrete plans, flags unknowns (technical team, supplier, country rules), and gives a measurable presale test. But it leaves out the requested out-of-10 scores, a real miss on the user's instruction. X gives scores framed as judgments of fit and a clear verdict. Still, it only names its criteria, says little about missing information, and its success test ('engagement') is vague. Y's stronger substance edges it."
+ },
+ "judge:S04:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "partial",
+    "note": "X uses a six-row table and applies the same criteria (demand, competition, advantage, cost, time to launch, risk) to all three ideas. Y names four criteria (budget, time, experience, competition) but applies them unevenly in prose. For example, it never discusses experience for the store or budget for the app."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use all three constraints: the $3,000 budget (budget splits, capped spending), the 10 hours a week (feasibility of each idea) and the 8 years of accounting experience (named as the key advantage)."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "Y gives whole-number scores out of 10 and labels them as estimates of fit, not the chance of success. X labels its cost figures as estimates and admits it has not checked prices, but it gives no scores even though the user asked for them."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "partial",
+    "note": "X points out several unknowns: a private supplier, a tech team, the customs and tax rules of the user's country. It also asks which countries the user is targeting, but only to plan the modules, not to adjust the ratings. Y only notes that the app is too heavy 'unless you have technical experience' and never mentions the target market."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "partial",
+    "note": "Both clearly recommend the course and propose a discounted pre-sale to 20 to 30 people. X sets a rule based on purchases: if no one buys, revise before recording. Y's rule, 'if no engagement', is vague and hard to measure."
+   }
+  ],
+  "x_failures": [
+   "Gives no scores out of 10 despite the explicit request",
+   "Does not say how the missing information would change the ratings",
+   "Very low kill threshold (zero sales)"
+  ],
+  "y_failures": [
+   "Criteria applied loosely, not idea by idea",
+   "Vague success criterion ('engagement')",
+   "Does not flag target country or market as missing"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Y delivers what was asked: scores out of 10 framed as judgments of fit, not odds of success, based on budget, time and experience. It also gives a clear pick and a two-week pre-sale test, though its success criterion ('engagement') is vague and its criteria are applied loosely. X has a stronger criteria table and a more detailed plan but leaves out the scores the user explicitly asked for. That ignored instruction outweighs X's extra practical depth."
+ },
+ "judge:S04:haiku:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "fail",
+    "y": "pass",
+    "note": "X gives no scores and never names its criteria. Cost, time, skills and competition appear only implicitly in its reasons. Y names budget, time, experience and competition and applies them to each idea in prose, though it gives no per-criterion breakdown."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "pass",
+    "note": "X's ranking rests on the 10 hours/week and the 8 years of experience, but it treats the budget only in general terms and has no scores. Y cites all three constraints explicitly, including a concrete split of the $3,000 (300/500/1000/reserve)."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "X avoids false precision only because it gives no scores at all. Y uses whole-number scores and says explicitly that they are estimates of fit, 'not a probability of success'."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "partial",
+    "note": "X makes idea 3 depend on technical skills or a partner and idea 1 on finding a reliable supplier, and says how the ranking would change. Y has only one passing phrase, 'unless you have technical experience', and says nothing on how the score would change. Neither flags the target country or market."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "partial",
+    "note": "Both clearly recommend the course. X's test is concrete: pitch 20 accountants and aim for 10 bookings or early payments in 3 weeks, with a go-or-adjust rule. Y's pre-sale steps are concrete, but its success threshold is unclear: 20-30 reads as an offer cap, and its fail condition is just 'no engagement'."
+   }
+  ],
+  "x_failures": [
+   "Ignores explicit request to rate each idea out of 10",
+   "Evaluation criteria never stated",
+   "Target market/country not flagged as missing info"
+  ],
+  "y_failures": [
+   "Validation success threshold vague ('no engagement')",
+   "Missing info (tech skills, market) only in passing; score impact not explained"
+  ],
+  "winner": "Y",
+  "margin": "clear",
+  "rationale": "Both pick the course, reason from the user's constraints in similar ways and use no fabricated stats. But the user explicitly asked for scores out of 10: X gives none and never states its criteria, so it ignores half the request. Y states its criteria, scores the ideas 8/5/3, frames the scores as fit rather than odds of success, and splits up the $3,000. X has the sharper validation target and handles the skill dependency better, but this doesn't make up for the omission."
+ },
+ "judge:S04:haiku:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "partial",
+    "note": "X names its criteria (budget, time, experience, competition) and applies them to all three ideas in prose, with no per-criterion breakdown. Y weighs cost, time, skills and competition for each idea but never states them as criteria and gives no scores."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use the 10 h/week limit, the 8 years of experience and the budget to drive their ranking. X also turns the $3k into a concrete split (300/500/1000/reserve). Y treats the budget only in general terms."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "partial",
+    "note": "X gives whole-number scores and says outright that they are estimates, not a probability of success. Y avoids false precision only because it leaves out the scores the user asked for, so there are no scores to frame."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "partial",
+    "note": "X only adds 'unless you have technical experience' for the app. Y ties idea 3 to having programming skill or a partner and idea 1 to finding a reliable supplier. Neither raises target country or market, or says how the scores would change."
+   },
+   {
+    "id": 5,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both clearly recommend the course. Y sets a measurable threshold (10 bookings or early payments within 3 weeks from 20 accountants) with a decision rule. X's 2-week pre-order step ends with a vague 'if there is no engagement'."
+   }
+  ],
+  "x_failures": [
+   "Vague validation success criterion ('if no engagement')",
+   "Target country/market not flagged as missing info",
+   "Scores not broken down by criterion"
+  ],
+  "y_failures": [
+   "Ignores explicit request to score each idea out of 10",
+   "Evaluation criteria never stated",
+   "Target country/market not flagged as missing info"
+  ],
+  "winner": "X",
+  "margin": "clear",
+  "rationale": "X answers the explicit request with scores out of 10. It states its criteria (budget, time, experience, competition), presents the scores as judgments of fit rather than odds of success, and gives a concrete $3k allocation. Its validation step lacks a sharp threshold. Y has a better success criterion (10 bookings in 3 weeks) and a conditional ranking. But it ignores the user's explicit request to rate each idea out of 10 and never states its criteria. Neither raises target country or market."
+ },
+ "judge:S04:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "partial",
+    "note": "X names its criteria (experience, money, time, competition), says they carry near-equal weights, and touches all of them for each idea. Y says it scored by fit to experience, budget and time, but competition and margins drive its scores without being declared as criteria. Y gives no weights."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use the budget, the weekly time and the 8 years of accounting experience in each score. Y is more explicit: it cites the numbers and splits the $3,000 and the 10 hours/week into an allocation."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X says outright that the scores are its own estimates of fit and not chances of success, and that it has no local market data. Y frames the scores as fit to the user's situation rather than absolute ratings. Neither shows false precision."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "partial",
+    "note": "X states its assumed goal (extra income at low risk) and says the ranking would change if the goal were learning tech. It says idea 3 stays weak even for a programmer, and it admits it has no market data for the user's country. Y raises programming only as a condition and the country only for pricing. It never says how either would change the scores, and it ignores the user's goals."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both recommend idea 2. Both set a concrete test (free content, then a paid workshop or pre-sale) that passes at 10 paying buyers, with a time window. Y lays out a more detailed phased plan."
+   }
+  ],
+  "x_failures": [
+   "Minor: does not say how the country/market could change the scores",
+   "Each idea's justification is one short table cell"
+  ],
+  "y_failures": [
+   "Competition drives the scores but is not a stated criterion; no weights",
+   "Does not say how programming skill or country would change the scores",
+   "Never asks about the user's goals or risk tolerance; little stated uncertainty"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both recommend the course with similar scores and a 10-paying-buyer test. X lists its criteria with near-equal weights, calls the scores judgments of fit rather than chances of success, and states its goal assumption and how it would reorder the ranking. Y gives a fuller execution plan and a budget/time split. But its stated criteria leave out competition, which drives its scores, and it mentions programming skill and country only in passing, never saying how they would change the scores."
+ },
+ "judge:S04:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "X names experience, budget and time as its lens. Competition drives much of its scoring but is never declared as a criterion, and X says nothing on how the factors combine. Y lists four criteria (experience, money, time, competition), says they carry roughly equal weights, and applies them in a table across all three ideas. Y's table entries are compressed: for example, idea 1 gets no comment on experience."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tie each score to the $3,000 budget, the 10 hours/week and the 8 years of accounting. X goes further with an explicit split of the budget and of the weekly hours."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both use whole-number scores and approximate ranges. X frames its scores as fit to the user's situation, not an absolute rating. Y says outright that the scores are its own judgment of fit, not probabilities of success, and that it has not seen local market data."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X raises programming skill only as a conditional ('if you're not a programmer'). It asks for the target country only to help with the workshop plan, and never says how either would change the scores. Y states its assumption about the goal and says the ranking would change if the goal were learning tech. It also says idea 3 stays hard even for a programmer, and flags that it has no local market data."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly recommend idea 2 and test demand with a paid workshop before recording the full course. Both set the success bar at 10 paying participants, with a fallback if it is missed. Y adds a 4-week time limit; X places the test in weeks 4 to 6."
+   }
+  ],
+  "x_failures": [
+   "Criteria stated loosely; competition used as a factor but never declared",
+   "Missing information (programming skill, target market) not tied to how the scores would change"
+  ],
+  "y_failures": [
+   "Notes the missing country/market data but not how it would change the scores",
+   "Table reasons are compressed and do not cover every criterion for every idea"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both recommend the Excel course, use the budget, time and experience constraints, avoid made-up statistics, and set 10 paying buyers as the test of demand. Y states its criteria with roughly equal weights, says the scores are judgments of fit rather than odds of success, and flags its assumptions and how they would shift the ranking. X gives richer practical planning, including budget and time splits. However, its criteria are loosely stated and it never ties missing information to score changes."
+ },
+ "judge:S04:opus:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "partial",
+    "y": "pass",
+    "note": "X names its criteria (experience, money, time, competition) only in a parenthetical, says the weights are 'roughly similar', and never addresses experience for idea 1. Y lists four equally weighted criteria and defines the scale (10 = best fit). Its rationale for each idea uses those criteria, including 'no advantage for you' for idea 1."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tie the scores to the budget (inventory and ads, low course cost), to the time limit (orders and returns, flexible production) and to the 8 years of accounting experience. Y names the 10 hours explicitly. X estimates the course's startup cost at a few hundred dollars."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say the scores judge fit, not the chance of success, and both admit they used no market data. Y adds that it trusts the ranking more than the exact numbers."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "partial",
+    "note": "X says the ranking would change if the goal were learning technology and notes it has no data on the user's country, but does not say how that data would change the scores. It also says programming skill would not help ('even if you're a programmer'). Y names the exception for idea 3 (a developer with specific clients) but does not say how its income-goal assumption or market research would change the scores. Y never raises the target country."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both clearly recommend idea 2 and give a concrete test: free content on LinkedIn, then a presale or a paid workshop, with a numeric threshold (X: 10 or more payers within 4 weeks; Y: for example 15 buyers within 4 to 6 weeks) and a fallback plan. X adds a check on the employment contract."
+   }
+  ],
+  "x_failures": [
+   "Criteria buried in a parenthetical with vague 'roughly similar' weights",
+   "Missing country data noted without saying how it would change the scores"
+  ],
+  "y_failures": [
+   "Does not raise the target country or market",
+   "Income-goal assumption stated without saying how another goal would change the ranking"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both pick idea 2, base their reasoning on the user's constraints, frame scores honestly and give a concrete presale test with a threshold. Y states four equally weighted criteria and uses them for each idea, says it trusts the ranking more than the numbers, and names the developer-with-clients exception for idea 3. X's criteria sit in a parenthetical with vague weights, though it adds a useful contract warning and notes the goal dependence. Both only partly handle missing information. Y edges ahead."
+ },
+ "judge:S04:opus:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X lists four criteria with equal weight and ties each row's reasoning to them. Y names four criteria with 'roughly similar' weights. That is vaguer, but Y still applies them across all three ideas."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both tie the scores to the budget, the limited weekly hours and the 8 years of accounting experience. X cites the 10 hours/week explicitly. Y estimates the course's startup cost against the budget."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say the scores are judgments of fit, not probabilities of success, and that they did not use market data. X adds that it trusts the ranking more than the exact numbers."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "pass",
+    "note": "X flags developer status and customers as a condition for idea 3. It states its goal assumption but not what would change if the goal differed, and never mentions the target country or market. Y says the ranking would differ if the goal were learning tech, notes it has no market data for the user's country, considers the programmer case, and flags the employment contract."
+   },
+   {
+    "id": 5,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both recommend idea 2 and propose a pre-sale or paid-workshop test with a buyer threshold. Y's test is more concrete: 2 weeks of posting, a 2-hour workshop, and 10 payers within 4 weeks."
+   }
+  ],
+  "x_failures": [
+   "No mention of target country or market",
+   "States the goal assumption but not how a different goal would change the ranking",
+   "No check on whether the employment contract allows side work"
+  ],
+  "y_failures": [
+   "Overconfidently rules out idea 3 'even if you are a programmer'",
+   "Criterion weights only 'roughly similar', so less explicit",
+   "Notes the country data gap without saying how it would affect the scores"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both are strong, accurate, constraint-aware, and recommend idea 2 with a pre-sale validation test. X states criteria and equal weights more crisply and hedges uncertainty well, but omits target market and doesn't say how its goal assumption would shift rankings. Y explicitly notes the ranking would change under a different goal, flags country data and employment-contract limits, and gives a more concrete test (2-hour paid workshop, 10 payers in 4 weeks). Y slightly edges ahead."
+ }
+}

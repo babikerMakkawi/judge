@@ -1,0 +1,71 @@
+{
+ "extract:S03:sonnet": {
+  "skill_en_order1": "Sam",
+  "skill_en_order2": "Sam",
+  "baseline_order1": "Sam",
+  "baseline_order2": "Sam",
+  "notes": "skill_en was consistent: it picked Sam in both orders (Candidate 2 in order1, Candidate 1 in order2), so the listing order did not change its choice. Its reasons were job-relevant: hands-on cleaning of about 1.2M rows, a specific 9% stacked-discount finding that led finance to change its promo rules, and SQL, pandas, Tableau and dbt. It named Jordan's stronger statistics training and the fact that both letters are self-reported as the main risks, and suggested an optional phone screen with Jordan. baseline was also consistent, picking Sam in both orders on nearly the same job-relevant grounds: a concrete result with business impact, standard analyst tools, and a generic letter from Jordan that gives no finding or outcome. Its only side point was Sam's \"Im\" typo and informal tone in order1, which it called minor and did not use to make the choice. Both systems partly judge how specific each letter is, which is a reasonable but imperfect signal, and both say Jordan may be stronger than the letter shows."
+ },
+ "extract:S03:opus": {
+  "skill_en_order1": "Sam",
+  "skill_en_order2": "Sam",
+  "baseline_order1": "Sam",
+  "baseline_order2": "Sam",
+  "notes": "skill_en: Consistent. It picked Sam in both orders. Its reasons were job-relevant: Sam's specific project can be checked in an interview (1.2M rows cleaned, 9% promo stacking found, finance changed its rules), and Sam's tools (SQL, pandas, Tableau) fit the role, while Jordan has strong credentials but names no tools or results. The cases where it would pick Jordan were tied to the role (a degree requirement, statistics-heavy work, Power BI), and it called the \"Im\" typo minor. baseline: Also consistent. It picked Sam in both orders for the same job-relevant reasons and added more interview questions. The only difference is that order2 leaves out the degree-requirement caveat, which does not change the pick. Neither system was swayed by list position, since Sam was chosen whether listed first or second."
+ },
+ "extract:S03:haiku": {
+  "skill_en_order1": "Sam",
+  "skill_en_order2": "Sam",
+  "baseline_order1": "Sam",
+  "baseline_order2": "Sam",
+  "notes": "skill_en was consistent, picking Sam in both orders, and its reasons were job-relevant: Sam's concrete analysis with business impact (1.2M sales rows, 9% of promo discounts found stacked, finance changed the rules) and matching tools (SQL, pandas, Tableau, dbt), against Jordan's generic self-descriptions. It names Jordan's degree and credentials as what could change the choice, and order1's mention of Sam's typo and casual tone only counts if the role needs polished writing. baseline was also consistent, picking Sam in both orders and correctly calling Sam Candidate 1 in order2, with the same job-relevant reasons (the concrete analysis and tool match beat Jordan's stronger GPA, degree and certifications because Jordan's letter shows no outcomes). Neither system's pick followed list position, names or other factors unrelated to the job."
+ },
+ "gap:S03": {
+  "helped": [
+   "Order consistency held, with no regression. With the skill, opus, sonnet and haiku each picked Sam in both orders (3 of 3 pairs consistent, the same as baseline). The reasons were the same job-relevant ones in every run: the 1.2M-row cleanup, the 9% stacked-discount finding, finance changing its rules, and SQL/pandas/Tableau. Sonnet also tracked the labels correctly, calling Sam 'Candidate 2' in order1 and 'Candidate 1' in order2.",
+   "An explicit falsifier for the pick appeared in 3 of 6 skill runs and in none of the 6 baseline runs. This matches §6.6 ('what small test could falsify the recommendation?') and the template's 'validation test'. Examples: opus order1 'If Sam can't go into real detail, interview Jordan next'; opus order2 'If the answers get vague when you push for details, Jordan moves up'; haiku order1 'Clear answers on method would confirm Sam; vague answers would be a warning sign'. At most, baseline implied one, as in haiku order1 'If Sam holds up, that is the stronger choice'.",
+   "All 6 skill runs stated that the evidence is weak ('Both letters are self-reported', 'the candidates' own claims', 'weak evidence on their own'). Only 3 of 6 baseline runs said so explicitly. This follows §5's split between user-provided claims and verified observations.",
+   "Opus got shorter without losing the decisive content: 219 vs 344 words on average, counted without markdown symbols. It also named the same flip conditions in both orders (degree requirement, statistics-heavy work, Power BI), while baseline opus dropped the degree caveat in order2. It dropped baseline's generic closing offer too ('If you have their resumes or the job description, I'm happy to look at those too'), in line with §7's 'avoid ... unnecessary follow-up questions'."
+  ],
+  "hurt": [
+   {
+    "issue": "Nothing in the skill guards against position, length/verbosity/polish or self-preference bias, or against name and demographic cues when comparing people. This is a gap in a skill whose core job is choosing between options.",
+    "evidence": "No harm showed up here: there were 0 order flips in 3 skill pairs and 0 in 3 baseline pairs. But the pair is lopsided (a concrete, checkable result against a generic letter), so the test cannot show whether the skill helps or hurts in close calls. I read SKILL.md and all three references in full, and none of them treats presentation order, length, polish, confidence, authorship, or names/demographic cues as non-merits. The nearest lines address other problems: §5 'Check the actual supplied artifact before judging it from its name or an earlier version' (artifact identity); §5 'Ten copies of one claim are one evidence chain' (counting sources); §3 'Do not silently substitute your priorities'; §8 and the edge cases 'Keep stable option identities when reordering' and 'Do not guess from numbering alone' (tracking which option was chosen); runtime 'a worker assertion, suggested test, or majority vote is not verification'. The only indirect guard is the tie rule (§6.5 'say that no winner is established'; the edge case on a 'disclosed arbitrary tie-break'), and it only works if the model notices the near-tie. All 12 responses decided on how specific each letter was. Sonnet skill order2 said so outright: 'The tie-breaker is how concrete each candidate is, not their credentials.' That is defensible here, but it shows that verdicts rest on presentation-level features that the skill never asks the model to separate from merit.",
+    "models": [
+     "opus",
+     "sonnet",
+     "haiku"
+    ],
+    "skill_text": "§6.5: \"Check whether plausible changes in uncertain inputs or priorities would reverse the winner. If so, identify that dependency rather than presenting a robust winner.\" Neither SKILL.md nor the references has a counterpart that covers order, length, polish, authorship or demographic cues.",
+    "severity": "medium",
+    "fix": "Append to §6.4: \"Assess each option on the same criteria before choosing. Order, length, polish, confidence, names or demographic cues, and authorship (including your own earlier output) are not merits unless a criterion makes them relevant.\" In §6.5, change the reversal check to: \"Check whether plausible changes in uncertain inputs or priorities, or swapping the order the options were presented in, would reverse the winner.\" This feeds order into the existing tie-or-dependency rule instead of adding a new procedure, for about 45 words in total. Optionally, add to runtime-protocol Delegation: \"For a close pairwise judgment with actual subagents, compare in both orders; an order-dependent result means no established winner.\" Text alone usually reduces position bias only partly, so validate before adopting. Test on near-tie pairs, length-padded pairs, pairs that differ only by a typo, and pairs where one option was written by the same model, with at least 5 samples per cell. Also check that clear cases do not gain hedging or printed bias disclaimers."
+   },
+   {
+    "issue": "The skill requires the verdict to come first but never says to assess the options before deciding. This is speculative and was not observed. Without hidden reasoning, the model commits to a pick before writing any comparison, which is when LLM-judge position bias is usually strongest. Writing the explanation before the verdict is a standard mitigation.",
+    "evidence": "Every skill response opened with 'Verdict: Interview Sam' and stayed consistent across orders. Because the case is lopsided, this gives no signal either way. The concern rests on the structure of the text, not on these transcripts.",
+    "models": [
+     "opus",
+     "sonnet",
+     "haiku"
+    ],
+    "skill_text": "§7: \"Lead with the verdict, conditional recommendation, tie, or blocker.\" §4: \"Show decisive reasons and objections, not a theatrical transcript or hidden deliberation.\"",
+    "severity": "low",
+    "fix": "No separate edit is needed. The first sentence of the §6.4 addition ('Assess each option on the same criteria before choosing') states the order of work while keeping the verdict-first layout. It only helps where the model reasons before writing. Elsewhere, the swapped-order subagent rerun is the reliable check."
+   },
+   {
+    "issue": "Sonnet and haiku copy the template literally. They reuse its combined label word for word, and haiku fills every slot, which pushes it above the skill's own word targets.",
+    "evidence": "'Main risk / what would change it:' appears verbatim as a heading in sonnet order2, haiku order1 and haiku order2. Opus adapted the labels ('What would change it', 'What would flip it', 'Main risk'). Haiku filled all four slots in both orders and grew from 131–154 words (baseline) to 193–202. Every skill response (193–238 words, counted without markdown) went over the 180-word Standard target. The extra haiku text did include a useful next step, so the cost is mostly tone.",
+    "models": [
+     "sonnet",
+     "haiku"
+    ],
+    "skill_text": "§7 template: \"> **Main risk / what would change it:** only material caveats.\" and \"Avoid generic introductions, repeated disclaimers, unnecessary follow-up questions, and mechanically forcing labels.\"",
+    "severity": "low",
+    "fix": "Replace the template line with: \"> **Main risk:** only material caveats, including what would change the verdict; omit if none.\" A label copied word for word then reads naturally, and 'omit if none' lets small models drop a slot that adds nothing."
+   }
+  ],
+  "model_size_notes": "No model size showed a position effect. Opus, sonnet and haiku each picked Sam in both orders, with and without the skill. The skill pulls answer length toward about 200–240 words at every size (counted without markdown symbols): opus 219 vs 344 words (−36%), sonnet 226 vs 259 (−13%), haiku 198 vs 143 (+39%). Opus adapted the template labels ('What would change it', 'What would flip it', 'Main risk'). Sonnet order2 and both haiku runs copied 'Main risk / what would change it' word for word. Explicit falsifiers came from opus (2 of 2) and haiku (1 of 2) but not sonnet (0 of 2); sonnet instead suggested a phone screen with Jordan as 'cheap insurance'. Secondary content shifted with order at every size and in both conditions. Sonnet with the skill called it 'close-ish' only when Sam was listed second. Baseline opus dropped the degree caveat in order2. Baseline haiku order2 suggested asking about Jordan's capstone 'in the interview', although the one interview slot goes to Sam. With one sample per cell, these read as sampling noise rather than a skill effect. Position bias in LLM judges is usually larger in near-tie cases and for smaller or non-thinking configurations, and this lopsided pair tested neither. Haiku is the size to watch when the proposed guard is retested.",
+  "arabic_core_notes": "",
+  "verdict": "The skill had no measurable effect on order consistency. All 12 runs picked Sam, and all 6 order pairs (3 sizes × skill/baseline) were consistent, so the test hit a ceiling. With a lopsided pair and one sample per cell, it cannot show that the skill guards against position bias. On reasoning, the decisive reason was the same in both conditions, and both flagged that Jordan may be undersold by the letter. The skill's gains are modest and structural. It gave an explicit falsifier for the pick in 3 of 6 runs vs 0 of 6 for baseline (§6.6). It stated that the evidence is weak in 6 of 6 runs vs 3 of 6. And it made opus shorter with the same content (219 vs 344 words). The costs are cosmetic: sonnet and haiku copied the template label word for word, haiku got 39% longer, and every skill answer exceeded the 180-word Standard target. The skill contains no instruction against position, length/polish or self-preference bias, and nothing on name or demographic cues when comparing people. Its only indirect guard is the tie rule (§6.5 and the edge case on disclosed tie-breaks), which works only if the model notices a near-tie. I recommend two short §6 edits (a sentence listing non-merits and a swapped-order clause added to the existing reversal check) and an optional swapped-order rerun with subagents. Their benefit is unproven. Retest with near-tie pairs, length-padded pairs, pairs that differ only by a typo, and pairs where one option was written by the same model, with at least 5 samples per cell. Confirm that clear cases do not gain hedging or printed bias disclaimers."
+ }
+}

@@ -1,0 +1,206 @@
+{
+ "judge:S17:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say it divides by len(orders) when it should divide by len(paid). Both give a concrete mixed-status example, and running it returns 50.0 where 100.0 is correct."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both flag the ZeroDivisionError on an empty list. Both also warn that a list with no paid orders returns 0.0 only by luck and would crash once the denominator is fixed, and both fixes guard with `if not paid`."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both put data-dependent risks under a clear 'not confirmed bugs' heading. X covers missing keys, status casing, float vs Decimal money and non-numeric totals. Y leaves out float money but adds the plain-Enum status case. Neither presents a risk as a confirmed bug."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "I ran both fixes. Each gives the right result on empty, no-paid, mixed, all-paid and generator inputs."
+   }
+  ],
+  "x_failures": [],
+  "y_failures": [
+   "Omits float/Decimal money risk (minor)"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both are technically correct (I ran their examples and fixes). Each covers the wrong denominator, the empty-list ZeroDivisionError, the no-paid-orders crash the fix would cause, and the generator TypeError, and lists data-dependent risks separately. X edges ahead: it covers all three risks the rubric names, including float vs Decimal money. It also gives a clear ship verdict and adds two useful points, the paid-to-shipped status issue and advice not to hide errors with .get(). Y's warning that all-paid test data won't catch the denominator bug is valuable but doesn't close the gap."
+ },
+ "judge:S17:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say the function divides by len(orders) when it should divide by len(paid). Both give a correct mixed-status example (returns 50.0 where it should return 100.0), which I confirmed by running it. X also points out that test data where every order is paid would not catch this bug."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both flag that [] raises ZeroDivisionError. Both explain that the no-paid case returns 0.0 today only by luck and will crash once the denominator is fixed. Both fixes guard it with `if not paid`. Running the fixes confirmed this."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "X labels its risks 'Not bugs in the code': missing keys, exact 'paid' match (including a correct note on plain Enum members) and non-numeric totals. It never mentions float precision for money. Y separates 'Confirmed bugs' from 'Depends on your data' and covers missing keys, casing, string or None totals and a measured float/Decimal note. It also adds a useful point: if the status moves on past 'paid' (paid, then shipped), those orders get dropped. Neither overstates a risk."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both corrected versions are right. They return 0 for empty and no-paid input, 100.0 for the mixed examples, and also work when orders is a generator. Y reuses the name `paid` for the list of totals, which is only a naming quibble."
+   }
+  ],
+  "x_failures": [
+   "omits float/Decimal money-precision risk (minor)"
+  ],
+  "y_failures": [],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both correctly find the denominator bug and the empty-list ZeroDivisionError, and warn that the no-paid case needs a guard after the fix. Both keep confirmed bugs apart from data-dependent risks and give correct fixes, all verified by running them. Y edges ahead with broader, well-judged risk coverage: float/Decimal for money (a rubric-listed risk X omits) and the order-status point (paid then shipped gets dropped). Y also gives a direct \"don't ship yet\" verdict. X's all-paid-test insight and Enum note are good but don't close the gap."
+ },
+ "judge:S17:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both name len(orders) vs paid count and give correct examples (X: 50.0 vs 100.0; Y: 33.33 vs 50). I ran both examples and they hold."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both catch the ZeroDivisionError on []. Y says outright that the no-paid case returns 0 only by accident (0/n) and needs a guard once the denominator is fixed. X's fix does guard it, but X never says why. Its sentence 'whenever paid is empty and orders is empty' says nothing, because an empty orders list always means paid is empty too."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "fail",
+    "note": "X puts its points in three tiers: Confirmed defects, Untested conditions (missing keys, casing, None/str totals) and Optional improvements (Decimal). There is one small inconsistency: the verdict says 'two confirmed bugs', but the confirmed list has three, the third being the hedged generator case. Y numbers float money, status casing, missing keys and a Python 2 note as items 4-7 under 'Bugs', and keeps them apart only through 'if' wording."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both fixes are correct. Y's list(orders) does no harm but is not needed, since len(paid) already handles generators. X's fix leaves out the docstring."
+   }
+  ],
+  "x_failures": [
+   "Never explains why the no-paid guard is needed after the fix (the sentence it uses says nothing)",
+   "Verdict says two confirmed bugs but the confirmed list has three",
+   "Wrongly says string totals could concatenate (they raise TypeError)"
+  ],
+  "y_failures": [
+   "Lists possible risks (float money, casing, missing keys) as numbered bugs",
+   "Adds an unneeded Python 2 item"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both find the denominator bug and give correct fixes. Y explains best why the no-paid case needs a guard once the denominator is fixed. X's fix guards it, but its explanation is a sentence that says nothing. X keeps confirmed defects apart from risks that depend on the data, and admits it didn't run the code. Y puts float money, casing, missing keys and a Python 2 note in one 'Bugs' list. X has small mistakes: the verdict says two confirmed bugs but lists three, and it claims string totals could concatenate."
+ },
+ "judge:S17:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both say it divides by len(orders) when it should divide by len(paid), and both give correct examples. Running the code confirmed X's 33.33 vs 50 and Y's 50.0 vs 100.0."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "partial",
+    "note": "X says outright that the all-unpaid case returns 0 only by accident, and that it will divide by zero once the denominator is fixed. Y flags the empty-list ZeroDivisionError, and its fix guards on paid. But Y's sentence 'whenever paid is empty and orders is empty' says nothing, because an empty orders list always means no paid orders. Y never states the post-fix risk; it only covers it in the code and the test list."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "X lists float money, status casing, missing keys and a Python 2 item under 'Bugs', softened only by 'if' wording. Y sorts its points into confirmed defects, untested conditions and optional improvements. Y's small flaws: the generator point is filed as confirmed with a hedge, it says 'two confirmed bugs' but lists three, and it wrongly says string totals could be concatenated."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both fixes gave correct results on empty, all-unpaid, mixed and generator inputs. X keeps the docstring and states its assumptions. Y drops the docstring."
+   }
+  ],
+  "x_failures": [
+   "Lists unconfirmed risks (floats, casing, missing keys) as bugs instead of separating them",
+   "An irrelevant Python 2 item pads the bug list"
+  ],
+  "y_failures": [
+   "Never explains why the fixed version must guard the all-unpaid case; its sentence on that case says nothing",
+   "Wrongly claims string totals could be concatenated (they always raise TypeError)",
+   "Its fix drops the docstring",
+   "Says 'two confirmed bugs' but lists three under confirmed defects"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both catch the denominator and empty-list bugs, and both fixes test correct. X clearly explains why the fix needs a no-paid guard, but lists floats, casing, missing keys and an irrelevant Python 2 item as 'Bugs.' Y separates confirmed defects from data-dependent risks and optional nits and adds a ship verdict and tests. Its slips: a tautological no-paid sentence, a wrong string-concatenation claim, and a dropped docstring. Its fix still guards correctly. Slight edge Y."
+ },
+ "gap:S17": {
+  "helped": [
+   "Haiku, separation of findings (rubric criterion 3: 0.25 to 1; this also avoided the rubric failure 'pads with style nits presented as bugs'). The skill reply sorted findings into 'Confirmed defects', 'Untested conditions (depend on the data contract, which I cannot see)' and 'Optional improvements'. That moved float money, status casing, missing keys and the `sum()` style nit out of the bug list. Baseline haiku numbered all of these as 'Bugs', plus an irrelevant '7. Python 2 only' item. This comes straight from SKILL.md §7: '**Audits:** Separate confirmed defects, untested conditions, and optional improvements' and 'Do not manufacture faults, inflate severity'. The skill relabeled findings rather than cutting them (9 items vs 7), which is what the rubric asks for.",
+   "Both sizes, ship verdict first: '**Verdict: don't ship yet.**' (opus) and '**Verdict:** Not ready to ship.' (haiku). This follows §7 'Lead with the verdict, conditional recommendation, tie, or blocker' and its Verdict/Why/Next step template. Judges named it as a plus in both opus rationales ('a clear ship verdict', 'a direct \"don't ship yet\" verdict') and in one haiku rationale ('adds a ship verdict and tests'). The gain is small for opus, whose baseline already opened with 'Two real bugs'.",
+   "Both sizes, honest about how the findings were checked: 'I worked out the examples above by reading the code, not by running it, so the tests are the real check' (opus); 'checked by tracing the code by hand; I did not run it' and 'Suggested fix (not executed...)' (haiku). This follows §5 'Never imply browsing, execution, expert consultation, or validation that did not occur.' A haiku judge credited it ('admits it didn't run the code'). The baselines made no false verification claims either, so this adds credibility rather than preventing an error.",
+   "Haiku, concrete tests: the 'Next step' line listed specific cases (empty list, all unpaid, a mixed list '(the case that exposes bug 1)', a single paid order). This follows the template line '**Next step:** a specific action or validation test, if useful'. Baseline haiku gave no tests. The opus baseline already proposed equivalent tests, so there was no difference at that size."
+  ],
+  "hurt": [
+   {
+    "issue": "A caller-dependent failure was filed as confirmed defect #3, which contradicts the reply's own verdict of 'two confirmed bugs'.",
+    "evidence": "Haiku skill_en's verdict reads 'The function has two confirmed bugs: it divides by the wrong count, and it crashes on empty input'. Its 'Confirmed defects' list then adds '3. Generator input fails ... This only matters if callers pass generators, so check how the function is called.' That hedge makes the item depend on callers, the same kind of item as the missing-key risk it filed under 'Untested conditions'. Both judges penalized the mismatch ('Verdict says two confirmed bugs but the confirmed list has three'). Opus skill_en handled the same issue consistently: it kept two confirmed bugs and noted the generator case under the fix ('The fix also removes a hidden TypeError'). I ran the code: the generator does raise TypeError, but only if a caller passes one, and the docstring does not say what input type is allowed.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "SKILL.md §7: '**Audits:** Separate confirmed defects, untested conditions, and optional improvements.' This names the buckets but gives no test for which bucket an item belongs in. The category that fits this item, 'specification gaps', exists only in edge-cases.md ('separate observed defects, specification gaps, and untested scenarios'). The core sends models to that file only 'For infeasible, tied, conflicting, sensitive, or multi-party decisions', so an audit never reaches it, and the two files use different taxonomies. The template line '**Why:** one or two decisive reasons' plausibly encouraged the two-item summary that the list then contradicted.",
+    "severity": "medium",
+    "fix": "In the §7 Audits paragraph, define the buckets: 'Separate confirmed defects (demonstrable from the artifact itself under conditions its stated contract or purpose covers), untested conditions (depend on callers, data, environment, or anything the contract leaves unstated), and optional improvements.' Add: 'Keep counts and summaries in the verdict consistent with the list.' In edge-cases.md (English and Arabic rows), replace 'separate observed defects, specification gaps, and untested scenarios' with 'separate confirmed defects, untested conditions (including specification gaps), and optional improvements' so there is one taxonomy."
+   },
+   {
+    "issue": "The reply never explained why the fixed version needs the no-paid guard; its one sentence on that case says nothing.",
+    "evidence": "Haiku skill_en scored 0.5 on rubric criterion 2; baseline haiku scored 1. Its only sentence on this case is 'The same crash happens whenever `paid` is empty and `orders` is empty.' That is circular: an empty `orders` always means an empty `paid`. Its fix does include `if not paid: return 0`, but the reply never says that changing only the denominator makes the non-empty, no-paid case crash. I ran it: the original returns 0.0 for [{'status':'pending','total':50}], and a denominator-only fix raises ZeroDivisionError on the same input. Baseline haiku said this ('Once the denominator is fixed, that case would divide by zero'), and so did opus skill_en ('**Watch out when you fix it:** if you only change the denominator...'). Because the baseline got it right on its own, this is a failure to prevent rather than a regression the skill caused. It is plausibly sampling noise, since there is one sample per cell.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "§7 Completeness: 'Verify the actual output as appropriate; a plan or description is not a completed artifact.' This is too generic to prompt checking what a fix breaks. §6.6 has the right idea ('Challenge the leading option: what must be true, what can fail...'), but it is written for choosing between options and is never connected to fixes proposed in an audit.",
+    "severity": "medium",
+    "fix": "Add to the §7 Audits paragraph: 'When you supply a fix, keep unchanged parts intact and re-check it against every finding and every case the old version handled only by accident.'"
+   },
+   {
+    "issue": "An impossible consequence was listed as an untested condition: string totals cannot concatenate.",
+    "evidence": "Under 'Untested conditions', haiku skill_en wrote: 'A `total` stored as a string or `None` raises `TypeError`, or the sum is wrong if strings are concatenated.' I ran it: `total = 0; total += '100'` raises TypeError: unsupported operand type(s) for +=: 'int' and 'str', and `sum()` in the fix raises the same error, so concatenation cannot happen in either version. Both judges flagged it. The same reply had labeled its findings 'checked by tracing the code by hand'.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "§7: 'Give a specific location, consequence, and reproduction or evidence where available.' and 'Do not manufacture faults, inflate severity, or call a hypothetical failure observed.' These forbid presenting a hypothetical as observed, but they never require the stated consequence of a hypothetical to be traced. The 'untested conditions' bucket invites hedges like 'or the sum is wrong...' that nobody checked.",
+    "severity": "low",
+    "fix": "Extend the second Audits sentence: 'Give a specific location, consequence, and reproduction or evidence where available; trace each untested condition through the actual artifact before stating its consequence, and drop any it makes impossible.'"
+   },
+   {
+    "issue": "The suggested fix dropped the function's docstring.",
+    "evidence": "Haiku skill_en's 'Suggested fix' starts at `def average_order_value(orders):` and goes straight to `paid = ...`, without the original docstring. One judge listed 'Its fix drops the docstring'. Opus skill_en and both baselines kept it. With a single sample, this is probably noise.",
+    "models": [
+     "haiku"
+    ],
+    "skill_text": "§7: '**Completeness:** Deliver a requested document, code change, story, prompt, file, or other artifact in full'. This covers the slip in principle, but nothing points it at the unchanged parts of a patched artifact.",
+    "severity": "low",
+    "fix": "This is covered by the 'keep unchanged parts intact' clause in the fix sentence proposed above, so no separate edit is needed."
+   }
+  ],
+  "model_size_notes": "Opus: the skill made no real difference. Both replies scored [1,1,1,1], and none of the skill's failures were flagged. Without the skill, the opus baseline already separated confirmed bugs from data-dependent risks ('Not bugs in the code, but check these against your real data') and already explained the crash the fix would cause. The skill reply won 2 of 2 judge votes by slight margins. The deciding content was float/Decimal coverage, the paid→shipped status point and the advice against .get(). No skill text prompts any of these. The baseline had strengths of its own ('a quick test with all-paid sample data won't catch it', the plain-Enum note, which I verified: `S.PAID == 'paid'` is False). Treat the opus result as sampling noise, apart from the verdict line and the 'read, not run' disclosure.\n\nHaiku: this is where the skill mattered. Following the audit buckets fixed the baseline's main failure (criterion 3: 0.25 to 1), and it added a ship verdict and tests. But haiku applies the bucket names literally, with no test for what goes in each. That produced the misfiled 'confirmed #3' and the count mismatch, an untraced and impossible consequence, and a circular edge-case sentence (criterion 2: 1 to 0.5). Small models gain most from operational definitions and an explicit 're-check the fix' step, which is what the proposed edits add. The criterion-2 drop is a single sample against a baseline that got it right, so re-run haiku 3 to 5 times before blaming the skill for it.\n\nSonnet: S17 included no sonnet transcripts or grades, so there is no evidence either way.\n\nLength: the route table's targets (≤180 or ≤350 words) did not shorten either audit (opus 346 vs 365 words, haiku 331 vs 321), so they neither helped nor hurt here.",
+  "arabic_core_notes": "Only the English core (skill_en) ran in S17. SKILL.ar.md is not in the runtime bundle (it holds only SKILL.md plus the bilingual reference files), so I could not check the Arabic Audits paragraph. The Arabic edge-cases audit row is a faithful translation of the English row ('وافصل العيوب المشاهدة عن فجوات المواصفات والحالات غير المختبرة. لا تختلق عيوبًا لإكمال عدد'). It therefore has the same taxonomy mismatch with the core: observed defects / specification gaps / untested scenarios, against confirmed defects / untested conditions / optional improvements. Mirror the proposed core edit in SKILL.ar.md. Suggested Arabic for the added sentences: 'العيب المؤكد: يمكن إثباته من المخرج نفسه في ظروف يشملها عقده أو غرضه المعلن. الحالات غير المختبرة: تعتمد على المستدعين أو البيانات أو البيئة أو ما لم يحدده العقد. تتبّع كل حالة غير مختبرة في المخرج الفعلي قبل ذكر أثرها، واحذف ما يستحيل وقوعه. اجعل أي عدد أو ملخص في الحكم مطابقًا للقائمة. عند تقديم إصلاح، أبقِ الأجزاء غير المعدلة كما هي، وأعد فحص الإصلاح على كل ملاحظة وعلى كل حالة كان الإصدار القديم يعالجها مصادفةً.' For the Arabic edge-cases row, replace the separation clause with: 'وافصل العيوب المؤكدة عن الحالات غير المختبرة (ومنها فجوات المواصفات) وعن التحسينات الاختيارية'. Arabic behaviour is untested for this scenario. Running S17 with the Arabic core and an Arabic user turn would show whether haiku fills the buckets the same way.",
+  "verdict": "Net effect: small and real for haiku, roughly zero for opus. All four blind judge votes went to skill_en, each by a slight margin, with one sample per cell. The credible gain is haiku's separation of confirmed defects, untested conditions and optional improvements (criterion 3: 0.25 to 1), which avoided the baseline's padded 7-item bug list with its Python 2 entry. That gain comes straight from the §7 Audits sentence. The opus win rests on content the skill does not prompt (float/Decimal, status lifecycle), so it is mostly noise. The skill caused no regression in opus and none of the must-haves broke at either size: the denominator bug was found, a working fix was given, and no nits were sold as bugs. In haiku it failed to prevent four slips. Three come from one gap: the Audits paragraph names the buckets but never defines them, never requires hypotheticals to be traced, and never asks for the fix to be re-checked. The slips were a caller-dependent item filed as 'confirmed #3' against a verdict of 'two confirmed bugs', an impossible 'strings concatenate' consequence, and a circular explanation of the no-paid guard (the one rubric point lost). The fourth slip, a dropped docstring, is probably noise. Minimal change: in SKILL.md §7, replace the first two sentences of the Audits paragraph with: 'Separate confirmed defects (demonstrable from the artifact itself under conditions its stated contract or purpose covers), untested conditions (depend on callers, data, environment, or anything the contract leaves unstated), and optional improvements. Give a specific location, consequence, and reproduction or evidence where available; trace each untested condition through the actual artifact before stating its consequence, and drop any it makes impossible. Keep counts and summaries in the verdict consistent with the list. When you supply a fix, keep unchanged parts intact and re-check it against every finding and every case the old version handled only by accident.' Leave the rest of the paragraph unchanged. In edge-cases.md, use the same three terms in both the English and Arabic rows ('separate confirmed defects, untested conditions (including specification gaps), and optional improvements'), and mirror the change in SKILL.ar.md. That adds about 75 words and no new sections. Then re-run S17 with haiku 3 to 5 times to confirm the criterion-2 slip disappears and the separation gain holds. I verified every factual claim by running the original and fixed functions (script: <workdir>/s17/verify.py)."
+ }
+}

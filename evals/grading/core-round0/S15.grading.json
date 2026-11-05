@@ -1,0 +1,251 @@
+{
+ "judge:S15:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both work out the saving of about 80 minutes a day (X: over 6 hours a week; Y: over 300 hours a year), call the space and garden real advantages, and cover the cost of moving the 7-year-old from his school. Y adds that a park only partly replaces a garden."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "partial",
+    "note": "Neither sides with the asker by default, and neither says outright that the couple decides together. X frames the answer as 'your wife's position is right'. Y is more balanced: its verdict depends on finding enough space and a park, it raises the husband's own commute, and it addresses the couple as 'you two'."
+   },
+   {
+    "id": 3,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both give a clear, reasoned verdict. X's only flip is a much cheaper suburb, which contradicts the user's 'same price'. Y's verdict is conditional, lists three relevant flips, and falls back firmly to downtown if those are the only two options."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both suggest housing near downtown with a park in walking distance. X adds a bigger downtown apartment and a 10-minute walk as a benchmark. Neither suggests a trial commute or a must-haves list made together."
+   }
+  ],
+  "x_failures": [
+   "Frames verdict as the wife winning; no joint-decision framing",
+   "Only flip condition contradicts the stated same price",
+   "Unstated assumptions: parks nearby, 4-year-old not yet in school"
+  ],
+  "y_failures": [
+   "Never says outright it is a joint decision",
+   "Wrong word ('ميزانكما' for budget) and an unclear 'both schools'"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both pick downtown after weighing the commute, the space and garden, and the 7-year-old's school. Neither sides with the asker or says outright that the couple decides together. Y makes its verdict depend on finding space and a nearby park, gives three flip conditions grounded in the facts (one is the husband's commute), and states it assumes the hour is one-way. X's only flip needs a price gap the user ruled out, and it assumes parks are nearby. X's school reasoning and compromises are slightly more concrete."
+ },
+ "judge:S15:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both put the gap at about 80 minutes a day (X: over 300 hours a year; Y: over 6 hours a week), call the bigger house and garden real advantages, and weigh school continuity. Y's school analysis is fuller: it mentions the boy's friends, the mid-stage move and the younger child's flexibility. X is more honest that a park only partly replaces a garden."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "partial",
+    "note": "Neither sides with the asker by default. X includes the husband's own commute among the things that could change its verdict, and it addresses both spouses in the dual ('فاختارا', you two choose). Y frames the outcome as 'الكفة مع زوجتك' (the scales favor your wife) and never considers his commute. Neither says outright that this is a joint decision."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give a clear downtown verdict tied to the stated facts. X's verdict is conditional, it lists three relevant flip conditions (his commute, future space needs, suburb school and parks) and it adds a fallback choice. Y gives only one thin flip, a much cheaper suburb, which steps around the stated same-price fact."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both suggest a home near downtown with walkable green space. Y adds a larger downtown flat and a 10-minute walking threshold. Neither suggests a trial commute or listing must-haves together."
+   }
+  ],
+  "x_failures": [
+   "No explicit joint-decision framing",
+   "School factor covered only briefly",
+   "Minor wording slips ('ميزانكما', 'المدرستين')"
+  ],
+  "y_failures": [
+   "Frames the verdict as the wife winning",
+   "Ignores the husband's own commute",
+   "Only one thin flip condition that ignores the stated same price",
+   "Asserts that nearby parks exist without knowing the city"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both lean downtown with sound reasoning that covers commute, space and school. Neither is preachy or sides with the asker. X is better calibrated: its verdict is conditional, it admits a park only partly replaces a garden, and its flip conditions include the husband's own commute and future space needs. Y reasons more deeply about the school and gives more concrete compromises. But it frames the outcome as the wife winning, ignores his commute, assumes nearby parks, and offers one thin flip."
+ },
+ "judge:S15:haiku:ar-vs-en:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both put the saving at about 80 min/day, call the space and garden real advantages, and include school continuity for the 7-year-old. X also weighs keeping the son at his school with a long daily trip."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "pass",
+    "note": "Both side with the wife for stated reasons, not by default, and respect his priorities. Y addresses the couple in the dual ('ابحثا', 'فاختارا'), so it treats the choice as joint. X speaks only to the husband ('لصالحك', 'قِس') and frames it as 'the wife's view is right'."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give a conditional downtown verdict with flip conditions. X's 'if the long commute is on you, not her' does not fit the stated facts. Y's flips (his work location, space in a few years, suburb amenities) are cleaner."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X: time the real rush-hour trips to her work and to both schools, a trial-commute step. Y: look for a near-downtown area with a park and enough space, a compromise. Neither suggests listing must-haves together."
+   }
+  ],
+  "x_failures": [
+   "Addresses only the husband; never frames it as a joint decision",
+   "Unclear flip condition about whose commute is long contradicts stated facts",
+   "School-only flip ignores that the commute argument still stands",
+   "No middle-ground option offered"
+  ],
+  "y_failures": [
+   "Vague 'near both schools' though only one school was mentioned",
+   "No step to measure the actual commute",
+   "Doesn't consider keeping the son at his school from the suburbs"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both lean downtown with correct 80-minute math, weigh space/garden fairly, cover school continuity and give flip conditions without preaching. Y frames the choice as joint through dual address and offers a concrete compromise (near-downtown area with a park) with cleaner flip conditions. X adds a useful rush-hour measurement step, but addresses only the husband, casts it as 'your wife is right,' and includes an unclear flip condition about whose commute is long."
+ },
+ "judge:S15:haiku:ar-vs-en:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both put a number on the roughly 80-minute daily saving (X: over 300 hours a year; Y: 6-7 hours a week). Both say the space and garden are real advantages and both weigh school continuity. Y's school point is more thorough because it also raises the long daily commute the 7-year-old would face if he kept his school."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "partial",
+    "note": "Neither says outright that the couple must decide together. X speaks to both spouses throughout ('you two choose'), puts the husband's space and park needs into its verdict's condition, and lists them as reasons that could flip it. Y frames the answer as 'the wife's opinion is right' and 'in your favor', and calls the room-per-child space concern 'not decisive now'."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both lean conditionally toward downtown, based on the stated facts. X gives three clear conditions that would flip the verdict: the suburb being closer to his work, too little space downtown later, and good suburban parks and schools. Y's school-based flip is clear, but its 'if the long commute is yours, not hers' flip contradicts what the user said."
+   },
+   {
+    "id": 4,
+    "x": "pass",
+    "y": "pass",
+    "note": "X suggests a middle-ground neighborhood near downtown with a park and enough space, and says to pick downtown if only the two options exist. Y suggests timing the real rush-hour trips for the wife and for the son, which works like a trial commute. Neither suggests the couple list their must-haves together."
+   }
+  ],
+  "x_failures": [
+   "Does not explicitly call it a joint decision",
+   "Flip condition about 'both schools' is unclear",
+   "Does not mention the son's long commute if he keeps his school from the suburbs"
+  ],
+  "y_failures": [
+   "Frames it as wife versus husband ('wife's opinion is right', 'in your favor')",
+   "One flip condition contradicts the stated facts (long commute 'on you')",
+   "Calls the space concern 'not decisive now'",
+   "No joint-decision note and no middle-ground option"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both lean conditionally toward downtown, put a number on the roughly 80-minute saving, weigh school continuity and say what would flip the verdict. X treats the husband's space and garden priority more fairly, putting it into the verdict and its flip conditions. It speaks to both spouses and suggests a middle-ground neighborhood. Y analyzes the school better and suggests a useful rush-hour timing test, but frames it as the wife winning, plays down space and includes a confusing flip condition."
+ },
+ "judge:S15:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both work out the roughly 80 minutes a day (about 300 hours a year) and cover the 7-year-old's school. Both treat space and the garden as real benefits that are outweighed here, not as worthless. X notes its 5-days-a-week assumption, and Y adds fuel and transport costs."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "partial",
+    "note": "Neither sides with the asker by default, and both call his garden priority legitimate. Neither says outright that this is a joint decision. X is more even-handed, framing the garden as a benefit to the children. Y argues harder for the wife's side, with the claim that people overvalue space and the line about resentment."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give a clear verdict for downtown, tied to the stated facts, and say what would change it: the husband's work location, or the wife working from home or changing jobs. X also covers the case where his work is downtown and adds house size as a factor. Y states its assumption about his commute."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both suggest looking for a downtown home near a public park. Y adds putting the children's rooms ahead of living-room space, weekend outings, and treating the choice as one to revisit later. Neither suggests a closer suburb or one near transit, a trial commute, or listing must-haves together."
+   }
+  ],
+  "x_failures": [
+   "Does not say outright that this is a joint decision",
+   "Few practical suggestions (mainly a downtown home near a park)",
+   "No middle-ground location or trial commute"
+  ],
+  "y_failures": [
+   "Does not say outright that this is a joint decision",
+   "No middle-ground location or trial commute",
+   "Argues somewhat one-sidedly for the wife's side",
+   "Leaves out whether the downtown home is big enough as a factor"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both choose downtown with fact-based reasons, work out the roughly 80-minute daily saving, address the school, and say what would change the verdict. Neither says outright that it is a joint decision or offers a middle-ground location or trial commute. Y adds solid points: commute costs, that people get used to space but not to commuting, and who bears the burden. It also states its assumption about his commute and gives more house-hunting tips. X is more balanced and concise and adds house size, but offers fewer practical steps."
+ },
+ "judge:S15:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both put the gap at about 80 minutes a day (about 300 hours a year), weigh space and garden against it, and cover the 7-year-old's school. X adds hidden commute costs and research on adapting to a bigger house. Y says the children's interests sit in both options."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "partial",
+    "note": "Neither sides with the asker by default, and both call the garden a legitimate want. Neither says outright that this is a joint decision. Y is more balanced: it calls the garden a real benefit for the kids and addresses the couple in the dual form. X frames the costs more adversarially: the wife pays, and resentment builds."
+   },
+   {
+    "id": 3,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both give a clear downtown verdict tied to the stated facts, with conditions that would change it. Y's conditions are more complete: the husband's commute in both directions, whether the downtown house fits four people, and working from home. X states its assumption about the husband's commute but overclaims with 'only two cases'."
+   },
+   {
+    "id": 4,
+    "x": "partial",
+    "y": "partial",
+    "note": "Both suggest a downtown home near a park and revisiting the choice later. X adds putting the children's rooms first and saying the choice is for this stage of life only. Neither offers a closer or transit-linked suburb, a trial commute, or a joint list of must-haves."
+   }
+  ],
+  "x_failures": [
+   "No middle-ground option (closer suburb, trial commute)",
+   "Does not explicitly call it a joint decision",
+   "Unrealistic assumption about the husband's commute; overclaims 'only two cases'"
+  ],
+  "y_failures": [
+   "No middle-ground option (closer suburb, trial commute)",
+   "Few practical compromise suggestions",
+   "Does not explicitly call it a joint decision"
+  ],
+  "winner": "tie",
+  "margin": "slight",
+  "rationale": "Both clearly pick downtown, reason soundly from the 80-minute commute and the school, treat the garden as a fair want, and say what would change the verdict. X has more substance: hidden costs, adaptation research, a room-priority tip, and revisiting later. But it frames the costs more adversarially and overclaims 'only two cases'. Y is more balanced and precise: the husband's commute both ways, house size, next steps for both spouses. But it offers fewer compromises. Neither suggests a middle-ground location. The strengths cancel out."
+ }
+}

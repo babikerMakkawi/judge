@@ -1,0 +1,105 @@
+{
+ "judge:S20:haiku:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both open with a clear pick of pizza. X's single reason sentence ties all three factors cleanly: cheaper, easier when worn out, and easier in the rain. Y ties cheap and tired well. Its rain reason ('best eaten fresh... a rainy night you'd rather not stretch out') is muddled but still there."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are a few lines, with no table, no long analysis and no questions back. Y's bold 'Verdict' header and its short sushi comparison add a little weight but stay within 'brief'."
+   }
+  ],
+  "x_failures": [
+   "slightly illogical 'save even more' combo tip"
+  ],
+  "y_failures": [
+   "muddled rain rationale"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both pick pizza right away, stay brief, and ask nothing back. X's single reason sentence ties all three factors cleanly: cheaper, easier when worn out, and easier in the rain. Its extra tip has a small logic slip ('save even more' with a combo). Y covers cheap and tired well, but its rain link ('best eaten fresh... a rainy night you'd rather not stretch out') is muddled. Its bold 'Verdict' header and sushi comparison add slight weight. X edges it."
+ },
+ "judge:S20:haiku:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both pick pizza right away. Y ties the pick to all three factors (cheaper, easier when worn out and raining) in one clean sentence. X ties it clearly to cost and fatigue, but its rain link ('best eaten fresh, so it's a poor fit for a rainy night you'd rather not stretch out') is awkward, and the reasoning runs over two sentences."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both are a few lines long, with no table, no long analysis and no questions back. X's bold 'Verdict' header and extra sushi comparison make it a little heavier. Y is slightly tighter and more conversational."
+   }
+  ],
+  "x_failures": [
+   "Muddled rain rationale ('best eaten fresh... night you'd rather not stretch out')",
+   "Reason spread over two sentences rather than one line"
+  ],
+  "y_failures": [
+   "'Save even more' framing for a pizza-and-salad combo is a minor logic slip"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both pick pizza immediately, stay brief, and ask no questions. Y's single sentence cleanly ties the pick to all three factors (cheaper, easier when worn out and raining) and adds a useful frozen-pizza tip. X covers cost and fatigue well, but its rain link ('best eaten fresh... night you'd rather not stretch out') is muddled and the reason sprawls over two sentences. Y's combo-savings line is a minor logic slip. Y edges it."
+ },
+ "judge:S20:opus:en-vs-base:AB": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "Both open with a clear pick of pizza. X's first sentence gives a one-line cost reason, and its next paragraph covers the rain with ordering in. It only implies the tiredness. Y links each of cost, rain and effort to the pick explicitly, but spreads the reason over three bullets."
+   },
+   {
+    "id": 2,
+    "x": "pass",
+    "y": "partial",
+    "note": "X is about 75 words of short prose, with no table and no questions back. Y is about 115 words: three bullets with bold labels, a tips paragraph and a closing line. That is more than a few lines and reads like a small structured analysis. Neither asks questions."
+   }
+  ],
+  "x_failures": [
+   "exhaustion not explicitly acknowledged"
+  ],
+  "y_failures": [
+   "bulleted mini-analysis runs past a few lines",
+   "extra deals tip and closing sushi line add length"
+  ],
+  "winner": "X",
+  "margin": "slight",
+  "rationale": "Both pick pizza immediately, give reasons tied to cost and rain, and ask no questions. X does this in about 75 words of plain prose and adds a useful tip to order direct, but it never mentions the user's exhaustion. Y covers all three factors explicitly, including effort, but turns the reasons into bold-labelled bullets and adds extra tips and a closing line (about 115 words). That drifts toward the structured analysis the brevity criterion discourages, so X fits the rubric better."
+ },
+ "judge:S20:opus:en-vs-base:BA": {
+  "criteria": [
+   {
+    "id": 1,
+    "x": "pass",
+    "y": "pass",
+    "note": "X opens with 'Pizza, no question.' Its reasons tie directly to all three factors (cheap, rain, effort), but they take three bullets, not one line. Y opens with a bold 'Pizza.' and gives a short reason based on cost and leftovers. Its 'to stay dry' tip covers the rain, but it never mentions exhaustion. Both meet the core of the criterion with small gaps."
+   },
+   {
+    "id": 2,
+    "x": "partial",
+    "y": "pass",
+    "note": "Neither has a table or asks a question. X uses bullets with bold headers, then adds two more paragraphs: an order-direct and deals tip, and a closing line about saving sushi for a treat. At about 110 words it is more than 'a few lines' and reads like a small analysis. Y is three short plain paragraphs, about 75 words, with no structured breakdown. That is a little over 'a few lines' but still brief."
+   }
+  ],
+  "x_failures": [
+   "Bulleted breakdown with bold headers instead of a one-line reason",
+   "Extra deals tip and closing sushi line make it longer than a few lines"
+  ],
+  "y_failures": [
+   "Never mentions the user being exhausted"
+  ],
+  "winner": "Y",
+  "margin": "slight",
+  "rationale": "Both pick pizza right away, reason accurately about cost, give the same tip to order direct, and ask no questions. X ties its reasons to all three factors but spreads them over bold bullets, then adds more tips and a closing line, so it runs past the 'few lines' the rubric asks for. Y is tighter plain prose with a short cost reason and a tip that covers the rain, though it never addresses exhaustion. The rubric stresses brevity, so Y edges ahead."
+ }
+}
