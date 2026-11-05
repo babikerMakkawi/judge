@@ -85,9 +85,9 @@ Tested on Claude models only, one run per case ([test records](evals/)). It supp
 |---|---|
 | ChatGPT (Custom GPT أو Project) · Gemini (Gem) | الصق محتوى `judge-flash/SKILL.md` في خانة **Instructions** |
 | تطبيقات Claude | نزّل ملف zip من [الإصدارات](https://github.com/babikerMakkawi/judge/releases)، ثم **Settings ← Capabilities ← Skills ← Upload** |
-| Claude Code · Codex | انسخ مجلد `skills/ar/judge` إلى مجلد المهارات، ثم استخدم `/judge` أو `$judge` |
+| Claude Code · Codex | انسخ مجلد `skills/ar/judge` إلى مجلد المهارات، ثم اكتب الأمر `/judge` في Claude Code، والأمر `$judge` في Codex |
 
-`judge-flash` هي النسخة الخفيفة (أقل من 8,000 حرف، وتعمل وحدها)، و`judge` هي النسخة الكاملة.
+النسخة الخفيفة هي `judge-flash`، وهي أقل من 8,000 حرف وتعمل وحدها. والنسخة الكاملة هي `judge`.
 
 ## مثال على الطلب
 
