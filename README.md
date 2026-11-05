@@ -10,11 +10,25 @@ An Agent Skill that helps an AI assistant compare options, evaluate projects, su
 
 `v1.0.0` · English & Arabic instructions · Full and light editions · MIT License
 
+**[🚀 ابدأ هنا بدون تثبيت](#ابدأ-هنا)** · **[🚀 Quick start, no install](#quick-start)**
+
 [English](#english) · [العربية](#العربية) · [Evaluation records](evals/)
 
 </div>
 
 ---
+
+<a id="quick-start"></a>
+
+## 🚀 Quick start (any AI chat, no install)
+
+> Sending the GitHub link alone won't work: paste the instructions yourself.
+
+1. Open [this file](https://github.com/babikerMakkawi/judge/blob/main/skills/en/judge-flash/SKILL.md) and click 📋 **Copy raw file**.
+2. In a new chat (ChatGPT, Gemini, Claude...), send: `Follow these instructions in every reply:` then paste, then your question.
+3. Keep talking in the same chat. In a new chat, paste again.
+
+For a permanent setup, see [below](#installation).
 
 <a id="english"></a>
 
@@ -64,25 +78,19 @@ skills/
     └── judge-flash/            # light edition, Arabic instructions
 ```
 
-## Installation
+<a id="installation"></a>
 
-**Claude Code**: copy one skill folder into your skills directory, then invoke it with `/judge` (or let Claude pick it up automatically).
+## Permanent setup
 
-```bash
-cp -r skills/en/judge ~/.claude/skills/judge
-```
+| Where | How |
+|---|---|
+| **ChatGPT** (Custom GPT or Project) | Paste `judge-flash/SKILL.md` into **Instructions** |
+| **Gemini** (Gem) | Paste `judge-flash/SKILL.md` into **Instructions** |
+| **Claude apps** | Download a zip from [Releases](https://github.com/babikerMakkawi/judge/releases), then **Settings → Capabilities → Skills → Upload** |
+| **Claude Code** | `cp -r skills/en/judge ~/.claude/skills/judge`, then use `/judge` |
+| **Codex** | Copy the folder into your Codex skills directory, then use `$judge` |
 
-Use `.claude/skills/judge` inside a project instead to scope it to that project.
-
-**Claude apps (claude.ai, desktop, mobile)**: zip one skill folder (for example `judge/`) and upload it under Settings → Capabilities → Skills. Menu names may change over time.
-
-**Codex**: copy the folder into your Codex skills directory and invoke it with `$judge` (or `$judge-flash`). The `agents/openai.yaml` file provides the display name, icon and default prompt. Check the current Codex documentation for the skills path on your setup.
-
-```bash
-cp -r skills/en/judge ~/.codex/skills/judge
-```
-
-**Custom GPTs, Gemini Gems or any plain chat**: paste the contents of `judge-flash/SKILL.md` into the instructions field. The light edition is self-contained; if the host accepts knowledge files, uploading `references/` adds detail for edge cases and tool use.
+Use **`judge-flash`** for pasting (under 8,000 characters, works alone), and the full **`judge`** where skills install as folders.
 
 ## How to use it
 
@@ -153,6 +161,18 @@ See [CHANGELOG.md](CHANGELOG.md). Current release: **1.0.0**.
 
 ## العربية
 
+<a id="ابدأ-هنا"></a>
+
+### 🚀 ابدأ هنا (أي محادثة، بدون تثبيت)
+
+> إرسال رابط GitHub وحده لا يكفي: الصق التعليمات بنفسك.
+
+1. افتح [هذا الملف](https://github.com/babikerMakkawi/judge/blob/main/skills/ar/judge-flash/SKILL.md) واضغط 📋 **Copy raw file**.
+2. في محادثة جديدة (ChatGPT أو Gemini أو Claude...)، اكتب: «اتبع هذه التعليمات في كل ردودك:» ثم الصق النص، ثم سؤالك.
+3. أكمل في المحادثة نفسها. وفي أي محادثة جديدة الصقه مرة أخرى.
+
+وللإعداد الدائم، انظر [بالأسفل](#الإعداد-الدائم).
+
 ### ما هي judge؟
 
 مهارة (Agent Skill) تساعد المساعد الذكي على مقارنة الخيارات وتقييم المشاريع وكشف مخاطرها، ثم إعطاء توصية صريحة بلغة المستخدم ولهجته.
@@ -180,12 +200,16 @@ See [CHANGELOG.md](CHANGELOG.md). Current release: **1.0.0**.
 
 التعليمات العربية والإنجليزية متطابقتان في المعنى. **كل النسخ تجيب بلغة المستخدم ولهجته** أيًا كانت لغة التعليمات. ثبّت **نسخة واحدة فقط** في كل منصة.
 
-### التثبيت
+<a id="الإعداد-الدائم"></a>
 
-- **Claude Code:** انسخ مجلد المهارة إلى `~/.claude/skills/judge`، ثم استدعها بـ `/judge`.
-- **تطبيقات Claude:** اضغط مجلد المهارة في ملف zip، ثم ارفعه من الإعدادات ← Capabilities ← Skills.
-- **Codex:** انسخ المجلد إلى مجلد مهارات Codex، ثم استدعها بـ `$judge` أو `$judge-flash`.
-- **Custom GPTs وGems وأي محادثة عادية:** الصق محتوى `judge-flash/SKILL.md` في خانة التعليمات. النسخة الخفيفة تعمل وحدها، ورفع ملفات `references/` يضيف تفاصيل للحالات الخاصة.
+### الإعداد الدائم
+
+- **ChatGPT** (Custom GPT أو Project) و**Gemini** (Gem): الصق محتوى `judge-flash/SKILL.md` في خانة **Instructions**.
+- **تطبيقات Claude:** نزّل ملف zip من [الإصدارات](https://github.com/babikerMakkawi/judge/releases)، ثم **Settings ← Capabilities ← Skills ← Upload**.
+- **Claude Code:** انسخ المجلد إلى `~/.claude/skills/judge`، ثم استخدم `/judge`.
+- **Codex:** انسخ المجلد إلى مجلد مهارات Codex، ثم استخدم `$judge`.
+
+استخدم **`judge-flash`** للّصق (أقل من 8,000 حرف وتعمل وحدها)، والكاملة **`judge`** حيث تُثبَّت المهارات كمجلدات.
 
 ### الطلب المقترح لتقييم مشروع
 
