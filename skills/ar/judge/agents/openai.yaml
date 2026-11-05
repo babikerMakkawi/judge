@@ -1,0 +1,14 @@
+interface:
+  display_name: judge
+  short_description: Clear decisions, grounded evidence, concise answers
+  default_prompt: Use $judge to assess this decision, respect my constraints, and
+    give a concise recommendation with the key uncertainty and next step.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
